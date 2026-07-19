@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Matchbook Learning Culture Camp teacher dashboard: ten daily lesson bundles and five schoolwide systems.">
+  <title>When I Grow Up | Culture Camp</title>
+  <meta name="theme-color" content="#D91F2B">
+  <link rel="icon" type="image/svg+xml" href="./resources/_shared/flame-logo.svg">
+  <link rel="stylesheet" href="./styles.css?v=20260719-simplified15">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="app-shell">
+    <header class="site-header">
+      <button class="brand-lockup" type="button" data-view="lessons" aria-label="Open the Culture Camp ten-day lessons">
+        <span class="matchbook-name"><strong>MATCHBOOK</strong><small>LEARNING</small></span>
+        <span class="brand-rule" aria-hidden="true"></span>
+        <span class="program-name">
+          <span class="camp-name"><strong>CULTURE</strong><strong>CAMP</strong></span>
+          <em>When I Grow Up</em>
+          <small>Safe. Respectful. Responsible.</small>
+        </span>
+      </button>
+
+      <nav class="primary-nav" aria-label="Culture Camp sections">
+        <button class="nav-button active" type="button" data-view="lessons" aria-pressed="true">
+          <span>10-Day Lessons</span><small>Days 1–10</small>
+        </button>
+        <button class="nav-button" type="button" data-view="systems" aria-pressed="false">
+          <span>Schoolwide Systems</span><small>5 routine bundles</small>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="view-lessons" class="view active" aria-labelledby="lesson-title">
+        <div class="workspace-grid">
+          <aside class="bundle-sidebar" aria-label="Culture Camp days">
+            <div class="sidebar-heading">
+              <p class="eyebrow">Culture Camp</p>
+              <h2>Your 10-Day Journey</h2>
+              <p>One complete culture launch, organized by the instructional emphasis for each day.</p>
+            </div>
+            <div id="day-list" class="bundle-list"></div>
+          </aside>
+
+          <article class="bundle-detail">
+            <div class="bundle-heading">
+              <div>
+                <p id="lesson-kicker" class="eyebrow red">Day 1 of 10</p>
+                <h1 id="lesson-title">Full-System Launch</h1>
+              </div>
+              <span class="bundle-status">10-day sequence</span>
+            </div>
+
+            <section class="overview-panel" aria-labelledby="emphasis-title">
+              <div>
+                <p class="section-label" id="emphasis-title">Fixed instructional emphasis</p>
+                <p id="lesson-focus" class="feature-copy"></p>
+              </div>
+              <div>
+                <p class="section-label">Teacher objective</p>
+                <p id="lesson-objective"></p>
+              </div>
+            </section>
+
+            <section class="alignment-panel" aria-labelledby="alignment-title">
+              <div class="section-heading-row">
+                <div>
+                  <p class="section-label" id="alignment-title">Lesson alignment</p>
+                  <h2>What this day emphasizes</h2>
+                </div>
+                <span class="working-label">Working alignment</span>
+              </div>
+              <div id="lesson-alignments" class="alignment-chips"></div>
+            </section>
+
+            <section class="files-panel" aria-labelledby="lesson-files-title">
+              <div class="section-heading-row">
+                <div>
+                  <p class="section-label">Bundle access</p>
+                  <h2 id="lesson-files-title">Files for this day</h2>
+                </div>
+                <a class="primary-link" id="open-primary-lesson" href="#">Open teacher source</a>
+              </div>
+              <div id="lesson-files" class="file-list"></div>
+            </section>
+
+            <aside class="source-note">
+              <strong>Source rule</strong>
+              <p>Supporting documents stay inside the day they serve. They are not separate lessons and do not create a 27-lesson sequence.</p>
+            </aside>
+          </article>
+        </div>
+      </section>
+
+      <section id="view-systems" class="view" aria-labelledby="systems-title">
+        <div class="workspace-grid systems-workspace">
+          <aside class="bundle-sidebar" aria-label="Schoolwide system bundles">
+            <div class="sidebar-heading">
+              <p class="eyebrow">Schoolwide systems</p>
+              <h2>Five Routine Bundles</h2>
+              <p>Teach, rehearse, observe, and reteach the routines students use across the building.</p>
+            </div>
+            <div id="system-list" class="bundle-list"></div>
+          </aside>
+
+          <article class="bundle-detail">
+            <div class="bundle-heading">
+              <div>
+                <p id="system-kicker" class="eyebrow red">System 1 of 5</p>
+                <h1 id="systems-title">Arrival &amp; First Five</h1>
+              </div>
+              <span id="system-status" class="bundle-status current">Current source</span>
+            </div>
+
+            <section class="overview-panel system-overview" aria-labelledby="system-purpose-title">
+              <div>
+                <p class="section-label" id="system-purpose-title">Purpose</p>
+                <p id="system-purpose" class="feature-copy"></p>
+              </div>
+              <div>
+                <p class="section-label">Student-facing result</p>
+                <p id="system-result"></p>
+              </div>
+            </section>
+
+            <section class="files-panel" aria-labelledby="system-files-title">
+              <div class="section-heading-row">
+                <div>
+                  <p class="section-label">Bundle access</p>
+                  <h2 id="system-files-title">Files for this system</h2>
+                </div>
+                <a class="primary-link" id="open-primary-system" href="#">Open operating guide</a>
+              </div>
+              <div id="system-files" class="file-list"></div>
+            </section>
+
+            <aside id="system-note" class="source-note"></aside>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./app.js?v=20260719-professional-readers"></script>
+</body>
+</html>

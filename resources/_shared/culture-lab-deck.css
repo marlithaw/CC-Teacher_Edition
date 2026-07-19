@@ -1,0 +1,364 @@
+/* ============================================================
+   CULTURE LAB — MASTER PRESENTATION TEMPLATE
+   Matchbook Learning Schools of Indiana
+   Shared deck system for the Culture Lab 90-Day Rollout suite.
+   Built on "The Matchbook Way" design tokens, tuned for 1920×1080 projection.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap');
+
+:root {
+  /* ---------- BRAND COLORS ---------- */
+  --spark-red:    #E21C24;
+  --spark-red-press: #B5151A;
+  --ember:        #C8161D;
+  --dream-yellow: #F9DC7C;
+  --gold:         #F7B23C;
+
+  --ink:        #1A1A1A;
+  --charcoal:   #232323;
+  --slate:      #4A4A4A;
+  --muted:      #8A8A8A;
+  --hairline:   #E4E2DE;
+  --paper:      #F6F6F4;
+  --cloud:      #EDEDEB;
+  --white:      #FFFFFF;
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: 'Anton', 'Arial Narrow', sans-serif;
+  --font-cond:    'Oswald', 'Arial Narrow', sans-serif;
+  --font-body:    'Mulish', system-ui, -apple-system, sans-serif;
+
+  /* ---------- PROJECTION TYPE SCALE (1920×1080) ---------- */
+  --type-mega:     200px;   /* title-slide hero */
+  --type-display:  120px;   /* section dividers */
+  --type-title:    78px;    /* slide titles */
+  --type-subtitle: 48px;    /* sub headers */
+  --type-lead:     36px;    /* lead paragraphs */
+  --type-body:     30px;    /* body copy */
+  --type-small:    26px;    /* secondary copy */
+  --type-micro:    22px;    /* labels, footers */
+  --type-num:      90px;    /* big numerals */
+
+  /* ---------- KICKER ---------- */
+  --type-kicker:   26px;
+
+  /* ---------- SPACING / FRAME ---------- */
+  --pad-x:      110px;
+  --pad-top:    96px;
+  --pad-bottom: 84px;
+  --gap-title:  44px;
+  --gap-item:   28px;
+
+  --radius-sm: 4px;
+  --radius-pill: 999px;
+}
+
+/* ============================================================
+   STAGE / SLIDE FRAME
+   ============================================================ */
+deck-stage:not(:defined) { visibility: hidden; }
+html, body { margin: 0; background: #0F0F0F; }
+
+section {
+  background: var(--white);
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+.slide {
+  box-sizing: border-box;
+  width: 100%; height: 100%;
+  padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
+  display: flex; flex-direction: column;
+  position: relative;
+}
+.slide--center { justify-content: center; }
+.slide--paper  { background: var(--paper); }
+.slide--ink    { background: var(--charcoal); color: var(--white); }
+.slide--red    { background: var(--spark-red); color: var(--white); }
+.slide--flush  { padding: 0; }
+
+/* ============================================================
+   TYPE PRIMITIVES
+   ============================================================ */
+.disp {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  margin: 0;
+  color: var(--ink);
+}
+.kick {
+  font-family: var(--font-cond);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: var(--type-kicker);
+  color: var(--ink);
+  margin: 0;
+}
+.h3 {
+  font-family: var(--font-cond);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.02;
+  font-size: var(--type-subtitle);
+  margin: 0;
+  color: var(--ink);
+}
+.lead {
+  font-family: var(--font-body);
+  font-size: var(--type-lead);
+  line-height: 1.45;
+  color: var(--slate);
+  margin: 0;
+}
+.body {
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  line-height: 1.5;
+  color: var(--slate);
+  margin: 0;
+}
+.small {
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  line-height: 1.45;
+  color: var(--slate);
+  margin: 0;
+}
+.num {
+  font-family: var(--font-display);
+  font-size: var(--type-num);
+  line-height: 1;
+  color: var(--ink);
+}
+.red    { color: var(--spark-red); }
+.white  { color: var(--white); }
+.ink-c  { color: var(--ink); }
+.muted-c{ color: var(--muted); }
+.on-dark { color: rgba(255,255,255,0.86); }
+
+.rule {
+  height: 7px; border: 0; background: var(--spark-red);
+  width: 84px; margin: 0;
+}
+.rule--wide { width: 100%; }
+.rule--thin { height: 4px; }
+
+/* ============================================================
+   SLIDE HEADER (kicker + title)
+   ============================================================ */
+.slide-head { display: flex; flex-direction: column; gap: 18px; }
+.slide-head .disp { font-size: var(--type-title); max-width: 1500px; }
+
+/* ============================================================
+   FOOTER (deck label + slide number)
+   ============================================================ */
+.footer {
+  margin-top: auto;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: var(--font-cond);
+  font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  font-size: var(--type-micro);
+  color: var(--muted);
+  padding-top: 32px;
+}
+.footer .wm { display: flex; align-items: center; gap: 14px; }
+.footer img { height: 30px; }
+.slide--ink .footer, .slide--red .footer { color: rgba(255,255,255,0.7); }
+.slide--ink .footer img, .slide--red .footer img { filter: brightness(0) invert(1); }
+
+/* ============================================================
+   GRID HELPERS
+   ============================================================ */
+.grid { display: grid; gap: 32px; }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+.g5 { grid-template-columns: repeat(5, 1fr); }
+.g6 { grid-template-columns: repeat(6, 1fr); }
+.fill { flex: 1; min-height: 0; }
+.row { display: flex; gap: 32px; }
+.col { display: flex; flex-direction: column; }
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.card {
+  background: var(--white);
+  border: 2px solid var(--hairline);
+  padding: 38px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.card-dark  { background: var(--charcoal); color: var(--white); }
+.card-dark .h3, .card-dark .num { color: var(--white); }
+.card-dark .body, .card-dark .small { color: rgba(255,255,255,0.82); }
+.card-yellow { background: var(--dream-yellow); color: var(--ink); }
+.card-yellow .body, .card-yellow .small { color: var(--ink); }
+.card-paper { background: var(--paper); border-color: transparent; }
+.card-red { background: var(--spark-red); color: var(--white); }
+.card-red .h3, .card-red .num { color: var(--white); }
+.card-red .body, .card-red .small { color: rgba(255,255,255,0.9); }
+
+.card .card-num {
+  font-family: var(--font-display); font-size: 52px; line-height: 1; color: var(--spark-red);
+}
+.card-dark .card-num, .card-red .card-num { color: var(--white); }
+.card-yellow .card-num { color: var(--spark-red); }
+
+/* ============================================================
+   PROCESS MAP (horizontal sequence)
+   ============================================================ */
+.process { display: flex; align-items: stretch; gap: 0; }
+.process .step {
+  flex: 1; display: flex; flex-direction: column; gap: 12px;
+  padding: 30px 26px; position: relative;
+}
+.process .step + .step { border-left: 2px solid var(--hairline); }
+.process .step-no {
+  font-family: var(--font-cond); font-weight: 700; font-size: 22px;
+  letter-spacing: 0.14em; color: var(--spark-red); text-transform: uppercase;
+}
+.process .step-name {
+  font-family: var(--font-display); text-transform: uppercase;
+  font-size: 40px; line-height: 0.95; color: var(--ink);
+}
+
+/* ============================================================
+   PILL / CHIP / TAG
+   ============================================================ */
+.pill {
+  display: inline-flex; align-items: center; gap: 14px;
+  background: var(--spark-red); color: var(--white);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-cond); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  font-size: 28px; padding: 18px 40px;
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-cond); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: 22px; padding: 8px 20px;
+  border: 2px solid var(--ink); color: var(--ink);
+  border-radius: var(--radius-pill);
+}
+.chip--red { border-color: var(--spark-red); color: var(--spark-red); }
+
+/* ============================================================
+   TEACHER-MOVE BLOCK (Do / Say / Look For / Record / Reset)
+   ============================================================ */
+.movegrid { display: grid; grid-template-columns: 200px 1fr; gap: 0; border-top: 2px solid var(--hairline); }
+.movegrid .lab {
+  font-family: var(--font-cond); font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; font-size: 24px; color: var(--spark-red);
+  padding: 22px 0; border-bottom: 2px solid var(--hairline);
+}
+.movegrid .val {
+  font-family: var(--font-body); font-size: var(--type-small); line-height: 1.4;
+  color: var(--slate); padding: 22px 0 22px 28px; border-bottom: 2px solid var(--hairline);
+}
+
+/* ============================================================
+   SCRIPT CARD (facilitator language)
+   ============================================================ */
+.script {
+  background: var(--paper); border-left: 8px solid var(--spark-red);
+  padding: 34px 40px; display: flex; flex-direction: column; gap: 12px;
+}
+.script .say {
+  font-family: var(--font-body); font-style: italic; font-weight: 600;
+  font-size: var(--type-body); line-height: 1.4; color: var(--ink);
+}
+.script .who {
+  font-family: var(--font-cond); font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.14em; font-size: 20px; color: var(--spark-red);
+}
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+.tbl { width: 100%; border-collapse: collapse; font-family: var(--font-body); }
+.tbl th {
+  font-family: var(--font-cond); font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; font-size: 22px; color: var(--white); background: var(--charcoal);
+  text-align: left; padding: 18px 22px;
+}
+.tbl td {
+  font-size: var(--type-small); line-height: 1.35; color: var(--slate);
+  padding: 16px 22px; border-bottom: 1px solid var(--hairline); vertical-align: top;
+}
+.tbl tr:nth-child(even) td { background: var(--paper); }
+.tbl .lead-cell { font-family: var(--font-cond); font-weight: 600; color: var(--ink); text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* ============================================================
+   CALLOUT (mantra / key principle)
+   ============================================================ */
+.callout {
+  background: var(--dream-yellow); color: var(--ink);
+  padding: 40px 48px; display: flex; flex-direction: column; gap: 8px;
+}
+.callout .mantra {
+  font-family: var(--font-display); text-transform: uppercase;
+  font-size: 56px; line-height: 0.96; color: var(--ink);
+}
+.callout--red { background: var(--spark-red); color: var(--white); }
+.callout--red .mantra { color: var(--white); }
+.callout--ink { background: var(--charcoal); color: var(--white); }
+.callout--ink .mantra { color: var(--white); }
+
+/* ============================================================
+   AGENDA / NUMBERED LIST
+   ============================================================ */
+.agenda { display: flex; flex-direction: column; gap: 0; }
+.agenda .item {
+  display: flex; align-items: baseline; gap: 32px;
+  padding: 26px 0; border-bottom: 2px solid var(--hairline);
+}
+.agenda .item .no {
+  font-family: var(--font-display); font-size: 48px; color: var(--spark-red);
+  line-height: 1; min-width: 70px;
+}
+.agenda .item .ttl {
+  font-family: var(--font-cond); font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.03em; font-size: 38px; color: var(--ink);
+}
+.agenda .item .meta { margin-left: auto; font-size: var(--type-small); color: var(--muted); }
+
+/* ============================================================
+   ICON DOT (simple geometric markers — no hand-drawn SVG)
+   ============================================================ */
+.dot {
+  width: 64px; height: 64px; border-radius: 999px; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 30px; color: var(--white);
+  background: var(--spark-red);
+}
+.dot--ink { background: var(--charcoal); }
+.dot--yellow { background: var(--dream-yellow); color: var(--ink); }
+.square {
+  width: 22px; height: 22px; background: var(--spark-red); flex: none; margin-top: 8px;
+}
+
+/* bullet list with red squares */
+.blist { display: flex; flex-direction: column; gap: 20px; padding: 0; margin: 0; list-style: none; }
+.blist li { display: flex; gap: 22px; align-items: flex-start; font-size: var(--type-body); line-height: 1.4; color: var(--slate); }
+.blist li::before { content: ""; width: 18px; height: 18px; background: var(--spark-red); flex: none; margin-top: 12px; }
+.slide--ink .blist li, .slide--red .blist li { color: rgba(255,255,255,0.88); }
+
+/* image placeholder */
+.imgslot {
+  background:
+    repeating-linear-gradient(135deg, var(--cloud) 0 14px, var(--paper) 14px 28px);
+  border: 2px solid var(--hairline);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+}
+.imgslot span {
+  font-family: 'Courier New', monospace; font-size: 22px; color: var(--muted);
+  letter-spacing: 0.04em; padding: 16px 24px; background: rgba(255,255,255,0.7);
+}

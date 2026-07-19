@@ -1,0 +1,465 @@
+(() => {
+  "use strict";
+
+  const STORAGE_KEY = "matchbook-culture-camp-dashboard-v2";
+
+  const resourceCatalog = {
+    "ten-day-overview": {
+      title: "Culture Camp 10-Day Launch Kit",
+      type: "Professional resource · HTML",
+      path: "resources/culture-camp-10-day-launch-kit.html",
+      description: "The full-system launch model and ten-day sequence."
+    },
+    "day-by-day-guide": {
+      title: "Day-by-Day Teacher Guide",
+      type: "Professional resource · HTML",
+      path: "resources/culture-camp-day-by-day-teacher-guide.html",
+      description: "The canonical teaching guide for Days 1–10."
+    },
+    "behavior-matrix": {
+      title: "Schoolwide Behavior Matrix 2026–2027",
+      type: "Current source · DOCX",
+      path: "resources/schoolwide-behavior-matrix-2026.docx",
+      description: "Current expectations across classrooms and shared spaces."
+    },
+    "culture-deck": {
+      title: "Culture Camp Launch Deck",
+      type: "Teaching deck · HTML",
+      path: "resources/culture-deck.html",
+      description: "Editable launch visuals for the Culture Camp sequence."
+    },
+    "culture-promise-teacher": {
+      title: "Culture Promise Teacher Guide",
+      type: "Teacher guide · DOCX",
+      path: "resources/culture-promise-teacher.docx",
+      description: "Teacher-facing guide for Safe, Respectful, and Responsible."
+    },
+    "culture-promise-student": {
+      title: "Culture Promise Student Resources",
+      type: "Student materials · DOCX",
+      path: "resources/student-sequence.docx",
+      description: "Student-facing promise resources and practice materials."
+    },
+    "culture-promise-35-plan": {
+      title: "Culture Promise Grades 3–5 Lesson Plan",
+      type: "Lesson plan · DOCX",
+      path: "resources/culture-promise-35-plan.docx",
+      description: "Grade-band lesson plan for Culture Promise practice."
+    },
+    "culture-promise-35-handout": {
+      title: "Culture Promise Grades 3–5 Handout & Visuals",
+      type: "Student materials · DOCX",
+      path: "resources/culture-promise-35-handout.docx",
+      description: "Grade-band handout and visual supports."
+    },
+    "behavior-matrix-teacher": {
+      title: "Behavior Matrix by Grade Band Teacher Guide",
+      type: "Teacher guide · DOCX",
+      path: "resources/speech-frames.docx",
+      description: "Teacher guidance for making schoolwide expectations visible."
+    },
+    "morning-manual": {
+      title: "Morning Meeting Culture Lab Training Deck",
+      type: "Supporting deck · HTML",
+      path: "resources/morning-manual.html",
+      description: "Listening, speaking, participation, and community practice."
+    },
+    "morning-minute": {
+      title: "Morning Meeting — The Matchbook Way",
+      type: "Supporting deck · HTML",
+      path: "resources/morning-minute.html",
+      description: "Short staff-facing introduction to the daily meeting routine."
+    },
+    "role-system": {
+      title: "Student Leader Training Deck",
+      type: "Supporting deck · HTML",
+      path: "resources/role-system.html",
+      description: "Supported transfer of established routines to student leaders."
+    },
+    "regulation-guide": {
+      title: "Regulation Choices Teacher Guide",
+      type: "Teacher guide · DOCX",
+      path: "resources/reset-scripts.docx",
+      description: "Regulation choices students can use before returning to learning."
+    },
+    "responsive-pathway": {
+      title: "Responsive Behavior Plan Training Deck",
+      type: "Supporting deck · HTML",
+      path: "resources/response-pathway.html",
+      description: "Adult support for regulated response and predictable return."
+    },
+    "repair-guide": {
+      title: "Repair Words Teacher Guide",
+      type: "Teacher guide · DOCX",
+      path: "resources/repair-scripts.docx",
+      description: "Concise, teachable language for repairing harm."
+    },
+    "reentry-guide": {
+      title: "Re-Entry Routine Teacher Guide",
+      type: "Teacher guide · DOCX",
+      path: "resources/reteach.docx",
+      description: "Predictable steps for returning after a mistake or reset."
+    },
+    "restorative-deck": {
+      title: "Restorative Repair Training Deck",
+      type: "Supporting deck · HTML",
+      path: "resources/restorative-deck.html",
+      description: "Adult preparation for repair, recovery, and re-entry."
+    },
+    "adult-look-fors": {
+      title: "Adult Look-Fors for Students",
+      type: "Teacher guide · DOCX",
+      path: "resources/adult-look-fors.docx",
+      description: "Observable evidence adults use during rehearsal and review."
+    },
+    "recognition-guide": {
+      title: "Friday Cypher Recognition Guide",
+      type: "Supporting deck · HTML",
+      path: "resources/recognition-guide.html",
+      description: "Recognition grounded in observable culture-aligned evidence."
+    },
+    "nomination-protocol": {
+      title: "Evidence-Based Nomination Protocol",
+      type: "Supporting deck · HTML",
+      path: "resources/nomination-protocol.html",
+      description: "Practice for naming what a student did and why it matters."
+    },
+    "family-evidence": {
+      title: "Family Connection Wheel Training Deck",
+      type: "Supporting deck · HTML",
+      path: "resources/family-evidence.html",
+      description: "Optional family connection for sharing evidence of culture."
+    },
+    "fidelity-look-for": {
+      title: "Follow-Up Coaching Look-For",
+      type: "Implementation tool · DOCX",
+      path: "resources/fidelity.docx",
+      description: "Adult calibration tool for demonstrations and reteach decisions."
+    },
+    "first-five-operating": {
+      title: "Arrival and First Five Operating Guide",
+      type: "Professional resource · HTML",
+      path: "resources/arrival-and-first-five-guide.html",
+      description: "Current operating sequence for arrival and the silent First Five."
+    },
+    "first-five-teacher": {
+      title: "First Five Routine Teacher Guide",
+      type: "Teacher guide · DOCX",
+      path: "resources/first-five.docx",
+      description: "Teacher-facing routine guide with student practice language."
+    },
+    "first-five-35-plan": {
+      title: "First Five Grades 3–5 Lesson Plan",
+      type: "Lesson plan · DOCX",
+      path: "resources/first-five-35-plan.docx",
+      description: "Grade-band lesson plan for the First Five routine."
+    },
+    "first-five-35-handout": {
+      title: "First Five Grades 3–5 Handout & Visuals",
+      type: "Student materials · DOCX",
+      path: "resources/first-five-35-handout.docx",
+      description: "Grade-band student practice and visual supports."
+    },
+    "hallway-operating": {
+      title: "Hallway Transitions Operating Guide",
+      type: "Professional resource · HTML",
+      path: "resources/hallway-transitions-guide.html",
+      description: "Current hallway travel and transition routine."
+    },
+    "hallway-teacher": {
+      title: "Hallway Travel Routine Teacher Guide",
+      type: "Teacher guide · DOCX",
+      path: "resources/hallway.docx",
+      description: "Student-facing hallway rehearsal and teacher guidance."
+    },
+    "restroom-teacher": {
+      title: "Restroom Routine Teacher Guide",
+      type: "Working resource · DOCX",
+      path: "resources/bathroom.docx",
+      description: "Available teacher-facing restroom lesson pending current procedure ratification."
+    },
+    "cafeteria-operating": {
+      title: "Cafeteria Routines Operating Guide",
+      type: "Professional resource · HTML",
+      path: "resources/cafeteria-routines-guide.html",
+      description: "Current entry, meal, cleanup, and exit sequence."
+    },
+    "cafeteria-teacher": {
+      title: "Cafeteria Entry, Meal & Exit Teacher Guide",
+      type: "Teacher guide · DOCX",
+      path: "resources/cafeteria.docx",
+      description: "Student-facing cafeteria rehearsal and teacher guidance."
+    },
+    "recess-operating": {
+      title: "Recess and Playground Operating Guide",
+      type: "Professional resource · HTML",
+      path: "resources/recess-and-playground-guide.html",
+      description: "Current boundaries, active supervision, recall, and return sequence."
+    },
+    "recess-teacher": {
+      title: "Recess Boundaries and Recall Teacher Guide",
+      type: "Teacher guide · DOCX",
+      path: "resources/recess.docx",
+      description: "Student-facing recess rehearsal and teacher guidance."
+    }
+  };
+
+  const lessons = [
+    {
+      day: 1,
+      title: "Full-System Launch",
+      focus: "Students experience the full culture system from entry to dismissal.",
+      objective: "Launch the shared culture language and rehearse the essential entry routines students will use throughout the day.",
+      alignment: ["Culture Promise", "Behavior Matrix", "Essential entry routines"],
+      files: ["day-by-day-guide", "ten-day-overview", "behavior-matrix", "culture-deck", "culture-promise-teacher", "culture-promise-student", "first-five-operating"]
+    },
+    {
+      day: 2,
+      title: "Listening and Speaking Norms",
+      focus: "Students practice listening, turn-taking, and respectful speaking so everyone can participate.",
+      objective: "Teach and rehearse discussion and participation routines that protect every speaker.",
+      alignment: ["Discussion practice", "Participation routines"],
+      files: ["day-by-day-guide", "behavior-matrix-teacher", "morning-manual", "morning-minute"]
+    },
+    {
+      day: 3,
+      title: "Body Language and Visible Respect",
+      focus: "Students show respect through posture, attention, movement, and hands across school settings.",
+      objective: "Make respectful body language observable and consistent in classrooms and shared spaces.",
+      alignment: ["Behavior Matrix practice across settings"],
+      files: ["day-by-day-guide", "behavior-matrix", "behavior-matrix-teacher"]
+    },
+    {
+      day: 4,
+      title: "Voice Tone and First Student Roles",
+      focus: "Students practice respectful tone and begin taking supported ownership of small culture roles.",
+      objective: "Rehearse voice tone while transferring selected responsibilities to students with adult coaching.",
+      alignment: ["Guided practice with student ownership"],
+      files: ["day-by-day-guide", "role-system", "behavior-matrix-teacher"]
+    },
+    {
+      day: 5,
+      title: "Power of Commitments",
+      focus: "Students turn broad promises into observable, specific commitments they can act on.",
+      objective: "Connect one visible next step to Safe, Respectful, and Responsible community membership.",
+      alignment: ["Observable, specific commitments"],
+      files: ["day-by-day-guide", "culture-promise-teacher", "culture-promise-student", "culture-promise-35-plan", "culture-promise-35-handout"]
+    },
+    {
+      day: 6,
+      title: "Regulation Toolbox and Transitions",
+      focus: "Students select regulation tools and use transition routines before drift becomes disruption.",
+      objective: "Teach students to choose a regulation strategy and return to learning through a predictable transition.",
+      alignment: ["Regulation Choices", "Transition routines"],
+      files: ["day-by-day-guide", "regulation-guide", "responsive-pathway", "first-five-operating"]
+    },
+    {
+      day: 7,
+      title: "Repair Language and Recovery",
+      focus: "Students use repair language, recover after mistakes, and re-enter the learning community.",
+      objective: "Practice concise repair words and a supported re-entry routine after conflict or dysregulation.",
+      alignment: ["Repair Words", "Re-entry"],
+      files: ["day-by-day-guide", "repair-guide", "reentry-guide", "restorative-deck"]
+    },
+    {
+      day: 8,
+      title: "Student Leadership with Fidelity",
+      focus: "Students lead established routines accurately without weakening the shared expectations.",
+      objective: "Transfer selected routine leadership while protecting the sequence, language, and purpose.",
+      alignment: ["Student-led rehearsal of established routines"],
+      files: ["day-by-day-guide", "role-system", "adult-look-fors"]
+    },
+    {
+      day: 9,
+      title: "Recognition Through Evidence",
+      focus: "Students recognize specific actions instead of relying on popularity or vague praise.",
+      objective: "Use observable evidence to nominate and recognize Safe, Respectful, and Responsible actions.",
+      alignment: ["Evidence-based recognition", "Nomination"],
+      files: ["day-by-day-guide", "recognition-guide", "nomination-protocol", "family-evidence"]
+    },
+    {
+      day: 10,
+      title: "Readiness Review and Launch",
+      focus: "Students demonstrate the routines while adults identify what is ready and what needs reteaching.",
+      objective: "Complete a readiness review using demonstrations, adult look-fors, and specific reteach decisions.",
+      alignment: ["Adult Look-Fors", "Demonstrations", "Reteach decisions"],
+      files: ["day-by-day-guide", "ten-day-overview", "adult-look-fors", "fidelity-look-for"]
+    }
+  ];
+
+  const systems = [
+    {
+      id: "first-five",
+      title: "Arrival & First Five",
+      shortTitle: "First Five",
+      status: "Current source",
+      statusClass: "current",
+      purpose: "Create a calm, predictable on-ramp from arrival into independent learning.",
+      result: "Students locate the posted task, prepare materials, and begin at Level 0 for five minutes without teacher instruction.",
+      files: ["first-five-operating", "first-five-teacher", "first-five-35-plan", "first-five-35-handout", "behavior-matrix"],
+      note: "This bundle preserves the routine mechanics: same posted location, five minutes, Level 0, time-to-start, and a clear no-help boundary."
+    },
+    {
+      id: "hallway",
+      title: "Hallway Travel",
+      shortTitle: "Hallway",
+      status: "Current source",
+      statusClass: "current",
+      purpose: "Move students safely and efficiently while protecting learning throughout the building.",
+      result: "Students transition with the expected voice level, spacing, pace, and response to adult cues.",
+      files: ["hallway-operating", "hallway-teacher", "behavior-matrix"],
+      note: "Use the current operating guide as the routine spine and the teacher guide for student rehearsal."
+    },
+    {
+      id: "restroom",
+      title: "Restroom",
+      shortTitle: "Restroom",
+      status: "Ratification needed",
+      statusClass: "pending",
+      purpose: "Protect safety, privacy, cleanliness, and prompt return to learning.",
+      result: "Students use the restroom efficiently, follow the current Behavior Matrix, and return without disrupting learning.",
+      files: ["restroom-teacher", "behavior-matrix"],
+      note: "Source gap: a dedicated 2026–2027 Restroom Operating Guide was not found. The current Behavior Matrix and available teacher guide are linked here, but procedures must be ratified before this bundle is called final."
+    },
+    {
+      id: "cafeteria",
+      title: "Cafeteria",
+      shortTitle: "Cafeteria",
+      status: "Current source",
+      statusClass: "current",
+      purpose: "Make entry, meal service, cleanup, and exit predictable and respectful.",
+      result: "Students move through the cafeteria sequence safely, use the expected voice level, clean their area, and exit ready.",
+      files: ["cafeteria-operating", "cafeteria-teacher", "behavior-matrix"],
+      note: "The operating guide controls the adult sequence; the teacher guide supports student-facing rehearsal."
+    },
+    {
+      id: "recess",
+      title: "Recess & Playground",
+      shortTitle: "Recess",
+      status: "Current source",
+      statusClass: "current",
+      purpose: "Create safe play with clear boundaries, active supervision, recall, and return routines.",
+      result: "Students play within boundaries, respond to recall, resolve minor problems, and return to instruction predictably.",
+      files: ["recess-operating", "recess-teacher", "behavior-matrix"],
+      note: "Teach boundaries and recall as observable routines, then rehearse the return before students begin open play."
+    }
+  ];
+
+  const byId = id => document.getElementById(id);
+  const all = selector => Array.from(document.querySelectorAll(selector));
+
+  function loadSelection() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      return {
+        day: lessons.some(item => item.day === parsed.day) ? parsed.day : 1,
+        system: systems.some(item => item.id === parsed.system) ? parsed.system : "first-five",
+        view: parsed.view === "systems" ? "systems" : "lessons"
+      };
+    } catch {
+      return { day: 1, system: "first-five", view: "lessons" };
+    }
+  }
+
+  let selection = loadSelection();
+
+  function saveSelection() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(selection));
+  }
+
+  function fileRows(ids) {
+    return ids.map(id => resourceCatalog[id]).filter(Boolean).map(file => `
+      <a class="file-row" href="${file.path}" target="_blank" rel="noreferrer">
+        <span class="file-copy"><strong>${file.title}</strong><small>${file.description}</small></span>
+        <span class="file-meta"><small>${file.type}</small><strong>Open</strong></span>
+      </a>
+    `).join("");
+  }
+
+  function renderDayList() {
+    byId("day-list").innerHTML = lessons.map(lesson => `
+      <button class="bundle-list-item ${lesson.day === selection.day ? "selected" : ""}" type="button" data-day="${lesson.day}" ${lesson.day === selection.day ? 'aria-current="true"' : ""}>
+        <span class="bundle-number">${lesson.day}</span>
+        <span><strong>Day ${lesson.day}</strong><small>${lesson.title}</small></span>
+      </button>
+    `).join("");
+  }
+
+  function renderLesson() {
+    const lesson = lessons.find(item => item.day === selection.day) || lessons[0];
+    renderDayList();
+    byId("lesson-kicker").textContent = `Day ${lesson.day} of ${lessons.length}`;
+    byId("lesson-title").textContent = lesson.title;
+    byId("lesson-focus").textContent = lesson.focus;
+    byId("lesson-objective").textContent = lesson.objective;
+    byId("lesson-alignments").innerHTML = lesson.alignment.map(item => `<span>${item}</span>`).join("");
+    byId("lesson-files").innerHTML = fileRows(lesson.files);
+    byId("open-primary-lesson").href = resourceCatalog[lesson.files[0]].path;
+  }
+
+  function renderSystemList() {
+    byId("system-list").innerHTML = systems.map((system, index) => `
+      <button class="bundle-list-item ${system.id === selection.system ? "selected" : ""}" type="button" data-system="${system.id}" ${system.id === selection.system ? 'aria-current="true"' : ""}>
+        <span class="bundle-number">${index + 1}</span>
+        <span><strong>${system.shortTitle}</strong><small>${system.status}</small></span>
+      </button>
+    `).join("");
+  }
+
+  function renderSystem() {
+    const index = Math.max(0, systems.findIndex(item => item.id === selection.system));
+    const system = systems[index];
+    renderSystemList();
+    byId("system-kicker").textContent = `System ${index + 1} of ${systems.length}`;
+    byId("systems-title").textContent = system.title;
+    byId("system-purpose").textContent = system.purpose;
+    byId("system-result").textContent = system.result;
+    byId("system-files").innerHTML = fileRows(system.files);
+    byId("open-primary-system").href = resourceCatalog[system.files[0]].path;
+    byId("system-status").textContent = system.status;
+    byId("system-status").className = `bundle-status ${system.statusClass}`;
+    byId("system-note").innerHTML = `<strong>${system.statusClass === "pending" ? "Before finalizing" : "Implementation note"}</strong><p>${system.note}</p>`;
+    byId("system-note").classList.toggle("warning", system.statusClass === "pending");
+  }
+
+  function showView(view) {
+    selection.view = view === "systems" ? "systems" : "lessons";
+    all(".view").forEach(node => node.classList.toggle("active", node.id === `view-${selection.view}`));
+    all("[data-view]").forEach(button => {
+      const active = button.dataset.view === selection.view;
+      button.classList.toggle("active", active && button.classList.contains("nav-button"));
+      if (button.classList.contains("nav-button")) button.setAttribute("aria-pressed", String(active));
+    });
+    saveSelection();
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }
+
+  document.addEventListener("click", event => {
+    const viewButton = event.target.closest("[data-view]");
+    if (viewButton) {
+      showView(viewButton.dataset.view);
+      return;
+    }
+
+    const dayButton = event.target.closest("[data-day]");
+    if (dayButton) {
+      selection.day = Number(dayButton.dataset.day);
+      saveSelection();
+      renderLesson();
+      if (window.innerWidth < 860) byId("lesson-title").scrollIntoView({ block: "start" });
+      return;
+    }
+
+    const systemButton = event.target.closest("[data-system]");
+    if (systemButton) {
+      selection.system = systemButton.dataset.system;
+      saveSelection();
+      renderSystem();
+      if (window.innerWidth < 860) byId("systems-title").scrollIntoView({ block: "start" });
+    }
+  });
+
+  renderLesson();
+  renderSystem();
+  showView(selection.view);
+})();
