@@ -204,6 +204,61 @@
     }
   };
 
+  const studentGradeBands = [
+    { key: "k2", label: "K–2" },
+    { key: "35", label: "3–5" },
+    { key: "68", label: "6–8" }
+  ];
+
+  function registerStudentDeckSet(key, fileBase, sessionTitle, options = {}) {
+    return studentGradeBands.map(band => {
+      const id = `${key}-${band.key}`;
+      resourceCatalog[id] = {
+        title: `${sessionTitle} Student Presentation · Grades ${band.label}`,
+        type: `${options.draft ? "Draft " : ""}student deck · HTML`,
+        path: `resources/${fileBase}-${band.key}.html`,
+        description: options.draft
+          ? `Student-facing presentation for grades ${band.label}; restroom procedure ratification is still pending.`
+          : `Student-facing presentation for ${sessionTitle}, designed for grades ${band.label}.`
+      };
+      return id;
+    });
+  }
+
+  const studentDeckSets = {
+    day1: registerStudentDeckSet("student-day-1", "culture-promise-student-deck", "Culture Promise"),
+    day2: registerStudentDeckSet("student-day-2", "day-2-student-deck", "Listening & Speaking Norms"),
+    day3: registerStudentDeckSet("student-day-3", "day-3-student-deck", "Body Language & Visible Respect"),
+    day4: registerStudentDeckSet("student-day-4", "day-4-student-deck", "Voice Tone & Student Roles"),
+    day5: registerStudentDeckSet("student-day-5", "day-5-student-deck", "Power of Commitments"),
+    day6: registerStudentDeckSet("student-day-6", "day-6-student-deck", "Regulation Toolbox & Transitions"),
+    day7: registerStudentDeckSet("student-day-7", "day-7-student-deck", "Repair Language & Recovery"),
+    day8: registerStudentDeckSet("student-day-8", "day-8-student-deck", "Student Leadership"),
+    day9: registerStudentDeckSet("student-day-9", "day-9-student-deck", "Recognition Through Evidence"),
+    day10: registerStudentDeckSet("student-day-10", "day-10-student-deck", "Readiness Review & Launch"),
+    firstFive: registerStudentDeckSet("student-first-five", "arrival-first-five-student-deck", "Arrival & First Five"),
+    hallway: registerStudentDeckSet("student-hallway", "hallway-student-deck", "Hallway Travel"),
+    restroom: registerStudentDeckSet("student-restroom", "restroom-student-deck", "Restroom Routine", { draft: true }),
+    cafeteria: registerStudentDeckSet("student-cafeteria", "cafeteria-student-deck", "Cafeteria Routines"),
+    recess: registerStudentDeckSet("student-recess", "recess-student-deck", "Recess & Playground")
+  };
+
+  resourceCatalog["student-decks-library"] = {
+    title: "Student Presentation Library · All Sessions",
+    type: "Student decks · HTML",
+    path: "resources/student-decks-index.html",
+    description: "Browse all 45 Culture Camp presentations by session and grade band."
+  };
+
+  resourceCatalog["student-decks-offline"] = {
+    title: "Download Complete Student Presentation Library",
+    type: "Offline library · ZIP",
+    path: "resources/culture-camp-student-presentations-offline.zip",
+    description: "All 45 presentations, fonts, icons, and presenter notes for use without internet.",
+    action: "Download",
+    download: "culture-camp-student-presentations-offline.zip"
+  };
+
   const lessons = [
     {
       day: 1,
@@ -211,7 +266,7 @@
       focus: "Students experience the full culture system from entry to dismissal.",
       objective: "Launch the shared culture language and rehearse the essential entry routines students will use throughout the day.",
       alignment: ["Culture Promise", "Behavior Matrix", "Essential entry routines"],
-      files: ["day-by-day-guide", "ten-day-overview", "behavior-matrix", "culture-deck", "culture-promise-teacher", "culture-promise-student", "first-five-operating"]
+      files: ["day-by-day-guide", "ten-day-overview", "behavior-matrix", "culture-deck", "culture-promise-teacher", "culture-promise-student", "first-five-operating", ...studentDeckSets.day1, "student-decks-library", "student-decks-offline"]
     },
     {
       day: 2,
@@ -219,7 +274,7 @@
       focus: "Students practice listening, turn-taking, and respectful speaking so everyone can participate.",
       objective: "Teach and rehearse discussion and participation routines that protect every speaker.",
       alignment: ["Discussion practice", "Participation routines"],
-      files: ["day-by-day-guide", "behavior-matrix-teacher", "morning-manual", "morning-minute"]
+      files: ["day-by-day-guide", "behavior-matrix-teacher", "morning-manual", "morning-minute", ...studentDeckSets.day2, "student-decks-offline"]
     },
     {
       day: 3,
@@ -227,7 +282,7 @@
       focus: "Students show respect through posture, attention, movement, and hands across school settings.",
       objective: "Make respectful body language observable and consistent in classrooms and shared spaces.",
       alignment: ["Behavior Matrix practice across settings"],
-      files: ["day-by-day-guide", "behavior-matrix", "behavior-matrix-teacher"]
+      files: ["day-by-day-guide", "behavior-matrix", "behavior-matrix-teacher", ...studentDeckSets.day3, "student-decks-offline"]
     },
     {
       day: 4,
@@ -235,7 +290,7 @@
       focus: "Students practice respectful tone and begin taking supported ownership of small culture roles.",
       objective: "Rehearse voice tone while transferring selected responsibilities to students with adult coaching.",
       alignment: ["Guided practice with student ownership"],
-      files: ["day-by-day-guide", "role-system", "behavior-matrix-teacher"]
+      files: ["day-by-day-guide", "role-system", "behavior-matrix-teacher", ...studentDeckSets.day4, "student-decks-offline"]
     },
     {
       day: 5,
@@ -243,7 +298,7 @@
       focus: "Students turn broad promises into observable, specific commitments they can act on.",
       objective: "Connect one visible next step to Safe, Respectful, and Responsible community membership.",
       alignment: ["Observable, specific commitments"],
-      files: ["day-by-day-guide", "culture-promise-teacher", "culture-promise-student", "culture-promise-35-plan", "culture-promise-35-handout"]
+      files: ["day-by-day-guide", "culture-promise-teacher", "culture-promise-student", "culture-promise-35-plan", "culture-promise-35-handout", ...studentDeckSets.day5, "student-decks-offline"]
     },
     {
       day: 6,
@@ -251,7 +306,7 @@
       focus: "Students select regulation tools and use transition routines before drift becomes disruption.",
       objective: "Teach students to choose a regulation strategy and return to learning through a predictable transition.",
       alignment: ["Regulation Choices", "Transition routines"],
-      files: ["day-by-day-guide", "regulation-guide", "responsive-pathway", "first-five-operating"]
+      files: ["day-by-day-guide", "regulation-guide", "responsive-pathway", "first-five-operating", ...studentDeckSets.day6, "student-decks-offline"]
     },
     {
       day: 7,
@@ -259,7 +314,7 @@
       focus: "Students use repair language, recover after mistakes, and re-enter the learning community.",
       objective: "Practice concise repair words and a supported re-entry routine after conflict or dysregulation.",
       alignment: ["Repair Words", "Re-entry"],
-      files: ["day-by-day-guide", "repair-guide", "reentry-guide", "restorative-deck"]
+      files: ["day-by-day-guide", "repair-guide", "reentry-guide", "restorative-deck", ...studentDeckSets.day7, "student-decks-offline"]
     },
     {
       day: 8,
@@ -267,7 +322,7 @@
       focus: "Students lead established routines accurately without weakening the shared expectations.",
       objective: "Transfer selected routine leadership while protecting the sequence, language, and purpose.",
       alignment: ["Student-led rehearsal of established routines"],
-      files: ["day-by-day-guide", "role-system", "adult-look-fors"]
+      files: ["day-by-day-guide", "role-system", "adult-look-fors", ...studentDeckSets.day8, "student-decks-offline"]
     },
     {
       day: 9,
@@ -275,7 +330,7 @@
       focus: "Students recognize specific actions instead of relying on popularity or vague praise.",
       objective: "Use observable evidence to nominate and recognize Safe, Respectful, and Responsible actions.",
       alignment: ["Evidence-based recognition", "Nomination"],
-      files: ["day-by-day-guide", "recognition-guide", "nomination-protocol", "family-evidence"]
+      files: ["day-by-day-guide", "recognition-guide", "nomination-protocol", "family-evidence", ...studentDeckSets.day9, "student-decks-offline"]
     },
     {
       day: 10,
@@ -283,7 +338,7 @@
       focus: "Students demonstrate the routines while adults identify what is ready and what needs reteaching.",
       objective: "Complete a readiness review using demonstrations, adult look-fors, and specific reteach decisions.",
       alignment: ["Adult Look-Fors", "Demonstrations", "Reteach decisions"],
-      files: ["day-by-day-guide", "ten-day-overview", "adult-look-fors", "fidelity-look-for"]
+      files: ["day-by-day-guide", "ten-day-overview", "adult-look-fors", "fidelity-look-for", ...studentDeckSets.day10, "student-decks-offline"]
     }
   ];
 
@@ -296,7 +351,7 @@
       statusClass: "current",
       purpose: "Create a calm, predictable on-ramp from arrival into independent learning.",
       result: "Students locate the posted task, prepare materials, and begin at Level 0 for five minutes without teacher instruction.",
-      files: ["first-five-operating", "first-five-teacher", "first-five-35-plan", "first-five-35-handout", "behavior-matrix"],
+      files: ["first-five-operating", "first-five-teacher", "first-five-35-plan", "first-five-35-handout", "behavior-matrix", ...studentDeckSets.firstFive, "student-decks-offline"],
       note: "This bundle preserves the routine mechanics: same posted location, five minutes, Level 0, time-to-start, and a clear no-help boundary."
     },
     {
@@ -307,7 +362,7 @@
       statusClass: "current",
       purpose: "Move students safely and efficiently while protecting learning throughout the building.",
       result: "Students transition with the expected voice level, spacing, pace, and response to adult cues.",
-      files: ["hallway-operating", "hallway-teacher", "behavior-matrix"],
+      files: ["hallway-operating", "hallway-teacher", "behavior-matrix", ...studentDeckSets.hallway, "student-decks-offline"],
       note: "Use the current operating guide as the routine spine and the teacher guide for student rehearsal."
     },
     {
@@ -318,7 +373,7 @@
       statusClass: "pending",
       purpose: "Protect safety, privacy, cleanliness, and prompt return to learning.",
       result: "Students use the restroom efficiently, follow the current Behavior Matrix, and return without disrupting learning.",
-      files: ["restroom-teacher", "behavior-matrix"],
+      files: ["restroom-teacher", "behavior-matrix", ...studentDeckSets.restroom, "student-decks-offline"],
       note: "Source gap: a dedicated 2026–2027 Restroom Operating Guide was not found. The current Behavior Matrix and available teacher guide are linked here, but procedures must be ratified before this bundle is called final."
     },
     {
@@ -329,7 +384,7 @@
       statusClass: "current",
       purpose: "Make entry, meal service, cleanup, and exit predictable and respectful.",
       result: "Students move through the cafeteria sequence safely, use the expected voice level, clean their area, and exit ready.",
-      files: ["cafeteria-operating", "cafeteria-teacher", "behavior-matrix"],
+      files: ["cafeteria-operating", "cafeteria-teacher", "behavior-matrix", ...studentDeckSets.cafeteria, "student-decks-offline"],
       note: "The operating guide controls the adult sequence; the teacher guide supports student-facing rehearsal."
     },
     {
@@ -340,7 +395,7 @@
       statusClass: "current",
       purpose: "Create safe play with clear boundaries, active supervision, recall, and return routines.",
       result: "Students play within boundaries, respond to recall, resolve minor problems, and return to instruction predictably.",
-      files: ["recess-operating", "recess-teacher", "behavior-matrix"],
+      files: ["recess-operating", "recess-teacher", "behavior-matrix", ...studentDeckSets.recess, "student-decks-offline"],
       note: "Teach boundaries and recall as observable routines, then rehearse the return before students begin open play."
     }
   ];
@@ -369,9 +424,9 @@
 
   function fileRows(ids) {
     return ids.map(id => resourceCatalog[id]).filter(Boolean).map(file => `
-      <a class="file-row" href="${file.path}" target="_blank" rel="noreferrer">
+      <a class="file-row" href="${file.path}" ${file.download ? `download="${file.download}"` : 'target="_blank" rel="noreferrer"'}>
         <span class="file-copy"><strong>${file.title}</strong><small>${file.description}</small></span>
-        <span class="file-meta"><small>${file.type}</small><strong>Open</strong></span>
+        <span class="file-meta"><small>${file.type}</small><strong>${file.action || "Open"}</strong></span>
       </a>
     `).join("");
   }
