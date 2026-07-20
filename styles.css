@@ -154,7 +154,7 @@ a:focus-visible {
 
 .primary-nav {
   display: grid;
-  grid-template-columns: repeat(2, minmax(190px, 1fr));
+  grid-template-columns: repeat(3, minmax(170px, 1fr));
   align-self: center;
   gap: 8px;
 }
@@ -167,6 +167,7 @@ a:focus-visible {
   background: var(--white);
   color: var(--ink);
   text-align: left;
+  display: block;
 }
 
 .nav-button:hover { border-color: #b7b2aa; background: var(--warm); }
@@ -416,7 +417,7 @@ a:focus-visible {
   .camp-name strong { font-size: 28px; }
   .program-name em { font-size: 28px; }
   .program-name small { font-size: 10px; }
-  .primary-nav { grid-template-columns: 1fr 1fr; }
+  .primary-nav { grid-template-columns: 1fr 1fr 1fr; }
   .nav-button { min-height: 66px; padding: 10px; }
   .nav-button span { font-size: 13px; }
   .bundle-detail { padding: 28px 18px 52px; }
