@@ -28,6 +28,13 @@
       path: "resources/culture-deck.html",
       description: "Editable launch visuals for the Culture Camp sequence."
     },
+    "culture-camp-anthem": {
+      title: "The Matchbook Way — Culture Camp Anthem",
+      type: "Optional melodic overview · Video",
+      path: "resources/culture-camp-anthem.html",
+      description: "Use this three-minute anthem to open or close Culture Camp; continue with the teacher guide and grade-band presentation.",
+      action: "Watch anthem"
+    },
     "culture-promise-teacher": {
       title: "Culture Promise Teacher Guide",
       type: "Teacher guide · DOCX",
@@ -280,7 +287,7 @@
       focus: "Students experience the full culture system from entry to dismissal.",
       objective: "Launch the shared culture language and rehearse the essential entry routines students will use throughout the day.",
       alignment: ["Culture Promise", "Behavior Matrix", "Essential entry routines"],
-      files: ["day-by-day-guide", "ten-day-overview", "behavior-matrix", "culture-deck", "culture-promise-teacher", "culture-promise-student", "first-five-operating", ...studentDeckSets.day1, "student-decks-library", "student-decks-offline"]
+      files: ["day-by-day-guide", "ten-day-overview", "culture-camp-anthem", "behavior-matrix", "culture-deck", "culture-promise-teacher", "culture-promise-student", "first-five-operating", ...studentDeckSets.day1, "student-decks-library", "student-decks-offline"]
     },
     {
       day: 2,
