@@ -7,7 +7,7 @@
   <title>When I Grow Up | Culture Camp</title>
   <meta name="theme-color" content="#D91F2B">
   <link rel="icon" type="image/svg+xml" href="./resources/_shared/flame-logo.svg">
-  <link rel="stylesheet" href="./styles.css?v=20260721-culture-intro1">
+  <link rel="stylesheet" href="./styles.css?v=20260721-rollout-audit1">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -35,49 +35,51 @@
 
     <main id="main-content">
       <section id="view-lessons" class="view active" aria-labelledby="lesson-title">
-        <section class="culture-video-intro" aria-labelledby="culture-video-title">
-          <div class="culture-video-intro-heading">
-            <div>
-              <p class="eyebrow red">Start here · For teachers and staff</p>
-              <h2 id="culture-video-title">Culture Camp Video Introduction</h2>
-              <p id="culture-video-purpose">This three-minute melodic overview explains the larger Culture Camp story and reinforces the shared language adults will teach throughout the ten-day launch.</p>
-            </div>
-            <span class="culture-video-audience">Adult overview · 3:18</span>
-          </div>
+        <details class="culture-video-intro">
+          <summary class="culture-video-summary">
+            <span>
+              <span class="eyebrow red">Optional staff orientation</span>
+              <strong id="culture-video-title">Culture Camp Video Introduction</strong>
+              <small id="culture-video-purpose">Watch the three-minute adult overview without leaving the daily teaching workflow.</small>
+            </span>
+            <span class="culture-video-audience">Open video · 3:18</span>
+          </summary>
 
-          <div class="culture-video-stage" aria-label="Embedded Culture Camp video introduction">
-            <aside class="culture-video-side culture-video-brand" aria-hidden="true">
-              <img src="./resources/student-decks/_shared/matchbook-flame.png" alt="">
-              <strong>Culture Camp</strong>
-              <span>Video Introduction</span>
-              <small>Culture is practiced before pressure.</small>
-            </aside>
+          <div class="culture-video-intro-body">
+            <div class="culture-video-stage" aria-label="Embedded Culture Camp video introduction">
+              <aside class="culture-video-side culture-video-brand" aria-hidden="true">
+                <img src="./resources/student-decks/_shared/matchbook-flame.png" alt="">
+                <strong>Culture Camp</strong>
+                <span>Video Introduction</span>
+                <small>Culture is practiced before pressure.</small>
+              </aside>
 
-            <div class="culture-video-player">
-              <video id="culture-intro-video" controls playsinline preload="metadata" poster="./resources/culture-camp-anthem-poster.jpg" aria-describedby="culture-video-purpose culture-video-positioning">
-                <source src="./resources/culture-camp-anthem.mp4" type="video/mp4">
-                Your browser does not support HTML video. Use the download link below to open the introduction directly.
-              </video>
-              <div class="culture-video-cover" id="culture-video-cover">
-                <p>Meet the Culture Camp story</p>
-                <button id="culture-video-play" type="button" aria-controls="culture-intro-video">▶ Watch introduction</button>
-                <small>Teacher and staff orientation · On-screen lyrics</small>
+              <div class="culture-video-player">
+                <video id="culture-intro-video" controls playsinline preload="metadata" poster="./resources/culture-camp-anthem-poster.jpg" aria-describedby="culture-video-purpose culture-video-positioning">
+                  <source src="./resources/culture-camp-anthem.mp4" type="video/mp4">
+                  Your browser does not support HTML video. Use the download link below to open the introduction directly.
+                </video>
+                <div class="culture-video-cover" id="culture-video-cover">
+                  <p>Meet the Culture Camp story</p>
+                  <button id="culture-video-play" type="button" aria-controls="culture-intro-video">▶ Watch introduction</button>
+                  <small>Teacher and staff orientation · On-screen lyrics</small>
+                </div>
               </div>
+
+              <aside class="culture-video-side culture-video-pillars" aria-label="Matchbook culture pillars">
+                <span>The Matchbook Way</span>
+                <strong>Safe</strong>
+                <strong>Respectful</strong>
+                <strong>Responsible</strong>
+              </aside>
             </div>
 
-            <aside class="culture-video-side culture-video-pillars" aria-label="Matchbook culture pillars">
-              <span>The Matchbook Way</span>
-              <strong>Safe</strong>
-              <strong>Respectful</strong>
-              <strong>Responsible</strong>
-            </aside>
+            <div class="culture-video-intro-footer" id="culture-video-positioning">
+              <p><strong>Purpose:</strong> Use this introduction to orient adults to Culture Camp as a whole. It is not a student lesson and does not replace the daily teaching plan or grade-band presentations.</p>
+              <a href="./resources/culture-camp-anthem.mp4" download="matchbook-culture-camp-video-introduction.mp4">Download video for offline use</a>
+            </div>
           </div>
-
-          <div class="culture-video-intro-footer" id="culture-video-positioning">
-            <p><strong>Purpose:</strong> Use this introduction to orient adults to Culture Camp as a whole. It is not a student lesson and does not replace the Day-by-Day Teacher Guide or grade-band presentations.</p>
-            <a href="./resources/culture-camp-anthem.mp4" download="matchbook-culture-camp-video-introduction.mp4">Download video for offline use</a>
-          </div>
-        </section>
+        </details>
 
         <div class="workspace-grid">
           <aside class="bundle-sidebar" aria-label="Culture Camp days">
@@ -109,6 +111,18 @@
               </div>
             </section>
 
+            <section class="daily-plan-panel" aria-labelledby="daily-plan-title">
+              <div>
+                <p class="section-label">Teach today</p>
+                <h2 id="daily-plan-title">Daily minute-by-minute plan</h2>
+                <p>Use the time windows, block minutes, teacher language, look-fors, and reset moves as the teaching spine for this day.</p>
+              </div>
+              <div class="daily-plan-actions">
+                <a class="primary-link" id="open-primary-lesson" href="#" target="_blank" rel="noreferrer">Open daily plan</a>
+                <a class="secondary-link" id="open-script-companion" href="#" target="_blank" rel="noreferrer">Open grade-band scripts</a>
+              </div>
+            </section>
+
             <section class="alignment-panel" aria-labelledby="alignment-title">
               <div class="section-heading-row">
                 <div>
@@ -120,15 +134,32 @@
               <div id="lesson-alignments" class="alignment-chips"></div>
             </section>
 
-            <section class="files-panel" aria-labelledby="lesson-files-title">
+            <section class="presentation-panel" aria-labelledby="lesson-presentations-title">
               <div class="section-heading-row">
                 <div>
-                  <p class="section-label">Bundle access</p>
-                  <h2 id="lesson-files-title">Files for this day</h2>
+                  <p class="section-label">Present to students</p>
+                  <h2 id="lesson-presentations-title">Choose your grade-band presentation</h2>
                 </div>
-                <a class="primary-link" id="open-primary-lesson" href="#">Open teacher source</a>
               </div>
-              <div id="lesson-files" class="file-list"></div>
+              <div id="lesson-presentations" class="presentation-grid"></div>
+              <div class="library-actions" aria-label="Student presentation library">
+                <a href="./resources/student-decks-index.html" target="_blank" rel="noreferrer">Browse all 45 presentations</a>
+                <a href="./resources/culture-camp-student-presentations-offline.zip" download="culture-camp-student-presentations-offline.zip">Download the offline library</a>
+              </div>
+            </section>
+
+            <section class="files-panel" aria-labelledby="lesson-files-title">
+              <details class="resource-disclosure">
+                <summary>
+                  <span>
+                    <span class="section-label">Use as needed</span>
+                    <strong id="lesson-files-title">Supporting resources</strong>
+                    <small id="lesson-resource-count"></small>
+                  </span>
+                  <span class="disclosure-label" aria-hidden="true">View resources</span>
+                </summary>
+                <div id="lesson-files" class="file-list"></div>
+              </details>
             </section>
 
             <aside class="source-note">
@@ -187,6 +218,6 @@
       </section>
     </main>
   </div>
-  <script src="./app.js?v=20260721-culture-intro1"></script>
+  <script src="./app.js?v=20260721-rollout-audit1"></script>
 </body>
 </html>
