@@ -14,7 +14,13 @@
       title: "Day-by-Day Teacher Guide",
       type: "Professional resource · HTML",
       path: "resources/culture-camp-day-by-day-teacher-guide.html",
-      description: "The canonical teaching guide for Days 1–10."
+      description: "Daily time windows, block minutes, teacher language, look-fors, and reset moves for Days 1–10."
+    },
+    "grade-band-script-companion": {
+      title: "Grade-Band Script Companion",
+      type: "Teacher script companion · HTML",
+      path: "resources/culture-camp-grade-band-script-companion.html",
+      description: "K–2, 3–5, and 6–8 scripts generated from the same source as the student presentation notes."
     },
     "behavior-matrix": {
       title: "Schoolwide Behavior Matrix 2026–2027",
@@ -231,6 +237,8 @@
         title: `${sessionTitle} Student Presentation · Grades ${band.label}`,
         type: `${options.draft ? "Draft " : ""}student deck · HTML`,
         path: `resources/${fileBase}-${band.key}.html`,
+        gradeBand: band.label,
+        action: `Open ${band.label} presentation`,
         description: options.draft
           ? `Student-facing presentation for grades ${band.label}; restroom procedure ratification is still pending.`
           : `Student-facing presentation for ${sessionTitle}, designed for grades ${band.label}.`
@@ -280,7 +288,10 @@
       focus: "Students experience the full culture system from entry to dismissal.",
       objective: "Launch the shared culture language and rehearse the essential entry routines students will use throughout the day.",
       alignment: ["Culture Promise", "Behavior Matrix", "Essential entry routines"],
-      files: ["day-by-day-guide", "ten-day-overview", "behavior-matrix", "culture-deck", "culture-promise-teacher", "culture-promise-student", "first-five-operating", ...studentDeckSets.day1, "student-decks-library", "student-decks-offline"]
+      planAnchor: "day-1-full-system-launch",
+      scriptAnchor: "day-1-culture-promise",
+      presentations: studentDeckSets.day1,
+      files: ["ten-day-overview", "behavior-matrix", "culture-deck", "culture-promise-teacher", "culture-promise-student", "first-five-operating"]
     },
     {
       day: 2,
@@ -288,7 +299,10 @@
       focus: "Students practice listening, turn-taking, and respectful speaking so everyone can participate.",
       objective: "Teach and rehearse discussion and participation routines that protect every speaker.",
       alignment: ["Discussion practice", "Participation routines"],
-      files: ["day-by-day-guide", "behavior-matrix-teacher", "morning-manual", "morning-minute", ...studentDeckSets.day2, "student-decks-offline"]
+      planAnchor: "day-2-listening-and-speaking-norms",
+      scriptAnchor: "day-2-listening-speaking",
+      presentations: studentDeckSets.day2,
+      files: ["behavior-matrix-teacher", "morning-manual", "morning-minute"]
     },
     {
       day: 3,
@@ -296,7 +310,10 @@
       focus: "Students show respect through posture, attention, movement, and hands across school settings.",
       objective: "Make respectful body language observable and consistent in classrooms and shared spaces.",
       alignment: ["Behavior Matrix practice across settings"],
-      files: ["day-by-day-guide", "behavior-matrix", "behavior-matrix-teacher", ...studentDeckSets.day3, "student-decks-offline"]
+      planAnchor: "day-3-body-language-and-visible-respect",
+      scriptAnchor: "day-3-body-language",
+      presentations: studentDeckSets.day3,
+      files: ["behavior-matrix", "behavior-matrix-teacher"]
     },
     {
       day: 4,
@@ -304,7 +321,10 @@
       focus: "Students practice respectful tone and begin taking supported ownership of small culture roles.",
       objective: "Rehearse voice tone while transferring selected responsibilities to students with adult coaching.",
       alignment: ["Guided practice with student ownership"],
-      files: ["day-by-day-guide", "role-system", "behavior-matrix-teacher", ...studentDeckSets.day4, "student-decks-offline"]
+      planAnchor: "day-4-voice-tone-and-early-student-roles",
+      scriptAnchor: "day-4-voice-and-roles",
+      presentations: studentDeckSets.day4,
+      files: ["role-system", "behavior-matrix-teacher"]
     },
     {
       day: 5,
@@ -312,7 +332,10 @@
       focus: "Students turn broad promises into observable, specific commitments they can act on.",
       objective: "Connect one visible next step to Safe, Respectful, and Responsible community membership.",
       alignment: ["Observable, specific commitments"],
-      files: ["day-by-day-guide", "culture-promise-teacher", "culture-promise-student", "culture-promise-35-plan", "culture-promise-35-handout", ...studentDeckSets.day5, "student-decks-offline"]
+      planAnchor: "day-5-the-power-of-commitments",
+      scriptAnchor: "day-5-commitments",
+      presentations: studentDeckSets.day5,
+      files: ["culture-promise-teacher", "culture-promise-student", "culture-promise-35-plan", "culture-promise-35-handout"]
     },
     {
       day: 6,
@@ -320,7 +343,10 @@
       focus: "Students select regulation tools and use transition routines before drift becomes disruption.",
       objective: "Teach students to choose a regulation strategy and return to learning through a predictable transition.",
       alignment: ["Regulation Choices", "Transition routines"],
-      files: ["day-by-day-guide", "regulation-guide", "responsive-pathway", "first-five-operating", ...studentDeckSets.day6, "student-decks-offline"]
+      planAnchor: "day-6-regulation-toolbox-and-transitions",
+      scriptAnchor: "day-6-calm-down-tools",
+      presentations: studentDeckSets.day6,
+      files: ["regulation-guide", "responsive-pathway", "first-five-operating"]
     },
     {
       day: 7,
@@ -328,7 +354,10 @@
       focus: "Students use repair language, recover after mistakes, and re-enter the learning community.",
       objective: "Practice concise repair words and a supported re-entry routine after conflict or dysregulation.",
       alignment: ["Repair Words", "Re-entry"],
-      files: ["day-by-day-guide", "repair-guide", "reentry-guide", "restorative-deck", ...studentDeckSets.day7, "student-decks-offline"]
+      planAnchor: "day-7-repair-language-and-recovery",
+      scriptAnchor: "day-7-repair",
+      presentations: studentDeckSets.day7,
+      files: ["repair-guide", "reentry-guide", "restorative-deck"]
     },
     {
       day: 8,
@@ -336,7 +365,10 @@
       focus: "Students lead established routines accurately without weakening the shared expectations.",
       objective: "Transfer selected routine leadership while protecting the sequence, language, and purpose.",
       alignment: ["Student-led rehearsal of established routines"],
-      files: ["day-by-day-guide", "role-system", "adult-look-fors", ...studentDeckSets.day8, "student-decks-offline"]
+      planAnchor: "day-8-student-leadership-without-loss-of-fidelity",
+      scriptAnchor: "day-8-student-leadership",
+      presentations: studentDeckSets.day8,
+      files: ["role-system", "adult-look-fors"]
     },
     {
       day: 9,
@@ -344,7 +376,10 @@
       focus: "Students recognize specific actions instead of relying on popularity or vague praise.",
       objective: "Use observable evidence to nominate and recognize Safe, Respectful, and Responsible actions.",
       alignment: ["Evidence-based recognition", "Nomination"],
-      files: ["day-by-day-guide", "recognition-guide", "nomination-protocol", "family-evidence", ...studentDeckSets.day9, "student-decks-offline"]
+      planAnchor: "day-9-recognition-through-evidence",
+      scriptAnchor: "day-9-recognition",
+      presentations: studentDeckSets.day9,
+      files: ["recognition-guide", "family-evidence"]
     },
     {
       day: 10,
@@ -352,7 +387,10 @@
       focus: "Students demonstrate the routines while adults identify what is ready and what needs reteaching.",
       objective: "Complete a readiness review using demonstrations, adult look-fors, and specific reteach decisions.",
       alignment: ["Adult Look-Fors", "Demonstrations", "Reteach decisions"],
-      files: ["day-by-day-guide", "ten-day-overview", "adult-look-fors", "fidelity-look-for", ...studentDeckSets.day10, "student-decks-offline"]
+      planAnchor: "day-10-readiness-review-and-launch",
+      scriptAnchor: "day-10-launch",
+      presentations: studentDeckSets.day10,
+      files: ["ten-day-overview", "adult-look-fors", "fidelity-look-for"]
     }
   ];
 
@@ -434,7 +472,7 @@
       return {
         day: lessons.some(item => item.day === parsed.day) ? parsed.day : 1,
         system: systems.some(item => item.id === parsed.system) ? parsed.system : "morning-meeting",
-        view: parsed.view === "systems" ? "systems" : "lessons"
+        view: "lessons"
       };
     } catch {
       return { day: 1, system: "morning-meeting", view: "lessons" };
@@ -452,6 +490,15 @@
       <a class="file-row" href="${file.path}" ${file.download ? `download="${file.download}"` : 'target="_blank" rel="noreferrer"'}>
         <span class="file-copy"><strong>${file.title}</strong><small>${file.description}</small></span>
         <span class="file-meta"><small>${file.type}</small><strong>${file.action || "Open"}</strong></span>
+      </a>
+    `).join("");
+  }
+
+  function presentationRows(ids) {
+    return ids.map(id => resourceCatalog[id]).filter(Boolean).map(file => `
+      <a class="presentation-link" href="${file.path}" target="_blank" rel="noreferrer">
+        <span>${file.gradeBand}</span>
+        <strong>${file.action}</strong>
       </a>
     `).join("");
   }
@@ -474,7 +521,16 @@
     byId("lesson-objective").textContent = lesson.objective;
     byId("lesson-alignments").innerHTML = lesson.alignment.map(item => `<span>${item}</span>`).join("");
     byId("lesson-files").innerHTML = fileRows(lesson.files);
-    byId("open-primary-lesson").href = resourceCatalog[lesson.files[0]].path;
+    byId("lesson-presentations").innerHTML = presentationRows(lesson.presentations);
+    byId("lesson-resource-count").textContent = `${lesson.files.length} optional ${lesson.files.length === 1 ? "resource" : "resources"}`;
+
+    const primaryLessonLink = byId("open-primary-lesson");
+    primaryLessonLink.href = `${resourceCatalog["day-by-day-guide"].path}#${lesson.planAnchor}`;
+    primaryLessonLink.textContent = `Open Day ${lesson.day} minute-by-minute plan`;
+
+    const scriptCompanionLink = byId("open-script-companion");
+    scriptCompanionLink.href = `${resourceCatalog["grade-band-script-companion"].path}#${lesson.scriptAnchor}`;
+    scriptCompanionLink.textContent = `Open Day ${lesson.day} grade-band scripts`;
   }
 
   function renderSystemList() {
@@ -494,7 +550,7 @@
     byId("systems-title").textContent = system.title;
     byId("system-purpose").textContent = system.purpose;
     byId("system-result").textContent = system.result;
-    byId("system-files").innerHTML = fileRows(system.files);
+    byId("system-files").innerHTML = fileRows(system.files.slice(1).filter(id => id !== "student-decks-offline"));
     const primarySystemResource = resourceCatalog[system.files[0]];
     const primarySystemLink = byId("open-primary-system");
     primarySystemLink.href = primarySystemResource.path;
