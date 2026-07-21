@@ -58,6 +58,13 @@
       path: "resources/speech-frames.docx",
       description: "Teacher guidance for making schoolwide expectations visible."
     },
+    "morning-meeting-live": {
+      title: "Morning Meeting Playbook — Live Year-Round",
+      type: "Live schoolwide system · Web",
+      path: "https://marlithaw.github.io/morningmeeting/",
+      description: "Open the continuously updated Morning Meeting playbook for daily use throughout the school year.",
+      action: "Open live playbook"
+    },
     "morning-manual": {
       title: "Morning Meeting Culture Lab Training Deck",
       type: "Supporting deck · HTML",
@@ -344,6 +351,17 @@
 
   const systems = [
     {
+      id: "morning-meeting",
+      title: "Morning Meeting",
+      shortTitle: "Morning Meeting",
+      status: "Live year-round",
+      statusClass: "current",
+      purpose: "Give teachers continuous access to the daily Morning Meeting system throughout the school year.",
+      result: "Teachers use one current playbook for daily meeting routines, lesson updates, classroom tools, and schoolwide alignment.",
+      files: ["morning-meeting-live"],
+      note: "This opens the live Morning Meeting site. Updates published from marlithaw/morningmeeting appear here automatically, so the Teacher Edition does not keep a separate copy."
+    },
+    {
       id: "first-five",
       title: "Arrival & First Five",
       shortTitle: "First Five",
@@ -408,11 +426,11 @@
       const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
       return {
         day: lessons.some(item => item.day === parsed.day) ? parsed.day : 1,
-        system: systems.some(item => item.id === parsed.system) ? parsed.system : "first-five",
+        system: systems.some(item => item.id === parsed.system) ? parsed.system : "morning-meeting",
         view: parsed.view === "systems" ? "systems" : "lessons"
       };
     } catch {
-      return { day: 1, system: "first-five", view: "lessons" };
+      return { day: 1, system: "morning-meeting", view: "lessons" };
     }
   }
 
@@ -470,7 +488,17 @@
     byId("system-purpose").textContent = system.purpose;
     byId("system-result").textContent = system.result;
     byId("system-files").innerHTML = fileRows(system.files);
-    byId("open-primary-system").href = resourceCatalog[system.files[0]].path;
+    const primarySystemResource = resourceCatalog[system.files[0]];
+    const primarySystemLink = byId("open-primary-system");
+    primarySystemLink.href = primarySystemResource.path;
+    primarySystemLink.textContent = primarySystemResource.action || "Open operating guide";
+    if (/^https?:\/\//.test(primarySystemResource.path)) {
+      primarySystemLink.target = "_blank";
+      primarySystemLink.rel = "noreferrer";
+    } else {
+      primarySystemLink.removeAttribute("target");
+      primarySystemLink.removeAttribute("rel");
+    }
     byId("system-status").textContent = system.status;
     byId("system-status").className = `bundle-status ${system.statusClass}`;
     byId("system-note").innerHTML = `<strong>${system.statusClass === "pending" ? "Before finalizing" : "Implementation note"}</strong><p>${system.note}</p>`;
