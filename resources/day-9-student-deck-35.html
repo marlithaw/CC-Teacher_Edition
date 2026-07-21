@@ -1,55 +1,338 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Day 9 Student Deck · Recognition Through Evidence · Grades 3–5 | Culture Camp</title>
-<link rel="stylesheet" href="student-decks/_shared/culture-lab-deck.css">
-<script type="application/json" id="speaker-notes">[
- "TITLE. Frame the day: recognition through evidence. High energy still needs structure. GUIDE: Day-by-Day Guide · Day 9 Morning Meeting block. [Band: Grades 3–5]",
- "REGULATE (0:00–2:00). “High energy still needs structure.” Regulate before the celebratory tone begins. GUIDE: Day-by-Day Guide · Day 9 Morning Meeting 0:00–2:00, R1. [Band: Grades 3–5]",
- "TEACH (2:00–4:00). Show the nomination tracker. “At Matchbook, recognition is evidence, not popularity.” Students track the criteria for fair recognition. GUIDE: Day-by-Day Guide · Day 9 Morning Meeting 2:00–4:00, R2 R5. [Band: Grades 3–5]",
- "SHARE (4:00–7:00). “Name one thing you saw this week that looked Safe, Respectful, or Responsible.” Partners share observed evidence. GUIDE: Day-by-Day Guide · Day 9 Morning Meeting 4:00–7:00, R3 R5. [Band: Grades 3–5]",
- "MODEL (7:00–10:00). Model a strong nomination — “I want to recognize ___ because I saw ___ during ___” — then model a weak one and reject it. GUIDE: Day-by-Day Guide · Day 9 Morning Meeting 7:00–10:00, R4 R5. [Band: Grades 3–5]",
- "COMMIT (10:00–13:00). “What evidence will you create today?” Commit to a visible action worth noticing. GUIDE: Day-by-Day Guide · Day 9 Morning Meeting 10:00–13:00, R2 R5. [Band: Grades 3–5]",
- "CLOSE (13:00–15:00). “If the routine falls apart, the celebration waits. Fidelity earns the recognition.” GUIDE: Day-by-Day Guide · Day 9 Morning Meeting 13:00–15:00, R2 R5. [Band: Grades 3–5]"
-]</script>
-</head>
-<body>
-<deck-stage width="1920" height="1080">
+<title>Recognition Through Evidence · Grades 3–5 | Culture Camp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#232323; --ember:#C8161D; --spark-red:#E21C24; --mb-yellow:#F9DC7C;
+  --ink:#1A1A1A; --slate:#4A4A4A; --hairline:#e2e8f0; --muted:#94a3b8;
+  --font-body:'Inter',system-ui,sans-serif; --font-cond:'Oswald',system-ui,sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-body);}
+.deck{position:relative;width:100vw;height:100vh;overflow:hidden;}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;
+  padding:clamp(24px,4vw,64px);background:#fff;color:var(--ink);}
+.slide.active{display:flex;}
+.slide.dark{background:var(--charcoal);color:#fff;}
+.slide.red{background:var(--spark-red);color:#fff;}
+.slide.yellow{background:var(--mb-yellow);color:var(--ink);}
 
-  <section data-label="Title" data-screen-label="01">
-    <div class="slide slide--red slide--center"><img src="student-decks/_shared/matchbook-flame.png" height="140" alt="" style="filter:brightness(0) invert(1);margin-bottom:36px;"><p class="kick white" style="margin-bottom:28px;">Culture Camp &middot; Day 9 Morning Meeting &middot; Grades 3&ndash;5</p><h1 class="disp white" style="font-size:118px;">Evidence, Not<br>Popularity.</h1><p class="lead on-dark" style="margin-top:36px;font-size:44px;">Recognition is earned by what we can all see.</p><div class="footer"><span class="wm">Matchbook Culture Camp &middot; Recognition &middot; Grades 3&ndash;5</span><span>01</span></div></div>
-  </section>
+.eyebrow{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.14em;
+  font-size:clamp(11px,1.1vw,14px);font-weight:600;opacity:.72;margin:0 0 .6rem;}
+.slide h1{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;
+  letter-spacing:.01em;line-height:1.02;margin:0;font-size:clamp(30px,5.4vw,76px);}
+.slide h2{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;
+  line-height:1.05;margin:0;font-size:clamp(24px,4.2vw,58px);}
+.lede{font-size:clamp(15px,1.7vw,25px);line-height:1.45;margin:1rem 0 0;max-width:36ch;opacity:.9;}
+.body-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;}
 
-  <section data-label="Regulate First" data-screen-label="02">
-    <div class="slide slide--ink slide--center"><p class="kick red" style="margin-bottom:44px;">High Energy Still Needs Structure</p><div class="col" style="gap:30px;align-items:center;"><h2 class="disp white" style="font-size:84px;">Excited is welcome.<br>Regulated comes first.</h2><div class="row" style="gap:56px;align-items:center;margin-top:12px;"><div class="col" style="gap:14px;align-items:center;"><i data-lucide="wind" style="width:64px;height:64px;color:#F9DC7C;"></i><p class="body on-dark" style="font-size:34px;">Breathe in</p></div><div class="col" style="gap:14px;align-items:center;"><i data-lucide="pause" style="width:64px;height:64px;color:#F9DC7C;"></i><p class="body on-dark" style="font-size:34px;">Hold</p></div><div class="col" style="gap:14px;align-items:center;"><i data-lucide="waves" style="width:64px;height:64px;color:#F9DC7C;"></i><p class="body on-dark" style="font-size:34px;">Breathe out</p></div></div><p class="lead on-dark" style="margin-top:24px;font-size:40px;">Celebration does not lower the bar.</p></div><div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Recognition &middot; 3&ndash;5</span><span>02</span></div></div>
-  </section>
+.mb-icon{width:1em;height:1em;flex:none;}
+.hero-icon{font-size:clamp(58px,9vw,120px);color:currentColor;opacity:.95;}
 
-  <section data-label="What Counts" data-screen-label="03">
-    <div class="slide slide--paper"><div class="slide-head"><p class="kick red">The Nomination Tracker</p><h2 class="disp" style="font-size:92px;">What Counts as<br>Evidence?</h2><hr class="rule"></div><div class="col fill" style="gap:24px;margin-top:var(--gap-title);justify-content:center;"><div class="row" style="gap:28px;align-items:center;background:#fff;padding:26px 34px;"><span style="width:88px;height:88px;border-radius:999px;background:#E21C24;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="shield" style="width:48px;height:48px;color:#fff;"></i></span><div style="width:320px;flex:none;"><p class="h3" style="font-size:44px;">Safe</p></div><p class="body" style="flex:1;font-size:30px;color:#1A1A1A;">Something you SAW that kept bodies or feelings safe.</p></div><div class="row" style="gap:28px;align-items:center;background:#fff;padding:26px 34px;"><span style="width:88px;height:88px;border-radius:999px;background:#E21C24;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="heart-handshake" style="width:48px;height:48px;color:#fff;"></i></span><div style="width:320px;flex:none;"><p class="h3" style="font-size:44px;">Respectful</p></div><p class="body" style="flex:1;font-size:30px;color:#1A1A1A;">Something you HEARD that protected a person&rsquo;s dignity.</p></div><div class="row" style="gap:28px;align-items:center;background:#fff;padding:26px 34px;"><span style="width:88px;height:88px;border-radius:999px;background:#E21C24;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="check-circle-2" style="width:48px;height:48px;color:#fff;"></i></span><div style="width:320px;flex:none;"><p class="h3" style="font-size:44px;">Responsible</p></div><p class="body" style="flex:1;font-size:30px;color:#1A1A1A;">Something someone DID without being asked twice.</p></div><p class="small" style="font-size:26px;text-align:center;">At Matchbook, recognition is evidence, not popularity.</p></div><div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Recognition &middot; 3&ndash;5</span><span>03</span></div></div>
-  </section>
+.items{display:flex;gap:clamp(12px,2.2vw,32px);margin-top:clamp(16px,2.6vw,36px);flex-wrap:wrap;}
+.item{flex:1 1 0;min-width:150px;display:flex;flex-direction:column;gap:.55rem;
+  padding:clamp(12px,1.6vw,22px);border-radius:14px;background:rgba(0,0,0,.045);}
+.slide.dark .item,.slide.red .item{background:rgba(255,255,255,.11);}
+.item .mb-icon{font-size:clamp(34px,4.4vw,62px);}
+.item .lab{font-family:var(--font-cond);text-transform:uppercase;font-weight:700;
+  letter-spacing:.05em;font-size:clamp(15px,1.7vw,25px);line-height:1.1;}
+.item .txt{font-size:clamp(13px,1.35vw,19px);line-height:1.4;opacity:.93;}
 
-  <section data-label="Evidence Share" data-screen-label="04">
-    <div class="slide"><div class="slide-head"><p class="kick red">What Did You See This Week?</p><h2 class="disp" style="font-size:92px;">Evidence Share</h2><hr class="rule"></div><div class="row fill" style="align-items:center;gap:48px;margin-top:var(--gap-title);"><div class="card card-yellow" style="flex:1.2;gap:20px;"><p class="kick">Share This</p><p class="body" style="font-size:40px;color:#1A1A1A;">&ldquo;This week I saw something <span class="red" style="font-weight:800;">Safe / Respectful / Responsible</span>: ___.&rdquo;</p></div><div class="col" style="flex:1;gap:28px;"><div class="row" style="gap:20px;align-items:center;"><span style="width:80px;height:80px;border-radius:999px;background:#1A1A1A;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="mic" style="width:42px;height:42px;color:#F9DC7C;"></i></span><p class="h3" style="font-size:42px;">Speaker speaks.</p></div><div class="row" style="gap:20px;align-items:center;"><span style="width:80px;height:80px;border-radius:999px;background:#1A1A1A;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="ear" style="width:42px;height:42px;color:#F9DC7C;"></i></span><p class="h3" style="font-size:42px;">Listener listens.</p></div><p class="body" style="font-size:30px;">Real moments only — things you actually saw.</p></div></div><div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Recognition &middot; 3&ndash;5</span><span>04</span></div></div>
-  </section>
+.frame{margin-top:clamp(16px,2.4vw,32px);padding:clamp(14px,2vw,26px);
+  border-radius:14px;border:2px dashed currentColor;opacity:.98;}
+.frame .flab{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;
+  font-size:clamp(11px,1.1vw,14px);font-weight:600;opacity:.7;margin-bottom:.45rem;}
+.frame .stem{font-size:clamp(17px,2.3vw,34px);font-family:var(--font-cond);font-weight:600;line-height:1.25;}
+.choices{display:flex;gap:clamp(10px,1.6vw,22px);margin-top:clamp(12px,1.8vw,22px);flex-wrap:wrap;}
+.choice{flex:1 1 0;min-width:120px;display:flex;flex-direction:column;align-items:center;
+  gap:.4rem;padding:clamp(10px,1.4vw,18px);border-radius:12px;background:rgba(0,0,0,.06);text-align:center;}
+.slide.dark .choice,.slide.red .choice{background:rgba(255,255,255,.13);}
+.choice .mb-icon{font-size:clamp(30px,3.8vw,54px);}
+.choice .cl{font-family:var(--font-cond);text-transform:uppercase;font-weight:600;
+  font-size:clamp(12px,1.3vw,18px);letter-spacing:.03em;}
+.bank{margin-top:.7rem;font-size:clamp(12px,1.25vw,17px);opacity:.85;}
+.bank b{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.08em;font-size:.85em;}
 
-  <section data-label="Strong Nomination" data-screen-label="05">
-    <div class="slide slide--paper"><div class="slide-head"><p class="kick red">Strong vs. Weak</p><h2 class="disp" style="font-size:92px;">A Strong<br>Nomination</h2><hr class="rule"></div><div class="row fill" style="align-items:center;gap:44px;margin-top:var(--gap-title);"><div class="col" style="flex:1.2;gap:24px;"><div class="row" style="gap:20px;align-items:center;"><i data-lucide="check-circle-2" style="width:44px;height:44px;color:#E21C24;flex:none;"></i><p class="body" style="font-size:34px;color:#1A1A1A;">&ldquo;I want to recognize ___ because I saw ___ during ___.&rdquo;</p></div><div class="row" style="gap:20px;align-items:center;"><i data-lucide="x-circle" style="width:44px;height:44px;color:#E21C24;flex:none;"></i><p class="body" style="font-size:34px;color:#1A1A1A;">&ldquo;I nominate my friend because they&rsquo;re nice.&rdquo; &mdash; rejected. No evidence.</p></div><div class="row" style="gap:20px;align-items:center;"><i data-lucide="eye" style="width:44px;height:44px;color:#E21C24;flex:none;"></i><p class="body" style="font-size:34px;color:#1A1A1A;">Specific. Seen. Real.</p></div></div><div class="callout callout--ink" style="flex:1;"><p class="mantra" style="font-size:44px;">Because<br>I Saw It.</p></div></div><div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Recognition &middot; 3&ndash;5</span><span>05</span></div></div>
-  </section>
+.steps{display:flex;gap:clamp(10px,1.6vw,24px);margin-top:clamp(16px,2.4vw,32px);flex-wrap:wrap;}
+.step{flex:1 1 0;min-width:110px;display:flex;flex-direction:column;align-items:center;gap:.45rem;
+  padding:clamp(10px,1.5vw,20px);border-radius:12px;background:rgba(0,0,0,.06);text-align:center;}
+.slide.dark .step,.slide.red .step{background:rgba(255,255,255,.13);}
+.step .n{font-family:var(--font-cond);font-weight:700;font-size:clamp(20px,2.6vw,38px);opacity:.5;line-height:1;}
+.step .mb-icon{font-size:clamp(28px,3.4vw,48px);}
+.step .sl{font-family:var(--font-cond);text-transform:uppercase;font-weight:600;
+  font-size:clamp(13px,1.4vw,20px);letter-spacing:.03em;}
 
-  <section data-label="My Commitment" data-screen-label="06">
-    <div class="slide"><div class="slide-head"><p class="kick red">One Visible Next Step</p><h2 class="disp" style="font-size:92px;">My Commitment</h2><hr class="rule"></div><div class="col fill" style="justify-content:center;gap:36px;margin-top:var(--gap-title);"><div class="card card-yellow" style="align-self:center;padding:56px 72px;gap:20px;"><p class="body" style="font-size:52px;color:#1A1A1A;">&ldquo;Today I will create evidence by <span class="red" style="font-weight:800;">___</span>.&rdquo;</p></div><p class="lead" style="text-align:center;font-size:36px;">What <strong>visible action</strong> will be worth noticing?</p></div><div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Recognition &middot; 3&ndash;5</span><span>06</span></div></div>
-  </section>
+.callout{margin-top:clamp(14px,2vw,28px);font-family:var(--font-cond);font-weight:600;
+  text-transform:uppercase;letter-spacing:.04em;font-size:clamp(14px,1.8vw,26px);line-height:1.2;}
+.cognate{margin-top:.8rem;font-size:clamp(11px,1.15vw,15px);opacity:.7;font-style:italic;}
+.why{margin-top:clamp(14px,2vw,26px);padding:clamp(12px,1.6vw,20px);border-left:5px solid currentColor;
+  font-size:clamp(13px,1.5vw,21px);line-height:1.45;opacity:.94;}
+.why b{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.07em;font-size:.82em;
+  display:block;margin-bottom:.25rem;opacity:.75;}
 
-  <section data-label="Fidelity Earns It" data-screen-label="07">
-    <div class="slide slide--red slide--center"><p class="kick white" style="margin-bottom:40px;">If the Routine Falls Apart, the Celebration Waits</p><h2 class="disp white" style="font-size:88px;">Fidelity Earns<br>the Recognition.</h2><p class="lead on-dark" style="margin-top:48px;font-size:38px;">Expectations stay high — that is what makes the celebration real.</p><div class="footer"><span class="wm" ><img src="student-decks/_shared/matchbook-flame.png" alt="">Recognition &middot; 3&ndash;5</span><span>07</span></div></div>
-  </section>
+.foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;
+  font-size:clamp(9px,.95vw,12px);opacity:.55;padding-top:1rem;}
+.foot .band{font-weight:700;letter-spacing:.16em;}
 
-</deck-stage>
-<script src="student-decks/_shared/deck-stage.js"></script>
-<script src="student-decks/_shared/presenter-notes.js"></script>
-<script src="student-decks/_shared/lucide.min.js"></script>
-<script>lucide.createIcons();</script>
-</body>
-</html>
+.notes{position:fixed;left:0;right:0;bottom:0;max-height:58vh;overflow:auto;
+  background:#0d0d0d;color:#f2f2f2;border-top:4px solid var(--spark-red);
+  padding:20px clamp(20px,4vw,56px) 28px;display:none;z-index:60;font-size:14.5px;line-height:1.55;}
+.notes.show{display:block;}
+.notes h3{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.12em;
+  font-size:12px;margin:0 0 10px;color:var(--mb-yellow);}
+.notes .script{font-size:16.5px;line-height:1.55;margin:0 0 14px;padding:12px 14px;
+  background:rgba(255,255,255,.07);border-left:4px solid var(--mb-yellow);border-radius:0 8px 8px 0;}
+.notes .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;}
+.notes .k{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;
+  font-size:11px;color:var(--muted);margin:0 0 5px;}
+.notes ul{margin:0;padding-left:18px;}
+.notes li{margin-bottom:4px;}
+.notes .rub{display:inline-block;font-family:var(--font-cond);background:var(--spark-red);
+  color:#fff;padding:2px 9px;border-radius:20px;font-size:11px;letter-spacing:.1em;}
+.notes .imgspec{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:12px;
+  border-top:1px solid rgba(255,255,255,.13);padding-top:10px;}
+
+.hud{position:fixed;top:14px;right:16px;z-index:70;display:flex;gap:8px;align-items:center;
+  font-family:var(--font-cond);font-size:11px;letter-spacing:.1em;text-transform:uppercase;}
+.hud button{font:inherit;background:rgba(0,0,0,.62);color:#fff;border:0;border-radius:20px;
+  padding:7px 13px;cursor:pointer;letter-spacing:.1em;}
+.hud button:hover{background:var(--spark-red);}
+.hud .cnt{background:rgba(0,0,0,.62);color:#fff;border-radius:20px;padding:7px 13px;}
+
+@media print{
+  html,body{background:#fff;height:auto;}
+  .deck{height:auto;width:auto;}
+  .hud{display:none;}
+  .slide{display:flex!important;position:relative;inset:auto;height:100vh;
+    page-break-after:always;border-bottom:1px solid #ddd;}
+  .notes{display:block!important;position:relative;max-height:none;}
+  .note-block{display:block!important;page-break-inside:avoid;
+    border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:12px;margin-bottom:12px;}
+}
+</style></head><body>
+<div class="hud"><button id="prev">&larr;</button><button id="next">&rarr;</button><button id="nbtn">Notes (N)</button><span class="cnt" id="cnt"></span></div>
+<div class="deck">
+<section class="slide red">
+<p class="eyebrow">Culture Camp · Day 9</p>
+<div class="body-wrap">
+<h1>Name What<br>You Saw</h1>
+<p class="lede">“Good job” tells someone nothing. Recognition only works when it names the actual thing, because that is the part they can do again.</p>
+<div style="margin-top:1.1rem"><svg class="mb-icon hero-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 32s10-14 26-14 26 14 26 14-10 14-26 14S6 32 6 32z"/><circle cx="32" cy="32" r="7"/></svg></div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Recognition Through Evidence</span><span class="band">Grades 3–5 · 01</span></div>
+</section>
+<section class="slide ">
+<p class="eyebrow">We Get Calm Before We Work</p>
+<div class="body-wrap">
+<h2>Reset Your Body First</h2>
+<div class="items">
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 8v26"/><path d="M32 20c-4 0-8 3-9 8l-4 16a6 6 0 0 0 11 4V20z"/><path d="M32 20c4 0 8 3 9 8l4 16a6 6 0 0 1-11 4V20z"/></svg>
+<div class="lab">In for 4</div>
+<div class="txt">Slow, through your nose.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="22"/><path d="M22 28h6"/><path d="M36 28h6"/><path d="M22 40c4 4 16 4 20 0"/></svg>
+<div class="lab">Out for 6</div>
+<div class="txt">Longer, through your mouth.</div>
+</div>
+</div>
+<div class="callout">Three rounds. The breath out is the long one.</div>
+<div class="cognate">calm · calma</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Recognition Through Evidence</span><span class="band">Grades 3–5 · 02</span></div>
+</section>
+<section class="slide dark">
+<p class="eyebrow">What Makes It Land</p>
+<div class="body-wrap">
+<h2>Two Kinds Of Praise</h2>
+<div class="items">
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 54S10 41 10 26a12 12 0 0 1 22-7 12 12 0 0 1 22 7c0 15-22 28-22 28z"/></svg>
+<div class="lab">About who you are</div>
+<div class="txt">“You're smart.” Nothing to repeat. And it collapses the moment you struggle.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="24"/><path d="M20 33l8 9 16-19"/></svg>
+<div class="lab">About what you did</div>
+<div class="txt">“You tried three strategies before asking.” That you can do again tomorrow.</div>
+</div>
+</div>
+<div class="callout">Praise the move, not the person.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Recognition Through Evidence</span><span class="band">Grades 3–5 · 03</span></div>
+</section>
+<section class="slide ">
+<p class="eyebrow">Structured Partner Talk</p>
+<div class="body-wrap">
+<h2>Give One, Get One</h2>
+<div style="margin-top:1.1rem"><svg class="mb-icon hero-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="18" r="7"/><path d="M8 50v-4a12 12 0 0 1 24 0v4"/><circle cx="45" cy="18" r="7"/><path d="M34 50v-4a12 12 0 0 1 24 0v4"/></svg></div>
+<div class="frame">
+<div class="flab">Sentence frame</div>
+<div class="stem">I noticed you ___ and it helped ___.</div>
+<div class="bank"><b>Word bank:</b> restarted · included someone · kept going · asked for help · held the standard</div>
+</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Recognition Through Evidence</span><span class="band">Grades 3–5 · 04</span></div>
+</section>
+<section class="slide yellow">
+<p class="eyebrow">Rehearse The Behavior</p>
+<div class="body-wrap">
+<h2>Who Never Gets Named?</h2>
+<div class="items">
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="8"/><circle cx="32" cy="10" r="5"/><circle cx="32" cy="54" r="5"/><circle cx="10" cy="32" r="5"/><circle cx="54" cy="32" r="5"/></svg>
+<div class="lab">Scan</div>
+<div class="txt">Who in this room rarely gets recognized?</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 32s10-14 26-14 26 14 26 14-10 14-26 14S6 32 6 32z"/><circle cx="32" cy="32" r="7"/></svg>
+<div class="lab">Watch</div>
+<div class="txt">Spend one day actually looking at them.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 32h44"/><path d="M16 32c4 10 12 14 16 14s12-4 16-14"/></svg>
+<div class="lab">Name it</div>
+<div class="txt">Tell them specifically what you saw.</div>
+</div>
+</div>
+<div class="callout">The people who get noticed least usually need it most.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Recognition Through Evidence</span><span class="band">Grades 3–5 · 05</span></div>
+</section>
+<section class="slide ">
+<p class="eyebrow">One Visible Next Step</p>
+<div class="body-wrap">
+<h2>My Commitment</h2>
+<div style="margin-top:1.1rem"><svg class="mb-icon hero-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="24"/><path d="M20 33l8 9 16-19"/></svg></div>
+<div class="frame">
+<div class="flab">Sentence frame</div>
+<div class="stem">Today I will name what ___ did during ___.</div>
+<div class="bank"><b>Word bank:</b> a quiet classmate · someone I do not usually talk to · someone who struggled</div>
+</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Recognition Through Evidence</span><span class="band">Grades 3–5 · 06</span></div>
+</section>
+<section class="slide dark">
+<p class="eyebrow">How We Leave Is How We Enter</p>
+<div class="body-wrap">
+<h2>The Exit Sequence</h2>
+<div class="steps">
+<div class="step"><div class="n">1</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="12" r="6"/><path d="M32 18v20"/><path d="M32 38l-7 18"/><path d="M32 38l7 18"/><path d="M22 26h20"/></svg><div class="sl">Stand</div></div>
+<div class="step"><div class="n">2</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10v26h28V10"/><path d="M14 36h36"/><path d="M20 36v18"/><path d="M44 36v18"/></svg><div class="sl">Push in</div></div>
+<div class="step"><div class="n">3</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 32h44"/><path d="M38 18l14 14-14 14"/></svg><div class="sl">Turn</div></div>
+<div class="step"><div class="n">4</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="36" cy="12" r="6"/><path d="M36 20l-6 14 8 8 2 14"/><path d="M30 34l-10 6-4 12"/><path d="M36 24l10 6"/></svg><div class="sl">Walk</div></div>
+</div>
+<div class="callout">Timed as one class, against our own last time. Never against each other.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Recognition Through Evidence</span><span class="band">Grades 3–5 · 07</span></div>
+</section>
+</div><div class="notes" id="notes">
+<div class="note-block" style="display:none">
+<h3>Slide 1 · Title &amp; Promise <span class="rub">R3</span></h3>
+<p class="script">“'Good job' is nice and useless. It tells you nothing you can repeat. Watch: 'You restarted after you got frustrated instead of shutting down.' Now you know exactly what to do again.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students feel the difference between vague and specific</li><li>Students name the repeatable part</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Give a vague one and have the class make it specific.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Track who you recognize. Patterns show up fast and they are rarely flattering.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Specific praise is also comprehensible input — it names the behavior in usable language.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Eye icon. Open by naming three specific actions from real students.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 2 · Regulate <span class="rub">R1</span></h3>
+<p class="script">“In for four, out for six. The breath OUT is the one that calms you — that is the whole trick. Three rounds.” Count aloud with them.</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Exhale visibly longer</li><li>Shoulders drop by round two</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>“This one is for you, not for me. Eyes down, one more round.”</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Co-regulate beside students who struggle</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Counting is the only demand.</li><li>Model rather than describe.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Lungs and calm-face icons; optional 4/6 count bar.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 3 · Orient <span class="rub">R3</span></h3>
+<p class="script">“'You're smart' sounds great until you hit something hard — then it becomes evidence you are not. 'You tried three strategies before asking' survives failure, because it is about what you did.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students distinguish trait from action praise</li><li>Students notice which they usually receive</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Convert three trait-praise statements to action-praise as a class.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Audit your own praise for a day. Most adults are heavily trait-based.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Provide: ‘I noticed you ___.’</li></ul></div>
+</div>
+<p class="imgspec">Visual: Two contrasting praise-type icons.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 4 · Connect <span class="rub">R3</span></h3>
+<p class="script">“Name what your partner did and who it helped. Both halves. The second half is what turns a compliment into information.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Actions named, not traits</li><li>The 'helped' half names a real person or the group</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>“That was about who they are. What did they DO?”</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Ensure everyone receives one — pair deliberately</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Word bank supplies the action.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Two-people icon with word bank.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 5 · Practice <span class="rub">R3, R5</span></h3>
+<p class="script">“Recognition clusters. The same people get named over and over — usually the loud ones and the high performers. The quiet ones and the ones who struggle get missed, and they are the ones for whom it would matter most.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students identify under-recognized peers accurately</li><li>Recognition actually reaches new students this week</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Name the pattern in this class directly and without blame.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Keep a simple tally of who you recognize. The data will surprise you.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Developing English speakers are systematically under-recognized. Check for it deliberately.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Three icons. This is the equity core of the recognition system.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 6 · Commit <span class="rub">R2, R3</span></h3>
+<p class="script">“Name a real person who does not usually get named, and the moment you will watch for. Then actually say it to them.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>An under-recognized peer named</li><li>Follow-through by end of day</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>“Who have you not spoken to this week? Start there.”</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Check at day's end whether it happened</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Word bank identifies the target.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Check icon.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 7 · Transition <span class="rub">R1, R4, R5</span></h3>
+<p class="script">“How we leave the meeting is how we enter the learning. We time it as one class, against our own record — not against each other.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Chairs in unprompted</li><li>No pushing or racing</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>“Reset. First thirty seconds again until it is clean.”</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Redirect to the step, not the behavior</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Icons carry the sequence.</li><li>Post the class time — numbers are accessible.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Four step icons plus a clock showing the class's previous time.</p>
+</div>
+</div><script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var notes=[].slice.call(document.querySelectorAll('.note-block'));
+  var panel=document.getElementById('notes');
+  var cnt=document.getElementById('cnt');
+  var i=0, open=false;
+  function draw(){
+    slides.forEach(function(s,n){s.classList.toggle('active',n===i);});
+    notes.forEach(function(s,n){s.style.display=(n===i?'block':'none');});
+    cnt.textContent=(i+1)+' / '+slides.length;
+  }
+  function go(d){ i=Math.max(0,Math.min(slides.length-1,i+d)); draw(); }
+  function toggle(){ open=!open; panel.classList.toggle('show',open);
+    document.getElementById('nbtn').textContent = open?'Hide notes (N)':'Notes (N)'; }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(1);}
+    else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1);}
+    else if(e.key==='n'||e.key==='N'){e.preventDefault();toggle();}
+    else if(e.key==='Home'){i=0;draw();}
+    else if(e.key==='End'){i=slides.length-1;draw();}
+  });
+  document.getElementById('prev').addEventListener('click',function(){go(-1);});
+  document.getElementById('next').addEventListener('click',function(){go(1);});
+  document.getElementById('nbtn').addEventListener('click',toggle);
+  draw();
+})();
+</script></body></html>

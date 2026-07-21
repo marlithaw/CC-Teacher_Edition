@@ -1,148 +1,347 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Culture Promise Student Deck · Grades 6–8 | Culture Camp</title>
-<link rel="stylesheet" href="student-decks/_shared/culture-lab-deck.css">
-<script type="application/json" id="speaker-notes">[
-"TITLE (arrival of circle). Students join the meeting circle. Hold this slide while everyone settles. GUIDE: Day 1 Morning Meeting, 7:35–7:50 block.",
-"REGULATE FIRST (0:00–2:00). Lead breathing exactly as scripted: 'Feet still. Eyes soft. Breathe in. Hold. Breathe out. At Matchbook, we regulate before we work.' Support adult joins visibly, then moves near outliers by the third turn. TRAUMA-INFORMED: never call out a student who isn't still — model and repeat. GUIDE: Day 1 Morning Meeting 0:00–2:00, R1.",
-"OUR PRACTICE FIELD (2:00–4:00). Point to the board: 'At Matchbook, we believe culture is practiced before pressure. This is our practice field. Our values are Safe, Respectful, and Responsible.' Students track the board and repeat the values aloud. Support adult points to the value board as each word is named. GUIDE: Day 1 Morning Meeting 2:00–4:00, R2 R3.",
-"TURN AND SHARE (4:00–7:00). Script: 'Every day after this we know what comes next because our routine tells us. Turn and share one thing you are excited about this year. Speaker speaks. Listener listens.' Support adult coaches partner spacing and helps students face the speaker. TRAUMA-INFORMED: partner talk before public talk — no forced whole-group shares. GUIDE: Day 1 Morning Meeting 4:00–7:00, R2 R3 R4.",
-"RESPECT HAS A BODY (7:00–10:00). 6–8: name the realness up front — 'This might feel young. It isn't. Adults practice this in every meeting that matters.' I DO: 'Respect has a body. Watch my shoulders, eyes, and hands.' WE DO: 'Now show me the Matchbook listening body.' Rehearse; redo it if sloppy — coach the move, never grade the child. Support adult models the posture silently next to the group. GUIDE: Day 1 Morning Meeting 7:00–10:00, R3 R4 R5.",
-"MY COMMITMENT (10:00–13:00). Script: 'A Matchbook commitment is one visible next step. Finish this sentence: Today I will...' Take a few aloud; write or post examples on the commitment chart. Support adult records commitments or helps students state them clearly. This commitment is revisited at afternoon re-entry and before dismissal. GUIDE: Day 1 Morning Meeting 10:00–13:00, R2 R5.",
-"CLOSE (13:00–15:00). Script: 'How we leave the meeting is how we enter the learning. Stand. Push in. Turn. Walk.' Start timing the transition. Support adult watches the slowest students and quietly points them back to the sequence. If it's loose: reset and repractice before moving on. GUIDE: Day 1 Morning Meeting 13:00–15:00, R1 R4 R5."
-]</script>
-</head>
-<body>
-<deck-stage width="1920" height="1080">
+<title>Culture Promise · Grades 6–8 | Culture Camp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#232323; --ember:#C8161D; --spark-red:#E21C24; --mb-yellow:#F9DC7C;
+  --ink:#1A1A1A; --slate:#4A4A4A; --hairline:#e2e8f0; --muted:#94a3b8;
+  --font-body:'Inter',system-ui,sans-serif; --font-cond:'Oswald',system-ui,sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-body);}
+.deck{position:relative;width:100vw;height:100vh;overflow:hidden;}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;
+  padding:clamp(24px,4vw,64px);background:#fff;color:var(--ink);}
+.slide.active{display:flex;}
+.slide.dark{background:var(--charcoal);color:#fff;}
+.slide.red{background:var(--spark-red);color:#fff;}
+.slide.yellow{background:var(--mb-yellow);color:var(--ink);}
 
-  <!-- 1 TITLE -->
-  <section data-label="Title" data-screen-label="01">
-    <div class="slide slide--red slide--center">
-      <img src="student-decks/_shared/matchbook-flame.png" height="140" alt="" style="filter:brightness(0) invert(1);margin-bottom:36px;">
-      <p class="kick white" style="margin-bottom:28px;">Culture Camp &middot; Day 1 Morning Meeting &middot; Grades 6&ndash;8</p>
-      <h1 class="disp white" style="font-size:130px;">Safe. Respectful.<br>Responsible.</h1>
-      <p class="lead on-dark" style="margin-top:36px;font-size:44px;">Our Culture Promise &mdash; culture is practiced before pressure.</p>
-      <div class="footer"><span class="wm">Matchbook Culture Camp &middot; Culture Promise &middot; Grades 6&ndash;8</span><span>01</span></div>
-    </div>
-  </section>
+.eyebrow{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.14em;
+  font-size:clamp(11px,1.1vw,14px);font-weight:600;opacity:.72;margin:0 0 .6rem;}
+.slide h1{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;
+  letter-spacing:.01em;line-height:1.02;margin:0;font-size:clamp(30px,5.4vw,76px);}
+.slide h2{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;
+  line-height:1.05;margin:0;font-size:clamp(24px,4.2vw,58px);}
+.lede{font-size:clamp(15px,1.7vw,25px);line-height:1.45;margin:1rem 0 0;max-width:36ch;opacity:.9;}
+.body-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;}
 
-  <!-- 2 REGULATE FIRST -->
-  <section data-label="Regulate First" data-screen-label="02">
-    <div class="slide slide--ink slide--center">
-      <p class="kick red" style="margin-bottom:44px;">We Regulate Before We Work</p>
-      <div class="col" style="gap:30px;align-items:center;">
-        <h2 class="disp white" style="font-size:88px;">Feet still. Eyes soft.</h2>
-        <div class="row" style="gap:56px;align-items:center;margin-top:12px;">
-          <div class="col" style="gap:14px;align-items:center;"><i data-lucide="wind" style="width:64px;height:64px;color:#F9DC7C;"></i><p class="body on-dark" style="font-size:34px;">Breathe in</p></div>
-          <div class="col" style="gap:14px;align-items:center;"><i data-lucide="pause" style="width:64px;height:64px;color:#F9DC7C;"></i><p class="body on-dark" style="font-size:34px;">Hold</p></div>
-          <div class="col" style="gap:14px;align-items:center;"><i data-lucide="waves" style="width:64px;height:64px;color:#F9DC7C;"></i><p class="body on-dark" style="font-size:34px;">Breathe out</p></div>
-        </div>
-        <p class="lead on-dark" style="margin-top:24px;font-size:40px;">At Matchbook, we regulate before we work.</p>
-      </div>
-      <div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Culture Promise &middot; 6&ndash;8</span><span>02</span></div>
-    </div>
-  </section>
+.mb-icon{width:1em;height:1em;flex:none;}
+.hero-icon{font-size:clamp(58px,9vw,120px);color:currentColor;opacity:.95;}
 
-  <!-- 3 OUR PRACTICE FIELD -->
-  <section data-label="Our Practice Field" data-screen-label="03">
-    <div class="slide slide--paper">
-      <div class="slide-head"><p class="kick red">Culture Is Practiced Before Pressure</p><h2 class="disp" style="font-size:92px;">This Is Our<br>Practice Field</h2><hr class="rule"></div>
-      <div class="col fill" style="gap:24px;margin-top:var(--gap-title);justify-content:center;">
-        <div class="row" style="gap:28px;align-items:center;background:#fff;padding:26px 34px;">
-          <span style="width:88px;height:88px;border-radius:999px;background:#E21C24;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="shield" style="width:48px;height:48px;color:#fff;"></i></span>
-          <div style="width:320px;flex:none;"><p class="h3" style="font-size:46px;">Safe</p></div>
-          <p class="body" style="flex:1;font-size:30px;color:#1A1A1A;">My words and actions protect this space &mdash; and everyone in it, including me.</p>
-        </div>
-        <div class="row" style="gap:28px;align-items:center;background:#fff;padding:26px 34px;">
-          <span style="width:88px;height:88px;border-radius:999px;background:#E21C24;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="heart-handshake" style="width:48px;height:48px;color:#fff;"></i></span>
-          <div style="width:320px;flex:none;"><p class="h3" style="font-size:46px;">Respectful</p></div>
-          <p class="body" style="flex:1;font-size:30px;color:#1A1A1A;">I treat every person in this room like they matter.</p>
-        </div>
-        <div class="row" style="gap:28px;align-items:center;background:#fff;padding:26px 34px;">
-          <span style="width:88px;height:88px;border-radius:999px;background:#E21C24;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="check-circle-2" style="width:48px;height:48px;color:#fff;"></i></span>
-          <div style="width:320px;flex:none;"><p class="h3" style="font-size:46px;">Responsible</p></div>
-          <p class="body" style="flex:1;font-size:30px;color:#1A1A1A;">I own my next move without being asked twice.</p>
-        </div>
-        <p class="small" style="font-size:26px;text-align:center;">These aren&rsquo;t rules on a poster &mdash; they&rsquo;re how we run this room.</p>
-      </div>
-      <div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Culture Promise &middot; 6&ndash;8</span><span>03</span></div>
-    </div>
-  </section>
+.items{display:flex;gap:clamp(12px,2.2vw,32px);margin-top:clamp(16px,2.6vw,36px);flex-wrap:wrap;}
+.item{flex:1 1 0;min-width:150px;display:flex;flex-direction:column;gap:.55rem;
+  padding:clamp(12px,1.6vw,22px);border-radius:14px;background:rgba(0,0,0,.045);}
+.slide.dark .item,.slide.red .item{background:rgba(255,255,255,.11);}
+.item .mb-icon{font-size:clamp(34px,4.4vw,62px);}
+.item .lab{font-family:var(--font-cond);text-transform:uppercase;font-weight:700;
+  letter-spacing:.05em;font-size:clamp(15px,1.7vw,25px);line-height:1.1;}
+.item .txt{font-size:clamp(13px,1.35vw,19px);line-height:1.4;opacity:.93;}
 
-  <!-- 4 TURN AND SHARE -->
-  <section data-label="Turn and Share" data-screen-label="04">
-    <div class="slide">
-      <div class="slide-head"><p class="kick red">Our Routine Tells Us What Comes Next</p><h2 class="disp" style="font-size:92px;">Turn &amp; Share</h2><hr class="rule"></div>
-      <div class="row fill" style="align-items:center;gap:48px;margin-top:var(--gap-title);">
-        <div class="card card-yellow" style="flex:1.2;gap:20px;">
-          <p class="kick">Share This</p>
-          <p class="body" style="font-size:40px;color:#1A1A1A;">&ldquo;One thing I&rsquo;m looking forward to this year is <span class="red" style="font-weight:800;">___</span>.&rdquo;</p>
-        </div>
-        <div class="col" style="flex:1;gap:28px;">
-          <div class="row" style="gap:20px;align-items:center;"><span style="width:80px;height:80px;border-radius:999px;background:#1A1A1A;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="mic" style="width:42px;height:42px;color:#F9DC7C;"></i></span><p class="h3" style="font-size:44px;">Speaker speaks.</p></div>
-          <div class="row" style="gap:20px;align-items:center;"><span style="width:80px;height:80px;border-radius:999px;background:#1A1A1A;display:flex;align-items:center;justify-content:center;flex:none;"><i data-lucide="ear" style="width:42px;height:42px;color:#F9DC7C;"></i></span><p class="h3" style="font-size:44px;">Listener listens.</p></div>
-          <p class="body" style="font-size:30px;">Face your partner. Real listening &mdash; then switch.</p>
-        </div>
-      </div>
-      <div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Culture Promise &middot; 6&ndash;8</span><span>04</span></div>
-    </div>
-  </section>
+.frame{margin-top:clamp(16px,2.4vw,32px);padding:clamp(14px,2vw,26px);
+  border-radius:14px;border:2px dashed currentColor;opacity:.98;}
+.frame .flab{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;
+  font-size:clamp(11px,1.1vw,14px);font-weight:600;opacity:.7;margin-bottom:.45rem;}
+.frame .stem{font-size:clamp(17px,2.3vw,34px);font-family:var(--font-cond);font-weight:600;line-height:1.25;}
+.choices{display:flex;gap:clamp(10px,1.6vw,22px);margin-top:clamp(12px,1.8vw,22px);flex-wrap:wrap;}
+.choice{flex:1 1 0;min-width:120px;display:flex;flex-direction:column;align-items:center;
+  gap:.4rem;padding:clamp(10px,1.4vw,18px);border-radius:12px;background:rgba(0,0,0,.06);text-align:center;}
+.slide.dark .choice,.slide.red .choice{background:rgba(255,255,255,.13);}
+.choice .mb-icon{font-size:clamp(30px,3.8vw,54px);}
+.choice .cl{font-family:var(--font-cond);text-transform:uppercase;font-weight:600;
+  font-size:clamp(12px,1.3vw,18px);letter-spacing:.03em;}
+.bank{margin-top:.7rem;font-size:clamp(12px,1.25vw,17px);opacity:.85;}
+.bank b{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.08em;font-size:.85em;}
 
-  <!-- 5 RESPECT HAS A BODY -->
-  <section data-label="Respect Has a Body" data-screen-label="05">
-    <div class="slide slide--paper">
-      <div class="slide-head"><p class="kick red">Watch Me, Then Show Me</p><h2 class="disp" style="font-size:92px;">Respect Has a Body</h2><hr class="rule"></div>
-      <div class="row fill" style="align-items:center;gap:44px;margin-top:var(--gap-title);">
-        <div class="col" style="flex:1.2;gap:24px;">
-          <div class="row" style="gap:20px;align-items:center;"><i data-lucide="user" style="width:44px;height:44px;color:#E21C24;flex:none;"></i><p class="body" style="font-size:34px;color:#1A1A1A;"><strong>Shoulders</strong> turned to the speaker</p></div>
-          <div class="row" style="gap:20px;align-items:center;"><i data-lucide="eye" style="width:44px;height:44px;color:#E21C24;flex:none;"></i><p class="body" style="font-size:34px;color:#1A1A1A;"><strong>Eyes</strong> on the speaker</p></div>
-          <div class="row" style="gap:20px;align-items:center;"><i data-lucide="hand" style="width:44px;height:44px;color:#E21C24;flex:none;"></i><p class="body" style="font-size:34px;color:#1A1A1A;"><strong>Hands</strong> still and calm</p></div>
-        </div>
-        <div class="callout callout--ink" style="flex:1;"><p class="mantra" style="font-size:44px;">Show Me The<br>Matchbook<br>Listening Body.</p></div>
-      </div>
-      <div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Culture Promise &middot; 6&ndash;8</span><span>05</span></div>
-    </div>
-  </section>
+.steps{display:flex;gap:clamp(10px,1.6vw,24px);margin-top:clamp(16px,2.4vw,32px);flex-wrap:wrap;}
+.step{flex:1 1 0;min-width:110px;display:flex;flex-direction:column;align-items:center;gap:.45rem;
+  padding:clamp(10px,1.5vw,20px);border-radius:12px;background:rgba(0,0,0,.06);text-align:center;}
+.slide.dark .step,.slide.red .step{background:rgba(255,255,255,.13);}
+.step .n{font-family:var(--font-cond);font-weight:700;font-size:clamp(20px,2.6vw,38px);opacity:.5;line-height:1;}
+.step .mb-icon{font-size:clamp(28px,3.4vw,48px);}
+.step .sl{font-family:var(--font-cond);text-transform:uppercase;font-weight:600;
+  font-size:clamp(13px,1.4vw,20px);letter-spacing:.03em;}
 
-  <!-- 6 MY COMMITMENT -->
-  <section data-label="My Commitment" data-screen-label="06">
-    <div class="slide">
-      <div class="slide-head"><p class="kick red">One Visible Next Step</p><h2 class="disp" style="font-size:92px;">My Commitment</h2><hr class="rule"></div>
-      <div class="col fill" style="justify-content:center;gap:36px;margin-top:var(--gap-title);">
-        <div class="card card-yellow" style="align-self:center;padding:56px 72px;gap:20px;">
-          <p class="body" style="font-size:56px;color:#1A1A1A;">&ldquo;Today I will <span class="red" style="font-weight:800;">___</span>.&rdquo;</p>
-        </div>
-        <p class="lead" style="text-align:center;font-size:36px;">A commitment is one visible next step &mdash; not a feeling,<br>something anyone in this room could <strong>see</strong> you do.</p>
-      </div>
-      <div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Culture Promise &middot; 6&ndash;8</span><span>06</span></div>
-    </div>
-  </section>
+.callout{margin-top:clamp(14px,2vw,28px);font-family:var(--font-cond);font-weight:600;
+  text-transform:uppercase;letter-spacing:.04em;font-size:clamp(14px,1.8vw,26px);line-height:1.2;}
+.cognate{margin-top:.8rem;font-size:clamp(11px,1.15vw,15px);opacity:.7;font-style:italic;}
+.why{margin-top:clamp(14px,2vw,26px);padding:clamp(12px,1.6vw,20px);border-left:5px solid currentColor;
+  font-size:clamp(13px,1.5vw,21px);line-height:1.45;opacity:.94;}
+.why b{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.07em;font-size:.82em;
+  display:block;margin-bottom:.25rem;opacity:.75;}
 
-  <!-- 7 HOW WE LEAVE -->
-  <section data-label="How We Leave" data-screen-label="07">
-    <div class="slide slide--red slide--center">
-      <p class="kick white" style="margin-bottom:40px;">How We Leave Is How We Enter The Learning</p>
-      <div class="row" style="gap:44px;align-items:center;">
-        <div class="col" style="gap:16px;align-items:center;"><span class="disp white" style="font-size:60px;">1</span><p class="h3 white" style="font-size:48px;">Stand</p></div>
-        <i data-lucide="arrow-right" style="width:44px;height:44px;color:#F9DC7C;"></i>
-        <div class="col" style="gap:16px;align-items:center;"><span class="disp white" style="font-size:60px;">2</span><p class="h3 white" style="font-size:48px;">Push in</p></div>
-        <i data-lucide="arrow-right" style="width:44px;height:44px;color:#F9DC7C;"></i>
-        <div class="col" style="gap:16px;align-items:center;"><span class="disp white" style="font-size:60px;">3</span><p class="h3 white" style="font-size:48px;">Turn</p></div>
-        <i data-lucide="arrow-right" style="width:44px;height:44px;color:#F9DC7C;"></i>
-        <div class="col" style="gap:16px;align-items:center;"><span class="disp white" style="font-size:60px;">4</span><p class="h3 white" style="font-size:48px;">Walk</p></div>
-      </div>
-      <p class="lead on-dark" style="margin-top:48px;font-size:38px;">We&rsquo;re timing it. Beat the last transition &mdash; not each other.</p>
-      <div class="footer"><span class="wm"><img src="student-decks/_shared/matchbook-flame.png" alt="">Culture Promise &middot; 6&ndash;8</span><span>07</span></div>
-    </div>
-  </section>
+.foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;
+  font-size:clamp(9px,.95vw,12px);opacity:.55;padding-top:1rem;}
+.foot .band{font-weight:700;letter-spacing:.16em;}
 
-</deck-stage>
-<script src="student-decks/_shared/deck-stage.js"></script>
-<script src="student-decks/_shared/presenter-notes.js"></script>
-<script src="student-decks/_shared/lucide.min.js"></script>
-<script>lucide.createIcons();</script>
-</body>
-</html>
+.notes{position:fixed;left:0;right:0;bottom:0;max-height:58vh;overflow:auto;
+  background:#0d0d0d;color:#f2f2f2;border-top:4px solid var(--spark-red);
+  padding:20px clamp(20px,4vw,56px) 28px;display:none;z-index:60;font-size:14.5px;line-height:1.55;}
+.notes.show{display:block;}
+.notes h3{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.12em;
+  font-size:12px;margin:0 0 10px;color:var(--mb-yellow);}
+.notes .script{font-size:16.5px;line-height:1.55;margin:0 0 14px;padding:12px 14px;
+  background:rgba(255,255,255,.07);border-left:4px solid var(--mb-yellow);border-radius:0 8px 8px 0;}
+.notes .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;}
+.notes .k{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;
+  font-size:11px;color:var(--muted);margin:0 0 5px;}
+.notes ul{margin:0;padding-left:18px;}
+.notes li{margin-bottom:4px;}
+.notes .rub{display:inline-block;font-family:var(--font-cond);background:var(--spark-red);
+  color:#fff;padding:2px 9px;border-radius:20px;font-size:11px;letter-spacing:.1em;}
+.notes .imgspec{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:12px;
+  border-top:1px solid rgba(255,255,255,.13);padding-top:10px;}
+
+.hud{position:fixed;top:14px;right:16px;z-index:70;display:flex;gap:8px;align-items:center;
+  font-family:var(--font-cond);font-size:11px;letter-spacing:.1em;text-transform:uppercase;}
+.hud button{font:inherit;background:rgba(0,0,0,.62);color:#fff;border:0;border-radius:20px;
+  padding:7px 13px;cursor:pointer;letter-spacing:.1em;}
+.hud button:hover{background:var(--spark-red);}
+.hud .cnt{background:rgba(0,0,0,.62);color:#fff;border-radius:20px;padding:7px 13px;}
+
+@media print{
+  html,body{background:#fff;height:auto;}
+  .deck{height:auto;width:auto;}
+  .hud{display:none;}
+  .slide{display:flex!important;position:relative;inset:auto;height:100vh;
+    page-break-after:always;border-bottom:1px solid #ddd;}
+  .notes{display:block!important;position:relative;max-height:none;}
+  .note-block{display:block!important;page-break-inside:avoid;
+    border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:12px;margin-bottom:12px;}
+}
+</style></head><body>
+<div class="hud"><button id="prev">&larr;</button><button id="next">&rarr;</button><button id="nbtn">Notes (N)</button><span class="cnt" id="cnt"></span></div>
+<div class="deck">
+<section class="slide red">
+<p class="eyebrow">Culture Camp · Day 1</p>
+<div class="body-wrap">
+<h1>Safe.<br>Respectful.<br>Responsible.</h1>
+<p class="lede">Three words that decide whether this room works. You are not being asked to believe them today. You are being asked to run them.</p>
+<div style="margin-top:1.1rem"><svg class="mb-icon hero-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 6l22 8v16c0 14-10 24-22 28-12-4-22-14-22-28V14z"/><path d="M22 32l7 8 13-15"/></svg></div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 01</span></div>
+</section>
+<section class="slide ">
+<p class="eyebrow">Nervous System First</p>
+<div class="body-wrap">
+<h2>Reset Before You Engage</h2>
+<div class="items">
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 8v26"/><path d="M32 20c-4 0-8 3-9 8l-4 16a6 6 0 0 0 11 4V20z"/><path d="M32 20c4 0 8 3 9 8l4 16a6 6 0 0 1-11 4V20z"/></svg>
+<div class="lab">4 in</div>
+<div class="txt">Through the nose.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="24"/><path d="M32 17v15l10 6"/></svg>
+<div class="lab">4 hold</div>
+<div class="txt">Steady, not strained.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="22"/><path d="M22 28h6"/><path d="M36 28h6"/><path d="M22 40c4 4 16 4 20 0"/></svg>
+<div class="lab">4 out</div>
+<div class="txt">Slow, through the mouth.</div>
+</div>
+</div>
+<div class="why"><b>Why this works</b>A long, controlled exhale activates your vagus nerve, which lowers heart rate. This is not a mood exercise — it is a physical override, and it works whether or not you are in the mood for it.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 02</span></div>
+</section>
+<section class="slide dark">
+<p class="eyebrow">The Standard, Not The Slogan</p>
+<div class="body-wrap">
+<h2>What We Actually Mean</h2>
+<div class="items">
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 6l22 8v16c0 14-10 24-22 28-12-4-22-14-22-28V14z"/><path d="M22 32l7 8 13-15"/></svg>
+<div class="lab">Safe</div>
+<div class="txt">I protect this space because it only stays safe if everyone holds it — including when no adult is watching.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h34v20H22L12 41V32H4z"/><path d="M26 26h34v20h-8v9l-10-9H26z"/></svg>
+<div class="lab">Respectful</div>
+<div class="txt">I extend respect before it is earned, because that is what makes it possible for anyone to earn it here.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="24"/><path d="M20 33l8 9 16-19"/></svg>
+<div class="lab">Responsible</div>
+<div class="txt">I own my next move without being asked twice — and I repair it when I don't.</div>
+</div>
+</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 03</span></div>
+</section>
+<section class="slide ">
+<p class="eyebrow">Structured Talk</p>
+<div class="body-wrap">
+<h2>Turn And Talk</h2>
+<div style="margin-top:1.1rem"><svg class="mb-icon hero-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="18" r="7"/><path d="M8 50v-4a12 12 0 0 1 24 0v4"/><circle cx="45" cy="18" r="7"/><path d="M34 50v-4a12 12 0 0 1 24 0v4"/></svg></div>
+<div class="frame">
+<div class="flab">Prompt</div>
+<div class="stem">Describe a room, team, or group that actually worked. What did people do that made it work?</div>
+</div>
+<div class="callout">Speaker goes first. Listener does not respond until they finish.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 04</span></div>
+</section>
+<section class="slide yellow">
+<p class="eyebrow">The Observable Standard</p>
+<div class="body-wrap">
+<h2>Listening Is A Behavior</h2>
+<div class="items">
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="14" r="7"/><path d="M32 21v20"/><path d="M18 28h28"/><path d="M24 41v14"/><path d="M40 41v14"/><path d="M46 20l8-5"/></svg>
+<div class="lab">Orientation</div>
+<div class="txt">Body turned toward whoever has the floor.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 30c6 8 14 12 24 12s18-4 24-12"/><path d="M16 42l-4 6"/><path d="M32 46v7"/><path d="M48 42l4 6"/></svg>
+<div class="lab">Gaze</div>
+<div class="txt">On the speaker, or resting. Both are real listening — we do not police eyes here.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 26a10 10 0 0 1 20 0c0 7-6 9-6 15a5 5 0 0 1-10 0"/><path d="M28 26a4 4 0 0 1 8 0"/><path d="M26 46v6a6 6 0 0 0 12 0"/></svg>
+<div class="lab">Proof</div>
+<div class="txt">You can accurately restate what they said.</div>
+</div>
+</div>
+<div class="callout">The proof is the restatement, not the posture.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 05</span></div>
+</section>
+<section class="slide ">
+<p class="eyebrow">One Visible Next Step</p>
+<div class="body-wrap">
+<h2>My Commitment</h2>
+<div style="margin-top:1.1rem"><svg class="mb-icon hero-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="24"/><path d="M20 33l8 9 16-19"/></svg></div>
+<div class="frame">
+<div class="flab">Frame</div>
+<div class="stem">Today I will ___ so that ___.</div>
+</div>
+<div class="callout">A commitment is not a feeling. It is something anyone in this room could see you do.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 06</span></div>
+</section>
+<section class="slide dark">
+<p class="eyebrow">How We Leave Is How We Enter</p>
+<div class="body-wrap">
+<h2>The Exit Sequence</h2>
+<div class="steps">
+<div class="step"><div class="n">1</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="12" r="6"/><path d="M32 18v20"/><path d="M32 38l-7 18"/><path d="M32 38l7 18"/><path d="M22 26h20"/></svg><div class="sl">Stand</div></div>
+<div class="step"><div class="n">2</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10v26h28V10"/><path d="M14 36h36"/><path d="M20 36v18"/><path d="M44 36v18"/></svg><div class="sl">Push in</div></div>
+<div class="step"><div class="n">3</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 32h44"/><path d="M38 18l14 14-14 14"/></svg><div class="sl">Turn</div></div>
+<div class="step"><div class="n">4</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="36" cy="12" r="6"/><path d="M36 20l-6 14 8 8 2 14"/><path d="M30 34l-10 6-4 12"/><path d="M36 24l10 6"/></svg><div class="sl">Walk</div></div>
+</div>
+<div class="why"><b>Why this works</b>A clean exit removes the ninety seconds of noise that normally eats the start of your next class. You are buying back your own time.</div>
+<div class="callout">Timed as a class, against our own last time. Never against each other.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 07</span></div>
+</section>
+</div><div class="notes" id="notes">
+<div class="note-block" style="display:none">
+<h3>Slide 1 · Title &amp; Promise <span class="rub">R2</span></h3>
+<p class="script">“You have seen words like these on a poster before, and you have watched adults ignore them. Fair. So here is the deal: I am not asking you to believe these today. I am asking you to run them for ten days and see what this room feels like.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students are tracking rather than performing boredom</li><li>At least one student pushes back — that is engagement, take it seriously</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>If a student says this is pointless: “That is a fair position. Give me ten days of data, then tell me.” Do not argue.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Scan for the students who check out first — they are the ones to invest in this week</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Preview 'run them' as an idiom — it means put into practice.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Shield icon. Strong candidate for replacement with a photo of actual students from this school.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 2 · Regulate <span class="rub">R1</span></h3>
+<p class="script">“Four in, four hold, four out. Here is why it works: the long exhale triggers your vagus nerve, which physically slows your heart rate. You do not have to want it to work. It works anyway. Three rounds.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Genuine participation rather than performative compliance</li><li>Students who resist on day one but participate by day three — that is the win</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>If a student refuses: do not escalate. “Sit quietly and let us work. That is enough.” Refusal is not defiance at this age — it is often self-consciousness.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Participate visibly yourself. Adolescents read adult non-participation instantly.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Numbers carry the protocol.</li><li>Pre-teach 'vagus nerve' — or replace with 'the nerve that controls your heart rate.'</li></ul></div>
+</div>
+<p class="imgspec">Visual: Lungs, clock, calm icons. Consider a heart-rate line dropping across the four counts.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 3 · Orient <span class="rub">R2, R3</span></h3>
+<p class="script">“Read the middle one again. Respect before it is earned. That is not weakness — it is the only way anyone in a new room ever gets a chance. If everyone waits to be respected first, nobody moves.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students engage with the 'before it is earned' tension — expect argument</li><li>Students connect the standard to their own experience of a room that did not work</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>If a student says respect must be earned: “Then who goes first? Somebody has to. That is the whole argument.”</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Chart the counterarguments. Taking them seriously is what earns buy-in at this age.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Pre-teach 'extend' and 'repair' in this context.</li><li>Provide the frame: ‘I agree/disagree because ___.’</li></ul></div>
+</div>
+<p class="imgspec">Visual: Same three icons used K–8. The visual continuity is deliberate and worth naming to students.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 4 · Connect <span class="rub">R3, R4</span></h3>
+<p class="script">“Think of a group that actually worked — a team, a class, a job, a friend group. What did people DO? Not how it felt. What did they do. Ninety seconds, speaker first. Listener does not respond until they are done.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students name behaviors, not vibes</li><li>Listeners hold silence — this is the harder skill at this age</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>If pairs stall: give your own example in one sentence, then restart the clock.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Note which students describe groups OUTSIDE school — that is where the real answer lives</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Allow the initial description in a home language, then support translation of the key behavior.</li><li>Provide: ‘It worked because people ___.’</li></ul></div>
+</div>
+<p class="imgspec">Visual: Two-people icon. Consider projecting a 90-second countdown.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 5 · Practice <span class="rub">R3, R4, R5</span></h3>
+<p class="script">“We are not going to police your eyes. For some of you, forced eye contact makes it harder to listen, and in some families it is straight-up rude. So the standard is body orientation, and the proof is whether you can restate what the person said. That is measurable. Eyes are not.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Accurate restatement</li><li>Body orientation maintained without reminder</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>“We correct the routine, not the person. Reset the orientation and we run it again.”</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Model restating a student's point precisely — they will copy your precision</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Restating is the core academic language skill here — it transfers directly to discussion in content classes.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Body-orientation figure with a resting-gaze icon. Naming the no-eye-policing rule explicitly is part of the lesson.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 6 · Commit <span class="rub">R2, R5</span></h3>
+<p class="script">“Not a feeling. Not 'be better.' Something I could point at from across the room and say — there, that is them doing it. And the second blank names who it is for. If your commitment only helps you, it is not a culture commitment.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Observable verbs</li><li>The 'so that' names another person or the group</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>If a student writes something vague: “What would I see? Give me the video, not the caption.”</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Record commitments and reconnect to them after lunch — the follow-through is what makes it real</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Provide a verb bank on the board if needed: include, start, listen, finish, ask.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Check icon. Post commitments where you can reference them in the afternoon block.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 7 · Transition <span class="rub">R1, R4, R5</span></h3>
+<p class="script">“How we leave is how we enter. And be clear about what you get out of this: a clean exit means the next class starts on time instead of burning ninety seconds settling down. That is time you get back.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Chairs in without prompting</li><li>No racing — collective timing only</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>“Reset. First thirty seconds again, clean.” No commentary on individuals.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Position yourself at the destination, not behind the group</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Four icons carry the sequence.</li><li>Post the class time — numbers are universally accessible.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Four step icons plus a clock showing the class's previous time.</p>
+</div>
+</div><script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var notes=[].slice.call(document.querySelectorAll('.note-block'));
+  var panel=document.getElementById('notes');
+  var cnt=document.getElementById('cnt');
+  var i=0, open=false;
+  function draw(){
+    slides.forEach(function(s,n){s.classList.toggle('active',n===i);});
+    notes.forEach(function(s,n){s.style.display=(n===i?'block':'none');});
+    cnt.textContent=(i+1)+' / '+slides.length;
+  }
+  function go(d){ i=Math.max(0,Math.min(slides.length-1,i+d)); draw(); }
+  function toggle(){ open=!open; panel.classList.toggle('show',open);
+    document.getElementById('nbtn').textContent = open?'Hide notes (N)':'Notes (N)'; }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(1);}
+    else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1);}
+    else if(e.key==='n'||e.key==='N'){e.preventDefault();toggle();}
+    else if(e.key==='Home'){i=0;draw();}
+    else if(e.key==='End'){i=slides.length-1;draw();}
+  });
+  document.getElementById('prev').addEventListener('click',function(){go(-1);});
+  document.getElementById('next').addEventListener('click',function(){go(1);});
+  document.getElementById('nbtn').addEventListener('click',toggle);
+  draw();
+})();
+</script></body></html>
