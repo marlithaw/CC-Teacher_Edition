@@ -90,6 +90,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid rgba(217, 31, 43, .32
 .day-schedule-jump > div { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
 .day-schedule-jump a { display: flex; align-items: center; justify-content: center; min-height: 42px; padding: 8px 10px; border: 1px solid #d9c678; border-radius: 7px; background: var(--white); color: var(--red-dark); font-size: 13px; font-weight: 850; text-decoration: none; }
 .day-schedule-jump a:hover { border-color: var(--red); background: var(--red-soft); }
+.teaching-time-banner { margin: 16px 0 20px; padding: 14px 16px; border-left: 5px solid var(--red); border-radius: 0 9px 9px 0; background: #fff3bc; color: var(--ink); }
+.teaching-time-banner strong { color: var(--red-dark); }
 .document-body pre { overflow-x: auto; padding: 18px; border-radius: 10px; background: #25272b; color: #fff; }
 .document-body pre code { padding: 0; background: transparent; }
 .document-body table { width: 100%; margin: 22px 0 32px; border-collapse: collapse; font-size: 14px; }
