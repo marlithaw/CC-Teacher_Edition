@@ -85,6 +85,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid rgba(217, 31, 43, .32
 .document-body blockquote { margin: 24px 0; padding: 14px 18px; border-left: 4px solid var(--red); background: var(--red-soft); }
 .document-body blockquote p:last-child { margin-bottom: 0; }
 .document-body code { padding: 2px 5px; border-radius: 4px; background: var(--warm-strong); font-size: .9em; }
+.day-schedule-jump { scroll-margin-top: 112px; margin: 30px 0 8px; padding: 22px; border: 1px solid #e1bd45; border-radius: 12px; background: #fff8d8; }
+.day-schedule-jump > strong { display: block; margin-bottom: 12px; font-size: 18px; }
+.day-schedule-jump > div { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.day-schedule-jump a { display: flex; align-items: center; justify-content: center; min-height: 42px; padding: 8px 10px; border: 1px solid #d9c678; border-radius: 7px; background: var(--white); color: var(--red-dark); font-size: 13px; font-weight: 850; text-decoration: none; }
+.day-schedule-jump a:hover { border-color: var(--red); background: var(--red-soft); }
 .document-body pre { overflow-x: auto; padding: 18px; border-radius: 10px; background: #25272b; color: #fff; }
 .document-body pre code { padding: 0; background: transparent; }
 .document-body table { width: 100%; margin: 22px 0 32px; border-collapse: collapse; font-size: 14px; }
@@ -114,6 +119,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid rgba(217, 31, 43, .32
   .document-hero h1 { font-size: 40px; }
   .document-description { font-size: 16px; }
   .document-body table { display: block; overflow-x: auto; white-space: normal; }
+  .day-schedule-jump > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .document-body th, .document-body td { min-width: 150px; }
   .document-body th:first-child, .document-body td:first-child { min-width: 120px; }
   .document-footer { display: block; padding: 18px 22px; }

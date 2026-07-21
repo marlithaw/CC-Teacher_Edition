@@ -84,12 +84,6 @@
       path: "resources/morning-manual.html",
       description: "Listening, speaking, participation, and community practice."
     },
-    "morning-minute": {
-      title: "Morning Meeting — The Matchbook Way",
-      type: "Supporting deck · HTML",
-      path: "resources/morning-minute.html",
-      description: "Short staff-facing introduction to the daily meeting routine."
-    },
     "role-system": {
       title: "Student Leader Training Deck",
       type: "Supporting deck · HTML",
@@ -137,12 +131,6 @@
       type: "Supporting deck · HTML",
       path: "resources/recognition-guide.html",
       description: "Recognition grounded in observable culture-aligned evidence."
-    },
-    "nomination-protocol": {
-      title: "Evidence-Based Nomination Protocol",
-      type: "Supporting deck · HTML",
-      path: "resources/nomination-protocol.html",
-      description: "Practice for naming what a student did and why it matters."
     },
     "family-evidence": {
       title: "Family Connection Wheel Training Deck",
@@ -291,7 +279,7 @@
       planAnchor: "day-1-full-system-launch",
       scriptAnchor: "day-1-culture-promise",
       presentations: studentDeckSets.day1,
-      files: ["ten-day-overview", "behavior-matrix", "culture-deck", "culture-promise-teacher", "culture-promise-student", "first-five-operating"]
+      files: ["culture-deck", "culture-promise-student"]
     },
     {
       day: 2,
@@ -302,7 +290,7 @@
       planAnchor: "day-2-listening-and-speaking-norms",
       scriptAnchor: "day-2-listening-speaking",
       presentations: studentDeckSets.day2,
-      files: ["behavior-matrix-teacher", "morning-manual", "morning-minute"]
+      files: ["morning-manual"]
     },
     {
       day: 3,
@@ -313,7 +301,7 @@
       planAnchor: "day-3-body-language-and-visible-respect",
       scriptAnchor: "day-3-body-language",
       presentations: studentDeckSets.day3,
-      files: ["behavior-matrix", "behavior-matrix-teacher"]
+      files: ["behavior-matrix-teacher"]
     },
     {
       day: 4,
@@ -324,7 +312,7 @@
       planAnchor: "day-4-voice-tone-and-early-student-roles",
       scriptAnchor: "day-4-voice-and-roles",
       presentations: studentDeckSets.day4,
-      files: ["role-system", "behavior-matrix-teacher"]
+      files: ["role-system"]
     },
     {
       day: 5,
@@ -335,7 +323,7 @@
       planAnchor: "day-5-the-power-of-commitments",
       scriptAnchor: "day-5-commitments",
       presentations: studentDeckSets.day5,
-      files: ["culture-promise-teacher", "culture-promise-student", "culture-promise-35-plan", "culture-promise-35-handout"]
+      files: ["culture-promise-teacher", "culture-promise-35-plan", "culture-promise-35-handout"]
     },
     {
       day: 6,
@@ -346,7 +334,7 @@
       planAnchor: "day-6-regulation-toolbox-and-transitions",
       scriptAnchor: "day-6-calm-down-tools",
       presentations: studentDeckSets.day6,
-      files: ["regulation-guide", "responsive-pathway", "first-five-operating"]
+      files: ["regulation-guide", "responsive-pathway"]
     },
     {
       day: 7,
@@ -368,7 +356,7 @@
       planAnchor: "day-8-student-leadership-without-loss-of-fidelity",
       scriptAnchor: "day-8-student-leadership",
       presentations: studentDeckSets.day8,
-      files: ["role-system", "adult-look-fors"]
+      files: ["adult-look-fors"]
     },
     {
       day: 9,
@@ -390,7 +378,7 @@
       planAnchor: "day-10-readiness-review-and-launch",
       scriptAnchor: "day-10-launch",
       presentations: studentDeckSets.day10,
-      files: ["ten-day-overview", "adult-look-fors", "fidelity-look-for"]
+      files: ["fidelity-look-for"]
     }
   ];
 
@@ -414,7 +402,7 @@
       statusClass: "current",
       purpose: "Create a calm, predictable on-ramp from arrival into independent learning.",
       result: "Students locate the posted task, prepare materials, and begin at Level 0 for five minutes without teacher instruction.",
-      files: ["first-five-operating", "first-five-teacher", "first-five-35-plan", "first-five-35-handout", "behavior-matrix", ...studentDeckSets.firstFive, "student-decks-offline"],
+      files: ["first-five-operating", "first-five-teacher", "first-five-35-plan", "first-five-35-handout", ...studentDeckSets.firstFive],
       note: "This bundle preserves the routine mechanics: same posted location, five minutes, Level 0, time-to-start, and a clear no-help boundary."
     },
     {
@@ -425,7 +413,7 @@
       statusClass: "current",
       purpose: "Move students safely and efficiently while protecting learning throughout the building.",
       result: "Students transition with the expected voice level, spacing, pace, and response to adult cues.",
-      files: ["hallway-operating", "hallway-teacher", "behavior-matrix", ...studentDeckSets.hallway, "student-decks-offline"],
+      files: ["hallway-operating", "hallway-teacher", ...studentDeckSets.hallway],
       note: "Use the current operating guide as the routine spine and the teacher guide for student rehearsal."
     },
     {
@@ -436,7 +424,7 @@
       statusClass: "pending",
       purpose: "Protect safety, privacy, cleanliness, and prompt return to learning.",
       result: "Students use the restroom efficiently, follow the current Behavior Matrix, and return without disrupting learning.",
-      files: ["restroom-teacher", "behavior-matrix", ...studentDeckSets.restroom, "student-decks-offline"],
+      files: ["restroom-teacher", ...studentDeckSets.restroom],
       note: "Source gap: a dedicated 2026–2027 Restroom Operating Guide was not found. The current Behavior Matrix and available teacher guide are linked here, but procedures must be ratified before this bundle is called final."
     },
     {
@@ -447,7 +435,7 @@
       statusClass: "current",
       purpose: "Make entry, meal service, cleanup, and exit predictable and respectful.",
       result: "Students move through the cafeteria sequence safely, use the expected voice level, clean their area, and exit ready.",
-      files: ["cafeteria-operating", "cafeteria-teacher", "behavior-matrix", ...studentDeckSets.cafeteria, "student-decks-offline"],
+      files: ["cafeteria-operating", "cafeteria-teacher", ...studentDeckSets.cafeteria],
       note: "The operating guide controls the adult sequence; the teacher guide supports student-facing rehearsal."
     },
     {
@@ -458,7 +446,7 @@
       statusClass: "current",
       purpose: "Create safe play with clear boundaries, active supervision, recall, and return routines.",
       result: "Students play within boundaries, respond to recall, resolve minor problems, and return to instruction predictably.",
-      files: ["recess-operating", "recess-teacher", "behavior-matrix", ...studentDeckSets.recess, "student-decks-offline"],
+      files: ["recess-operating", "recess-teacher", ...studentDeckSets.recess],
       note: "Teach boundaries and recall as observable routines, then rehearse the return before students begin open play."
     }
   ];
