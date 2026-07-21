@@ -7,7 +7,7 @@
   <title>When I Grow Up | Culture Camp</title>
   <meta name="theme-color" content="#D91F2B">
   <link rel="icon" type="image/svg+xml" href="./resources/_shared/flame-logo.svg">
-  <link rel="stylesheet" href="./styles.css?v=20260719-simplified15">
+  <link rel="stylesheet" href="./styles.css?v=20260721-culture-intro1">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -35,6 +35,50 @@
 
     <main id="main-content">
       <section id="view-lessons" class="view active" aria-labelledby="lesson-title">
+        <section class="culture-video-intro" aria-labelledby="culture-video-title">
+          <div class="culture-video-intro-heading">
+            <div>
+              <p class="eyebrow red">Start here · For teachers and staff</p>
+              <h2 id="culture-video-title">Culture Camp Video Introduction</h2>
+              <p id="culture-video-purpose">This three-minute melodic overview explains the larger Culture Camp story and reinforces the shared language adults will teach throughout the ten-day launch.</p>
+            </div>
+            <span class="culture-video-audience">Adult overview · 3:18</span>
+          </div>
+
+          <div class="culture-video-stage" aria-label="Embedded Culture Camp video introduction">
+            <aside class="culture-video-side culture-video-brand" aria-hidden="true">
+              <img src="./resources/student-decks/_shared/matchbook-flame.png" alt="">
+              <strong>Culture Camp</strong>
+              <span>Video Introduction</span>
+              <small>Culture is practiced before pressure.</small>
+            </aside>
+
+            <div class="culture-video-player">
+              <video id="culture-intro-video" controls playsinline preload="metadata" poster="./resources/culture-camp-anthem-poster.jpg" aria-describedby="culture-video-purpose culture-video-positioning">
+                <source src="./resources/culture-camp-anthem.mp4" type="video/mp4">
+                Your browser does not support HTML video. Use the download link below to open the introduction directly.
+              </video>
+              <div class="culture-video-cover" id="culture-video-cover">
+                <p>Meet the Culture Camp story</p>
+                <button id="culture-video-play" type="button" aria-controls="culture-intro-video">▶ Watch introduction</button>
+                <small>Teacher and staff orientation · On-screen lyrics</small>
+              </div>
+            </div>
+
+            <aside class="culture-video-side culture-video-pillars" aria-label="Matchbook culture pillars">
+              <span>The Matchbook Way</span>
+              <strong>Safe</strong>
+              <strong>Respectful</strong>
+              <strong>Responsible</strong>
+            </aside>
+          </div>
+
+          <div class="culture-video-intro-footer" id="culture-video-positioning">
+            <p><strong>Purpose:</strong> Use this introduction to orient adults to Culture Camp as a whole. It is not a student lesson and does not replace the Day-by-Day Teacher Guide or grade-band presentations.</p>
+            <a href="./resources/culture-camp-anthem.mp4" download="matchbook-culture-camp-video-introduction.mp4">Download video for offline use</a>
+          </div>
+        </section>
+
         <div class="workspace-grid">
           <aside class="bundle-sidebar" aria-label="Culture Camp days">
             <div class="sidebar-heading">
@@ -143,6 +187,6 @@
       </section>
     </main>
   </div>
-  <script src="./app.js?v=20260720-morning-meeting-video"></script>
+  <script src="./app.js?v=20260721-culture-intro1"></script>
 </body>
 </html>
