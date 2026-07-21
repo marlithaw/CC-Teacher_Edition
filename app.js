@@ -65,6 +65,13 @@
       description: "Open the continuously updated Morning Meeting playbook for daily use throughout the school year.",
       action: "Open live playbook"
     },
+    "morning-meeting-overview-video": {
+      title: "Morning Meeting Overview Video",
+      type: "Overview video · MP4",
+      path: "resources/morning-meeting-overview.mp4",
+      description: "Watch how the six-move Morning Meeting works from start to finish.",
+      action: "Watch video"
+    },
     "morning-manual": {
       title: "Morning Meeting Culture Lab Training Deck",
       type: "Supporting deck · HTML",
@@ -358,7 +365,7 @@
       statusClass: "current",
       purpose: "Give teachers continuous access to the daily Morning Meeting system throughout the school year.",
       result: "Teachers use one current playbook for daily meeting routines, lesson updates, classroom tools, and schoolwide alignment.",
-      files: ["morning-meeting-live"],
+      files: ["morning-meeting-live", "morning-meeting-overview-video"],
       note: "This opens the live Morning Meeting site. Updates published from marlithaw/morningmeeting appear here automatically, so the Teacher Edition does not keep a separate copy."
     },
     {
