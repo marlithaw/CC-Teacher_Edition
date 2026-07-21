@@ -114,6 +114,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid rgba(217, 31, 43, .32
   .document-hero h1 { font-size: 40px; }
   .document-description { font-size: 16px; }
   .document-body table { display: block; overflow-x: auto; white-space: normal; }
+  .document-body th, .document-body td { min-width: 150px; }
+  .document-body th:first-child, .document-body td:first-child { min-width: 120px; }
   .document-footer { display: block; padding: 18px 22px; }
   .document-footer span { display: block; margin-top: 4px; }
 }
