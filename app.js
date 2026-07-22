@@ -778,7 +778,7 @@
     const index = Math.max(0, systems.findIndex(item => item.id === selection.system));
     const system = systems[index];
     renderSystemList();
-    byId("system-kicker").textContent = `${system.category} · Bundle ${index + 1} of ${systems.length}`;
+    byId("system-kicker").textContent = `${system.category} · ${index + 1} of ${systems.length}`;
     byId("systems-title").textContent = system.title;
     byId("system-purpose").textContent = system.purpose;
     byId("system-result").textContent = system.result;
@@ -791,7 +791,7 @@
     primarySystemLink.rel = "noreferrer";
     byId("system-status").textContent = system.status;
     byId("system-status").className = `bundle-status ${system.statusClass}`;
-    byId("system-note").innerHTML = `<strong>${system.statusClass === "pending" ? "Before finalizing" : "Implementation note"}</strong><p>${system.note}</p>`;
+    byId("system-note").innerHTML = `<strong>${system.statusClass === "pending" ? "Before finalizing" : "Good to know"}</strong><p>${system.note}</p>`;
     byId("system-note").classList.toggle("warning", system.statusClass === "pending");
   }
 
