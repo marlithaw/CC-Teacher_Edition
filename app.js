@@ -14,7 +14,7 @@
       title: "Culture Camp Timed Lesson Guide",
       type: "Minute-by-minute plan · HTML",
       path: "resources/culture-camp-day-by-day-teacher-guide.html",
-      description: "Culture Camp-only teacher language, actions, look-fors, and reset moves for the protected 7:45 block on Days 1–10."
+      description: "Culture Camp-only teacher language, actions, look-fors, and reset moves for the protected 8:00 block on Days 1–10."
     },
     "grade-band-script-companion": {
       title: "Grade-Band Script Companion",
@@ -285,6 +285,13 @@
       type: "Updated current source · DOCX",
       path: "resources/procedures/classroom/voice-levels.docx",
       description: "Shared voice-level language and response expectations for classroom learning.",
+      action: "Open current procedure"
+    },
+    "assigned-seating-current": {
+      title: "Assigned Seating Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/classroom/assigned-seating.docx",
+      description: "Day-1 seating charts, four fixed desk structures, strategic assignment, and a clear trigger for revising the chart.",
       action: "Open current procedure"
     },
     "materials-current": {
@@ -803,6 +810,18 @@
       result: "Students enter, begin the posted First Five independently, close the class, restore the room, and exit on the teacher’s cue.",
       files: ["entering-exiting-current", "first-five-operating", "first-five-teacher", "first-five-35-plan", "first-five-35-handout", ...studentDeckSets.firstFive],
       note: "This bundle applies across K–8 whenever a group enters a new class: K–2 and grades 3–5 use it for transitions such as electives, and grades 6–8 use it throughout class-period changes. Entering is the threshold, First Five is the immediate academic on-ramp, and Exiting is the class closing and departure. It remains separate from Morning Entry and Dismissal."
+    },
+    {
+      id: "assigned-seating",
+      category: "Classroom procedures",
+      title: "Assigned Seating",
+      shortTitle: "Assigned Seating",
+      status: "Updated current source",
+      statusClass: "current",
+      purpose: "Set immediate structure and adult authority with a seating chart in place before students ever walk in.",
+      result: "Students go straight to an assigned seat every day; the chart is revised from data, not by informal daily moves.",
+      files: ["assigned-seating-current"],
+      note: "Every classroom has a chart by Day 1 — desks in rows, pairs, pods of 3, or groups of 4, never randomly arranged, and students never choose their own seats."
     },
     {
       id: "voice-levels",
