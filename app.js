@@ -618,7 +618,7 @@
       purpose: "Create a predictable threshold entry, immediate academic on-ramp, and classroom exit for groups moving between classes.",
       result: "Students enter, begin the posted First Five independently, close the class, restore the room, and exit on the teacher’s cue.",
       files: ["entering-exiting-current", "first-five-operating", "first-five-teacher", "first-five-35-plan", "first-five-35-handout", ...studentDeckSets.firstFive],
-      note: "This bundle applies across K–8 whenever a group enters a new class: K–5 use it for transitions such as electives, and grades 6–8 use it throughout class-period changes. Entering is the threshold, First Five is the immediate academic on-ramp, and Exiting is the class closing and departure. It remains separate from Morning Entry and Dismissal."
+      note: "This bundle applies across K–8 whenever a group enters a new class: K–2 and grades 3–5 use it for transitions such as electives, and grades 6–8 use it throughout class-period changes. Entering is the threshold, First Five is the immediate academic on-ramp, and Exiting is the class closing and departure. It remains separate from Morning Entry and Dismissal."
     },
     {
       id: "voice-levels",
