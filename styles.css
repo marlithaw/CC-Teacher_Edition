@@ -437,6 +437,17 @@ summary:focus-visible {
 
 .bundle-list { display: grid; gap: 5px; }
 
+.bundle-group-label {
+  margin: 18px 10px 4px;
+  color: var(--red-dark);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.bundle-group-label:first-child { margin-top: 2px; }
+
 .bundle-list-item {
   width: 100%;
   min-height: 65px;
@@ -537,6 +548,7 @@ summary:focus-visible {
 
 .alignment-panel,
 .presentation-panel,
+.student-materials-panel,
 .files-panel { padding-top: 38px; }
 
 .section-heading-row {
@@ -635,14 +647,18 @@ summary:focus-visible {
 .presentation-link span { color: var(--red-dark); font-size: 12px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; }
 .presentation-link strong { font-size: 14px; line-height: 1.3; }
 
-.library-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 20px;
-  margin-top: 13px;
-}
+.student-materials-panel .file-list { background: #fffdf7; }
 
-.library-actions a { color: var(--red-dark); font-size: 13px; font-weight: 800; }
+.empty-resource-state {
+  margin: 0;
+  padding: 17px 18px;
+  border: 1px dashed #c9c4bc;
+  border-radius: 10px;
+  background: var(--warm);
+  color: var(--slate);
+  font-size: 13px;
+  line-height: 1.5;
+}
 
 .resource-disclosure {
   overflow: hidden;
@@ -713,6 +729,37 @@ summary:focus-visible {
 .source-note strong { font-size: 13px; }
 .source-note p { margin: 4px 0 0; color: var(--slate); font-size: 13px; }
 
+.staff-learning-kit {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  align-items: center;
+  gap: 30px;
+  padding: 25px clamp(28px, 5vw, 76px);
+  border-bottom: 1px solid #ead47d;
+  background: linear-gradient(110deg, #fff4bd, #fffdf4 68%);
+}
+
+.staff-learning-kit h2 { margin: 5px 0 6px; font-size: 25px; line-height: 1.2; }
+.staff-learning-kit p:last-child { max-width: 760px; margin: 0; color: var(--slate); font-size: 13px; line-height: 1.5; }
+.staff-learning-actions { display: grid; gap: 8px; }
+.staff-learning-actions .primary-link { justify-content: center; margin: 0; }
+.staff-learning-actions > a:not(.primary-link) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid #d7bd58;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.staff-learning-actions > a:not(.primary-link):hover { border-color: var(--red); color: var(--red-dark); }
+
 @media (max-width: 1080px) {
   .site-header { padding-left: 20px; padding-right: 20px; }
   .matchbook-name, .brand-rule { display: none; }
@@ -727,9 +774,11 @@ summary:focus-visible {
   .workspace-grid { display: block; min-height: 0; }
   .canonical-anchor-strip { grid-template-columns: 1fr; }
   .canonical-anchor-actions { flex-wrap: wrap; }
+  .staff-learning-kit { grid-template-columns: 1fr; }
   .bundle-sidebar { padding: 22px 18px 18px; border-right: 0; border-bottom: 1px solid var(--line); }
   .sidebar-heading { padding: 0 4px 16px; }
   .bundle-list { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; scroll-snap-type: x proximity; }
+  .bundle-group-label { display: none; }
   .bundle-list-item { flex: 0 0 230px; scroll-snap-align: start; background: rgba(255, 255, 255, .7); }
   .bundle-detail { width: 100%; padding-top: 36px; }
   .culture-video-stage { min-height: 560px; grid-template-columns: minmax(280px, 1.3fr) minmax(180px, .7fr); }
@@ -765,7 +814,7 @@ summary:focus-visible {
   .daily-plan-actions { width: 100%; margin-top: 18px; }
   .daily-plan-actions .primary-link { margin-top: 0; }
   .presentation-grid { grid-template-columns: 1fr; }
-  .library-actions { display: grid; gap: 8px; }
+  .staff-learning-kit { padding: 22px 18px; }
   .resource-disclosure > summary { align-items: flex-start; }
   .disclosure-label { padding-top: 3px; }
   .file-row { grid-template-columns: 1fr; gap: 8px; }

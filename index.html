@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Matchbook Learning Culture Camp teacher dashboard: ten daily lesson bundles and six schoolwide systems.">
+  <meta name="description" content="Matchbook Learning Culture Camp teacher dashboard: ten daily instructional bundles and fourteen schoolwide system and classroom procedure bundles.">
   <title>When I Grow Up | Culture Camp</title>
   <meta name="theme-color" content="#D91F2B">
   <link rel="icon" type="image/svg+xml" href="./resources/_shared/flame-logo.svg">
-  <link rel="stylesheet" href="./styles.css?v=20260721-master-schedule1">
+  <link rel="stylesheet" href="./styles.css?v=20260721-rollout-reconcile1">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -28,7 +28,7 @@
           <span>10-Day Lessons</span><small>Days 1–10</small>
         </button>
         <button class="nav-button" type="button" data-view="systems" aria-pressed="false">
-          <span>Schoolwide Systems</span><small>6 routine bundles</small>
+          <span>Systems &amp; Procedures</span><small>14 current bundles</small>
         </button>
       </nav>
     </header>
@@ -44,6 +44,8 @@
           <a class="primary-link" href="./resources/culture-camp-day-by-day-teacher-guide.html#daily-schedules" target="_blank" rel="noreferrer">Open all 10 daily schedules</a>
           <a href="./resources/culture-camp-10-day-launch-kit.html" target="_blank" rel="noreferrer">10-day overview</a>
           <a href="./resources/schoolwide-behavior-matrix-2026.docx" target="_blank" rel="noreferrer">Behavior Matrix</a>
+          <a href="./resources/student-decks-index.html" target="_blank" rel="noreferrer">All student presentations</a>
+          <a href="./resources/culture-camp-student-presentations-offline.zip" download="culture-camp-student-presentations-offline.zip">Offline presentation library</a>
         </div>
       </section>
 
@@ -127,8 +129,8 @@
             <section class="daily-plan-panel" aria-labelledby="daily-plan-title">
               <div>
                 <p class="section-label">Teach today</p>
-                <h2 id="daily-plan-title">Daily minute-by-minute plan</h2>
-                <p>Use the time windows, block minutes, teacher language, look-fors, and reset moves as the teaching spine for this day.</p>
+                <h2 id="daily-plan-title">Culture Camp minute-by-minute plan</h2>
+                <p>This plan covers only the protected Culture Camp block beginning at 7:45. It does not schedule the rest of the school day.</p>
               </div>
               <div class="daily-plan-actions">
                 <a class="primary-link" id="open-primary-lesson" href="#" target="_blank" rel="noreferrer">Open daily plan</a>
@@ -142,7 +144,7 @@
                   <p class="section-label" id="alignment-title">Lesson alignment</p>
                   <h2>What this day emphasizes</h2>
                 </div>
-                <span class="working-label">Working alignment</span>
+                <span class="working-label">Core lesson</span>
               </div>
               <div id="lesson-alignments" class="alignment-chips"></div>
             </section>
@@ -155,21 +157,27 @@
                 </div>
               </div>
               <div id="lesson-presentations" class="presentation-grid"></div>
-              <div class="library-actions" aria-label="Student presentation library">
-                <a href="./resources/student-decks-index.html" target="_blank" rel="noreferrer">Browse all 45 presentations</a>
-                <a href="./resources/culture-camp-student-presentations-offline.zip" download="culture-camp-student-presentations-offline.zip">Download the offline library</a>
+            </section>
+
+            <section class="student-materials-panel" aria-labelledby="lesson-handouts-title">
+              <div class="section-heading-row">
+                <div>
+                  <p class="section-label">Give to students</p>
+                  <h2 id="lesson-handouts-title">Student handouts &amp; lesson materials</h2>
+                </div>
               </div>
+              <div id="lesson-handouts" class="file-list"></div>
             </section>
 
             <section class="files-panel" aria-labelledby="lesson-files-title">
               <details class="resource-disclosure">
                 <summary>
                   <span>
-                    <span class="section-label">Use as needed</span>
-                    <strong id="lesson-files-title">Supporting resources</strong>
+                    <span class="section-label">Prepare to teach</span>
+                    <strong id="lesson-files-title">Teacher &amp; facilitator resources</strong>
                     <small id="lesson-resource-count"></small>
                   </span>
-                  <span class="disclosure-label" aria-hidden="true">View resources</span>
+                  <span class="disclosure-label" aria-hidden="true">View teacher prep</span>
                 </summary>
                 <div id="lesson-files" class="file-list"></div>
               </details>
@@ -184,12 +192,24 @@
       </section>
 
       <section id="view-systems" class="view" aria-labelledby="systems-title">
+        <section class="staff-learning-kit" aria-labelledby="staff-learning-title">
+          <div>
+            <p class="section-label">Prepare adults once</p>
+            <h2 id="staff-learning-title">Culture Systems Staff Learning Kit</h2>
+            <p>Use the updated slides and the matching 89-minute facilitator script to learn and rehearse the systems before teachers open individual procedure bundles.</p>
+          </div>
+          <div class="staff-learning-actions">
+            <a class="primary-link" href="./resources/procedures/staff-learning/culture-systems-staff-learning-slides.pptx" target="_blank" rel="noreferrer">Open staff learning slides</a>
+            <a href="./resources/procedures/staff-learning/culture-systems-facilitator-script.docx" target="_blank" rel="noreferrer">Open facilitator script</a>
+          </div>
+        </section>
+
         <div class="workspace-grid systems-workspace">
-          <aside class="bundle-sidebar" aria-label="Schoolwide system bundles">
+          <aside class="bundle-sidebar" aria-label="Schoolwide system and classroom procedure bundles">
             <div class="sidebar-heading">
-              <p class="eyebrow">Schoolwide systems</p>
-              <h2>Six Routine Bundles</h2>
-              <p>Teach, rehearse, observe, and reteach the routines students use across the building.</p>
+              <p class="eyebrow">Systems &amp; procedures</p>
+              <h2>14 Current Bundles</h2>
+              <p>Schoolwide systems first, then classroom procedures. Updated sources lead each bundle; distinct existing teaching supports stay attached.</p>
             </div>
             <div id="system-list" class="bundle-list"></div>
           </aside>
@@ -197,7 +217,7 @@
           <article class="bundle-detail">
             <div class="bundle-heading">
               <div>
-                <p id="system-kicker" class="eyebrow red">System 1 of 6</p>
+                <p id="system-kicker" class="eyebrow red">Schoolwide systems · Bundle 1 of 14</p>
                 <h1 id="systems-title">Morning Meeting</h1>
               </div>
               <span id="system-status" class="bundle-status current">Current source</span>
@@ -218,7 +238,7 @@
               <div class="section-heading-row">
                 <div>
                   <p class="section-label">Bundle access</p>
-                  <h2 id="system-files-title">Files for this system</h2>
+                  <h2 id="system-files-title">Files in this bundle</h2>
                 </div>
                 <a class="primary-link" id="open-primary-system" href="#">Open operating guide</a>
               </div>
@@ -231,6 +251,6 @@
       </section>
     </main>
   </div>
-  <script src="./app.js?v=20260721-master-schedule1"></script>
+  <script src="./app.js?v=20260721-rollout-reconcile1"></script>
 </body>
 </html>

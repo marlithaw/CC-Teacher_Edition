@@ -11,10 +11,10 @@
       description: "The full-system launch model and ten-day sequence."
     },
     "day-by-day-guide": {
-      title: "Day-by-Day Teacher Guide",
-      type: "Professional resource · HTML",
+      title: "Culture Camp Timed Lesson Guide",
+      type: "Minute-by-minute plan · HTML",
       path: "resources/culture-camp-day-by-day-teacher-guide.html",
-      description: "Daily time windows, block minutes, teacher language, look-fors, and reset moves for Days 1–10."
+      description: "Culture Camp-only teacher language, actions, look-fors, and reset moves for the protected 7:45 block on Days 1–10."
     },
     "grade-band-script-companion": {
       title: "Grade-Band Script Companion",
@@ -145,10 +145,10 @@
       description: "Adult calibration tool for demonstrations and reteach decisions."
     },
     "first-five-operating": {
-      title: "Arrival and First Five Operating Guide",
+      title: "Entering (First Five) Operating Guide",
       type: "Professional resource · HTML",
       path: "resources/arrival-and-first-five-guide.html",
-      description: "Current operating sequence for arrival and the silent First Five."
+      description: "Existing operating sequence for the immediate academic on-ramp after students enter a new instructional space."
     },
     "first-five-teacher": {
       title: "First Five Routine Teacher Guide",
@@ -182,9 +182,9 @@
     },
     "restroom-teacher": {
       title: "Restroom Routine Teacher Guide",
-      type: "Working resource · DOCX",
+      type: "Teacher guide · DOCX",
       path: "resources/bathroom.docx",
-      description: "Available teacher-facing restroom lesson pending current procedure ratification."
+      description: "Existing teacher-facing restroom lesson retained alongside the updated procedure."
     },
     "cafeteria-operating": {
       title: "Cafeteria Routines Operating Guide",
@@ -209,6 +209,125 @@
       type: "Teacher guide · DOCX",
       path: "resources/recess.docx",
       description: "Student-facing recess rehearsal and teacher guidance."
+    },
+    "staff-learning-slides": {
+      title: "Culture Systems Staff Learning Slides",
+      type: "Staff learning deck · PPTX",
+      path: "resources/procedures/staff-learning/culture-systems-staff-learning-slides.pptx",
+      description: "The updated adult-facing slide deck for learning and rehearsing the systems and procedures.",
+      action: "Open staff slides"
+    },
+    "staff-learning-facilitator": {
+      title: "Culture Systems Facilitator Script",
+      type: "Facilitator guide · DOCX",
+      path: "resources/procedures/staff-learning/culture-systems-facilitator-script.docx",
+      description: "The updated 89-minute facilitation script that accompanies the staff learning slides.",
+      action: "Open facilitator guide"
+    },
+    "morning-entry-current": {
+      title: "Morning Entry Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/schoolwide/01-morning-entry.docx",
+      description: "Buildingwide start-of-day entry from arrival through the opening day routine.",
+      action: "Open current procedure"
+    },
+    "dismissal-current": {
+      title: "Dismissal Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/schoolwide/02-dismissal.docx",
+      description: "Buildingwide end-of-day dismissal and student handoff procedure.",
+      action: "Open current procedure"
+    },
+    "hallway-current": {
+      title: "Hallway Transitions Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/schoolwide/03-hallway-transitions.docx",
+      description: "Current schoolwide hallway movement, supervision, and transition expectations.",
+      action: "Open current procedure"
+    },
+    "restroom-current": {
+      title: "Restroom Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/schoolwide/04-restroom-procedures.docx",
+      description: "Current restroom access, monitoring, cleanliness, and return-to-learning procedure.",
+      action: "Open current procedure"
+    },
+    "lunch-current": {
+      title: "Lunch Expectations Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/schoolwide/05-lunch-expectations.docx",
+      description: "Current lunch entry, meal, cleanup, supervision, and exit expectations.",
+      action: "Open current procedure"
+    },
+    "recess-current": {
+      title: "Recess Expectations Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/schoolwide/06-recess-expectations.docx",
+      description: "Current boundaries, supervision, play, recall, and return expectations.",
+      action: "Open current procedure"
+    },
+    "refresher-current": {
+      title: "Dress Code, Cell Phones, Backpacks & Hall Passes Refresher",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/schoolwide/07-refresher-dress-code-phones-backpacks-hall-passes.docx",
+      description: "Schoolwide refresher for four high-frequency student expectations.",
+      action: "Open current procedure"
+    },
+    "entering-exiting-current": {
+      title: "Entering (First Five) & Exiting the Classroom Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/classroom/entering-exiting-classroom.docx",
+      description: "K–8 threshold entry and classroom exit for new instructional spaces; paired with the preserved First Five on-ramp.",
+      action: "Open current procedure"
+    },
+    "voice-levels-current": {
+      title: "Voice Levels Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/classroom/voice-levels.docx",
+      description: "Shared voice-level language and response expectations for classroom learning.",
+      action: "Open current procedure"
+    },
+    "materials-current": {
+      title: "Materials Collection & Distribution Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/classroom/materials-collection-distribution.docx",
+      description: "Predictable collection, distribution, and accountability for classroom materials.",
+      action: "Open current procedure"
+    },
+    "indoor-recess-current": {
+      title: "Indoor Recess Procedure",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/classroom/indoor-recess.docx",
+      description: "Classroom procedure for safe, structured indoor recess.",
+      action: "Open current procedure"
+    },
+    "attention-lower-current": {
+      title: "Attention-Getter · Lower Grades",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/classroom/attention-getter-lower-grades.docx",
+      description: "Developmentally appropriate attention signal and student response for lower grades.",
+      action: "Open lower-grades guide"
+    },
+    "attention-upper-current": {
+      title: "Attention-Getter · Upper Grades",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/classroom/attention-getter-upper-grades.docx",
+      description: "Developmentally appropriate attention signal and student response for upper grades.",
+      action: "Open upper-grades guide"
+    },
+    "morning-circle-lower-current": {
+      title: "Morning Circle Transition · Lower Grades",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/classroom/morning-circle-transition-lower-grades.docx",
+      description: "Lower-grade classroom transition into the Morning Circle meeting space.",
+      action: "Open lower-grades guide"
+    },
+    "morning-circle-upper-current": {
+      title: "Morning Circle Transition · Upper Grades",
+      type: "Updated current source · DOCX",
+      path: "resources/procedures/classroom/morning-circle-transition-upper-grades.docx",
+      description: "Upper-grade classroom transition into the Morning Circle meeting space.",
+      action: "Open upper-grades guide"
     }
   };
 
@@ -246,9 +365,9 @@
     day8: registerStudentDeckSet("student-day-8", "day-8-student-deck", "Student Leadership"),
     day9: registerStudentDeckSet("student-day-9", "day-9-student-deck", "Recognition Through Evidence"),
     day10: registerStudentDeckSet("student-day-10", "day-10-student-deck", "Readiness Review & Launch"),
-    firstFive: registerStudentDeckSet("student-first-five", "arrival-first-five-student-deck", "Arrival & First Five"),
+    firstFive: registerStudentDeckSet("student-first-five", "arrival-first-five-student-deck", "Entering (First Five) & Exiting"),
     hallway: registerStudentDeckSet("student-hallway", "hallway-student-deck", "Hallway Travel"),
-    restroom: registerStudentDeckSet("student-restroom", "restroom-student-deck", "Restroom Routine", { draft: true }),
+    restroom: registerStudentDeckSet("student-restroom", "restroom-student-deck", "Restroom Routine"),
     cafeteria: registerStudentDeckSet("student-cafeteria", "cafeteria-student-deck", "Cafeteria Routines"),
     recess: registerStudentDeckSet("student-recess", "recess-student-deck", "Recess & Playground")
   };
@@ -273,13 +392,14 @@
     {
       day: 1,
       title: "Full-System Launch",
-      focus: "Students experience the full culture system from entry to dismissal.",
-      objective: "Launch the shared culture language and rehearse the essential entry routines students will use throughout the day.",
-      alignment: ["Culture Promise", "Behavior Matrix", "Essential entry routines"],
+      focus: "Students learn the complete six-move Culture Camp routine and the shared Culture Promise.",
+      objective: "Explicitly teach Regulate, Orient, Connect, Practice, Commit, and Transition inside the protected 45-minute block.",
+      alignment: ["Culture Promise", "Six-move routine", "45-minute teaching lab"],
       planAnchor: "day-1-full-system-launch",
       scriptAnchor: "day-1-culture-promise",
       presentations: studentDeckSets.day1,
-      files: ["culture-deck", "culture-promise-student"]
+      teacherFiles: ["culture-deck"],
+      handouts: ["culture-promise-student"]
     },
     {
       day: 2,
@@ -290,7 +410,8 @@
       planAnchor: "day-2-listening-and-speaking-norms",
       scriptAnchor: "day-2-listening-speaking",
       presentations: studentDeckSets.day2,
-      files: ["morning-manual"]
+      teacherFiles: ["morning-manual"],
+      handouts: []
     },
     {
       day: 3,
@@ -301,7 +422,8 @@
       planAnchor: "day-3-body-language-and-visible-respect",
       scriptAnchor: "day-3-body-language",
       presentations: studentDeckSets.day3,
-      files: ["behavior-matrix-teacher"]
+      teacherFiles: ["behavior-matrix-teacher"],
+      handouts: []
     },
     {
       day: 4,
@@ -312,7 +434,8 @@
       planAnchor: "day-4-voice-tone-and-early-student-roles",
       scriptAnchor: "day-4-voice-and-roles",
       presentations: studentDeckSets.day4,
-      files: ["role-system"]
+      teacherFiles: [],
+      handouts: ["role-system"]
     },
     {
       day: 5,
@@ -323,7 +446,8 @@
       planAnchor: "day-5-the-power-of-commitments",
       scriptAnchor: "day-5-commitments",
       presentations: studentDeckSets.day5,
-      files: ["culture-promise-teacher", "culture-promise-35-plan", "culture-promise-35-handout"]
+      teacherFiles: ["culture-promise-teacher", "culture-promise-35-plan"],
+      handouts: ["culture-promise-35-handout"]
     },
     {
       day: 6,
@@ -334,7 +458,8 @@
       planAnchor: "day-6-regulation-toolbox-and-transitions",
       scriptAnchor: "day-6-calm-down-tools",
       presentations: studentDeckSets.day6,
-      files: ["regulation-guide", "responsive-pathway"]
+      teacherFiles: ["regulation-guide", "responsive-pathway"],
+      handouts: []
     },
     {
       day: 7,
@@ -345,7 +470,8 @@
       planAnchor: "day-7-repair-language-and-recovery",
       scriptAnchor: "day-7-repair",
       presentations: studentDeckSets.day7,
-      files: ["repair-guide", "reentry-guide", "restorative-deck"]
+      teacherFiles: ["repair-guide", "reentry-guide", "restorative-deck"],
+      handouts: []
     },
     {
       day: 8,
@@ -356,7 +482,8 @@
       planAnchor: "day-8-student-leadership-without-loss-of-fidelity",
       scriptAnchor: "day-8-student-leadership",
       presentations: studentDeckSets.day8,
-      files: ["adult-look-fors"]
+      teacherFiles: ["adult-look-fors"],
+      handouts: []
     },
     {
       day: 9,
@@ -367,7 +494,8 @@
       planAnchor: "day-9-recognition-through-evidence",
       scriptAnchor: "day-9-recognition",
       presentations: studentDeckSets.day9,
-      files: ["recognition-guide", "family-evidence"]
+      teacherFiles: ["recognition-guide", "family-evidence"],
+      handouts: []
     },
     {
       day: 10,
@@ -378,13 +506,15 @@
       planAnchor: "day-10-readiness-review-and-launch",
       scriptAnchor: "day-10-launch",
       presentations: studentDeckSets.day10,
-      files: ["fidelity-look-for"]
+      teacherFiles: ["fidelity-look-for"],
+      handouts: []
     }
   ];
 
   const systems = [
     {
       id: "morning-meeting",
+      category: "Schoolwide systems",
       title: "Morning Meeting",
       shortTitle: "Morning Meeting",
       status: "Live year-round",
@@ -395,59 +525,160 @@
       note: "This opens the live Morning Meeting site. Updates published from marlithaw/morningmeeting appear here automatically, so the Teacher Edition does not keep a separate copy."
     },
     {
-      id: "first-five",
-      title: "Arrival & First Five",
-      shortTitle: "First Five",
-      status: "Current source",
+      id: "morning-entry",
+      category: "Schoolwide systems",
+      title: "Morning Entry",
+      shortTitle: "Morning Entry",
+      status: "Updated current source",
       statusClass: "current",
-      purpose: "Create a calm, predictable on-ramp from arrival into independent learning.",
-      result: "Students locate the posted task, prepare materials, and begin at Level 0 for five minutes without teacher instruction.",
-      files: ["first-five-operating", "first-five-teacher", "first-five-35-plan", "first-five-35-handout", ...studentDeckSets.firstFive],
-      note: "This bundle preserves the routine mechanics: same posted location, five minutes, Level 0, time-to-start, and a clear no-help boundary."
+      purpose: "Create a consistent buildingwide start to the school day from arrival through the opening routine.",
+      result: "Students enter the building, complete arrival expectations, and begin the day safely and predictably.",
+      files: ["morning-entry-current"],
+      note: "Morning Entry is the beginning of the school day. It does not replace Entering (First Five) when any K–8 group enters a new class, including lower-grade transitions to electives and middle-school class-period changes."
+    },
+    {
+      id: "dismissal",
+      category: "Schoolwide systems",
+      title: "Dismissal",
+      shortTitle: "Dismissal",
+      status: "Updated current source",
+      statusClass: "current",
+      purpose: "Create a safe, orderly, and accountable buildingwide end to the school day.",
+      result: "Students move through end-of-day release and handoff procedures with calm bodies and clear adult supervision.",
+      files: ["dismissal-current"],
+      note: "Dismissal is the end of the school day. It does not replace the classroom exit routine used when a group leaves a class."
     },
     {
       id: "hallway",
-      title: "Hallway Travel",
+      category: "Schoolwide systems",
+      title: "Hallway Transitions",
       shortTitle: "Hallway",
-      status: "Current source",
+      status: "Updated current source",
       statusClass: "current",
       purpose: "Move students safely and efficiently while protecting learning throughout the building.",
       result: "Students transition with the expected voice level, spacing, pace, and response to adult cues.",
-      files: ["hallway-operating", "hallway-teacher", ...studentDeckSets.hallway],
-      note: "Use the current operating guide as the routine spine and the teacher guide for student rehearsal."
+      files: ["hallway-current", "hallway-operating", "hallway-teacher", ...studentDeckSets.hallway],
+      note: "The updated procedure is the current source. The existing operating guide, teacher guide, and grade-band student presentations remain as implementation supports."
     },
     {
       id: "restroom",
-      title: "Restroom",
+      category: "Schoolwide systems",
+      title: "Restroom Procedures",
       shortTitle: "Restroom",
-      status: "Ratification needed",
-      statusClass: "pending",
+      status: "Updated current source",
+      statusClass: "current",
       purpose: "Protect safety, privacy, cleanliness, and prompt return to learning.",
       result: "Students use the restroom efficiently, follow the current Behavior Matrix, and return without disrupting learning.",
-      files: ["restroom-teacher", ...studentDeckSets.restroom],
-      note: "Source gap: a dedicated 2026–2027 Restroom Operating Guide was not found. The current Behavior Matrix and available teacher guide are linked here, but procedures must be ratified before this bundle is called final."
+      files: ["restroom-current", "restroom-teacher", ...studentDeckSets.restroom],
+      note: "The updated procedure closes the former source gap. Its Kindergarten hang-tag step is a current implementation choice to revise only if practice shows it does not work."
     },
     {
-      id: "cafeteria",
-      title: "Cafeteria",
-      shortTitle: "Cafeteria",
-      status: "Current source",
+      id: "lunch",
+      category: "Schoolwide systems",
+      title: "Lunch Expectations",
+      shortTitle: "Lunch",
+      status: "Updated current source",
       statusClass: "current",
       purpose: "Make entry, meal service, cleanup, and exit predictable and respectful.",
       result: "Students move through the cafeteria sequence safely, use the expected voice level, clean their area, and exit ready.",
-      files: ["cafeteria-operating", "cafeteria-teacher", ...studentDeckSets.cafeteria],
-      note: "The operating guide controls the adult sequence; the teacher guide supports student-facing rehearsal."
+      files: ["lunch-current", "cafeteria-operating", "cafeteria-teacher", ...studentDeckSets.cafeteria],
+      note: "Lunch Expectations is the updated source. The existing cafeteria operating guide, teacher guide, and student presentations remain as teaching supports."
     },
     {
       id: "recess",
-      title: "Recess & Playground",
+      category: "Schoolwide systems",
+      title: "Recess Expectations",
       shortTitle: "Recess",
-      status: "Current source",
+      status: "Updated current source",
       statusClass: "current",
       purpose: "Create safe play with clear boundaries, active supervision, recall, and return routines.",
       result: "Students play within boundaries, respond to recall, resolve minor problems, and return to instruction predictably.",
-      files: ["recess-operating", "recess-teacher", ...studentDeckSets.recess],
-      note: "Teach boundaries and recall as observable routines, then rehearse the return before students begin open play."
+      files: ["recess-current", "recess-operating", "recess-teacher", ...studentDeckSets.recess],
+      note: "The updated procedure is the current source. The existing operating guide, teacher guide, and grade-band presentations remain as rehearsal supports."
+    },
+    {
+      id: "refresher",
+      category: "Schoolwide systems",
+      title: "Student Expectations Refresher",
+      shortTitle: "Expectations Refresher",
+      status: "Updated current source",
+      statusClass: "current",
+      purpose: "Refresh high-frequency expectations for dress code, cell phones, backpacks, and hall passes.",
+      result: "Students can name and follow the four expectations without inconsistent adult messages.",
+      files: ["refresher-current"],
+      note: "Use this as a targeted refresher when these expectations drift; it is not a replacement for the full behavior matrix."
+    },
+    {
+      id: "entering-first-five-exiting",
+      category: "Classroom procedures",
+      title: "Entering (First Five) & Exiting the Classroom",
+      shortTitle: "Entering / First Five / Exiting",
+      status: "Updated + preserved",
+      statusClass: "current",
+      purpose: "Create a predictable threshold entry, immediate academic on-ramp, and classroom exit for groups moving between classes.",
+      result: "Students enter, begin the posted First Five independently, close the class, restore the room, and exit on the teacher’s cue.",
+      files: ["entering-exiting-current", "first-five-operating", "first-five-teacher", "first-five-35-plan", "first-five-35-handout", ...studentDeckSets.firstFive],
+      note: "This bundle applies across K–8 whenever a group enters a new class: K–5 use it for transitions such as electives, and grades 6–8 use it throughout class-period changes. Entering is the threshold, First Five is the immediate academic on-ramp, and Exiting is the class closing and departure. It remains separate from Morning Entry and Dismissal."
+    },
+    {
+      id: "voice-levels",
+      category: "Classroom procedures",
+      title: "Voice Levels",
+      shortTitle: "Voice Levels",
+      status: "Updated current source",
+      statusClass: "current",
+      purpose: "Give every classroom one clear, teachable language for expected volume.",
+      result: "Students adjust their voice level to the learning task and respond promptly when the level changes.",
+      files: ["voice-levels-current"],
+      note: "Teach the level, model it, practice it, and correct with the same shared language across classrooms."
+    },
+    {
+      id: "materials",
+      category: "Classroom procedures",
+      title: "Materials Collection & Distribution",
+      shortTitle: "Materials",
+      status: "Updated current source",
+      statusClass: "current",
+      purpose: "Protect learning time with predictable material pickup, distribution, collection, and accountability.",
+      result: "Students know who moves, where materials go, and what completion looks like without crowding or dead time.",
+      files: ["materials-current"],
+      note: "Keep roles, routes, and storage locations consistent enough that the routine can become automatic."
+    },
+    {
+      id: "attention-getter",
+      category: "Classroom procedures",
+      title: "Attention-Getter",
+      shortTitle: "Attention-Getter",
+      status: "Updated by grade band",
+      statusClass: "current",
+      purpose: "Use a developmentally appropriate signal that produces a fast, observable student response.",
+      result: "Students stop, face the speaker, quiet their voices, and show readiness using the grade-appropriate response.",
+      files: ["attention-lower-current", "attention-upper-current"],
+      note: "Choose the lower- or upper-grade source; do not mix both response patterns in the same classroom."
+    },
+    {
+      id: "morning-circle-transition",
+      category: "Classroom procedures",
+      title: "Morning Circle Transition",
+      shortTitle: "Morning Circle Transition",
+      status: "Updated by grade band",
+      statusClass: "current",
+      purpose: "Move students efficiently from classroom seating into the Morning Circle meeting space.",
+      result: "Students move, settle, and become ready for the meeting with minimal narration or lost time.",
+      files: ["morning-circle-lower-current", "morning-circle-upper-current"],
+      note: "This is the classroom movement into the meeting space. Morning Meeting remains the schoolwide instructional system it supports."
+    },
+    {
+      id: "indoor-recess",
+      category: "Classroom procedures",
+      title: "Indoor Recess",
+      shortTitle: "Indoor Recess",
+      status: "Updated current source",
+      statusClass: "current",
+      purpose: "Provide a safe, structured classroom option when recess must happen indoors.",
+      result: "Students choose approved activities, manage materials, and reset the room within the expected time.",
+      files: ["indoor-recess-current"],
+      note: "Use the procedure for weather or building conditions that move recess indoors; the schoolwide outdoor Recess bundle remains separate."
     }
   ];
 
@@ -508,9 +739,16 @@
     byId("lesson-focus").textContent = lesson.focus;
     byId("lesson-objective").textContent = lesson.objective;
     byId("lesson-alignments").innerHTML = lesson.alignment.map(item => `<span>${item}</span>`).join("");
-    byId("lesson-files").innerHTML = fileRows(lesson.files);
+    byId("lesson-files").innerHTML = lesson.teacherFiles.length
+      ? fileRows(lesson.teacherFiles)
+      : '<p class="empty-resource-state">No additional teacher preparation file is required for this lesson. Use the timed plan and grade-band script companion.</p>';
+    byId("lesson-handouts").innerHTML = lesson.handouts.length
+      ? fileRows(lesson.handouts)
+      : '<p class="empty-resource-state">No separate student handout is needed today.</p>';
     byId("lesson-presentations").innerHTML = presentationRows(lesson.presentations);
-    byId("lesson-resource-count").textContent = `${lesson.files.length} optional ${lesson.files.length === 1 ? "resource" : "resources"}`;
+    byId("lesson-resource-count").textContent = lesson.teacherFiles.length
+      ? `${lesson.teacherFiles.length} teacher ${lesson.teacherFiles.length === 1 ? "resource" : "resources"}`
+      : "Timed plan + script companion only";
 
     const primaryLessonLink = byId("open-primary-lesson");
     primaryLessonLink.href = `${resourceCatalog["day-by-day-guide"].path}#${lesson.planAnchor}`;
@@ -522,19 +760,25 @@
   }
 
   function renderSystemList() {
-    byId("system-list").innerHTML = systems.map((system, index) => `
-      <button class="bundle-list-item ${system.id === selection.system ? "selected" : ""}" type="button" data-system="${system.id}" ${system.id === selection.system ? 'aria-current="true"' : ""}>
-        <span class="bundle-number">${index + 1}</span>
-        <span><strong>${system.shortTitle}</strong><small>${system.status}</small></span>
-      </button>
-    `).join("");
+    let lastCategory = "";
+    byId("system-list").innerHTML = systems.map((system, index) => {
+      const categoryLabel = system.category === lastCategory
+        ? ""
+        : `<p class="bundle-group-label">${system.category}</p>`;
+      lastCategory = system.category;
+      return `${categoryLabel}
+        <button class="bundle-list-item ${system.id === selection.system ? "selected" : ""}" type="button" data-system="${system.id}" ${system.id === selection.system ? 'aria-current="true"' : ""}>
+          <span class="bundle-number">${index + 1}</span>
+          <span><strong>${system.shortTitle}</strong><small>${system.status}</small></span>
+        </button>`;
+    }).join("");
   }
 
   function renderSystem() {
     const index = Math.max(0, systems.findIndex(item => item.id === selection.system));
     const system = systems[index];
     renderSystemList();
-    byId("system-kicker").textContent = `System ${index + 1} of ${systems.length}`;
+    byId("system-kicker").textContent = `${system.category} · Bundle ${index + 1} of ${systems.length}`;
     byId("systems-title").textContent = system.title;
     byId("system-purpose").textContent = system.purpose;
     byId("system-result").textContent = system.result;
@@ -543,13 +787,8 @@
     const primarySystemLink = byId("open-primary-system");
     primarySystemLink.href = primarySystemResource.path;
     primarySystemLink.textContent = primarySystemResource.action || "Open operating guide";
-    if (/^https?:\/\//.test(primarySystemResource.path)) {
-      primarySystemLink.target = "_blank";
-      primarySystemLink.rel = "noreferrer";
-    } else {
-      primarySystemLink.removeAttribute("target");
-      primarySystemLink.removeAttribute("rel");
-    }
+    primarySystemLink.target = "_blank";
+    primarySystemLink.rel = "noreferrer";
     byId("system-status").textContent = system.status;
     byId("system-status").className = `bundle-status ${system.statusClass}`;
     byId("system-note").innerHTML = `<strong>${system.statusClass === "pending" ? "Before finalizing" : "Implementation note"}</strong><p>${system.note}</p>`;
