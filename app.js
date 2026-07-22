@@ -388,6 +388,190 @@
     download: "culture-camp-student-presentations-offline.zip"
   };
 
+  // Culture Camp lesson documents + student handouts (procedure-card style, matches school-wide cards)
+  resourceCatalog["lesson-doc-1"] = {
+    title: "Day 1: Full-System Launch — Lesson Document",
+    type: "Culture Camp lesson · DOCX",
+    path: "resources/lessons/day-01-full-system-launch-lesson.docx",
+    description: "Full procedure-card lesson: six-move block, non-negotiables, teacher language, and a Day-1 teaching script.",
+    action: "Open lesson document"
+  };
+  resourceCatalog["lesson-handout-1"] = {
+    title: "Day 1: Full-System Launch — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/lessons/day-01-full-system-launch-student-handout.docx",
+    description: "One-page student-facing handout: my six moves today, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["lesson-doc-2"] = {
+    title: "Day 2: Listening and Speaking Norms — Lesson Document",
+    type: "Culture Camp lesson · DOCX",
+    path: "resources/lessons/day-02-listening-and-speaking-norms-lesson.docx",
+    description: "Full procedure-card lesson: six-move block, non-negotiables, teacher language, and a Day-2 teaching script.",
+    action: "Open lesson document"
+  };
+  resourceCatalog["lesson-handout-2"] = {
+    title: "Day 2: Listening and Speaking Norms — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/lessons/day-02-listening-and-speaking-norms-student-handout.docx",
+    description: "One-page student-facing handout: my six moves today, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["lesson-doc-3"] = {
+    title: "Day 3: Body Language and Visible Respect — Lesson Document",
+    type: "Culture Camp lesson · DOCX",
+    path: "resources/lessons/day-03-body-language-and-visible-respect-lesson.docx",
+    description: "Full procedure-card lesson: six-move block, non-negotiables, teacher language, and a Day-3 teaching script.",
+    action: "Open lesson document"
+  };
+  resourceCatalog["lesson-handout-3"] = {
+    title: "Day 3: Body Language and Visible Respect — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/lessons/day-03-body-language-and-visible-respect-student-handout.docx",
+    description: "One-page student-facing handout: my six moves today, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["lesson-doc-4"] = {
+    title: "Day 4: Voice Tone and First Student Roles — Lesson Document",
+    type: "Culture Camp lesson · DOCX",
+    path: "resources/lessons/day-04-voice-tone-and-early-student-roles-lesson.docx",
+    description: "Full procedure-card lesson: six-move block, non-negotiables, teacher language, and a Day-4 teaching script.",
+    action: "Open lesson document"
+  };
+  resourceCatalog["lesson-handout-4"] = {
+    title: "Day 4: Voice Tone and First Student Roles — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/lessons/day-04-voice-tone-and-early-student-roles-student-handout.docx",
+    description: "One-page student-facing handout: my six moves today, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["lesson-doc-5"] = {
+    title: "Day 5: Power of Commitments — Lesson Document",
+    type: "Culture Camp lesson · DOCX",
+    path: "resources/lessons/day-05-the-power-of-commitments-lesson.docx",
+    description: "Full procedure-card lesson: six-move block, non-negotiables, teacher language, and a Day-5 teaching script.",
+    action: "Open lesson document"
+  };
+  resourceCatalog["lesson-handout-5"] = {
+    title: "Day 5: Power of Commitments — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/lessons/day-05-the-power-of-commitments-student-handout.docx",
+    description: "One-page student-facing handout: my six moves today, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["lesson-doc-6"] = {
+    title: "Day 6: Regulation Toolbox and Transitions — Lesson Document",
+    type: "Culture Camp lesson · DOCX",
+    path: "resources/lessons/day-06-regulation-toolbox-and-transitions-lesson.docx",
+    description: "Full procedure-card lesson: six-move block, non-negotiables, teacher language, and a Day-6 teaching script.",
+    action: "Open lesson document"
+  };
+  resourceCatalog["lesson-handout-6"] = {
+    title: "Day 6: Regulation Toolbox and Transitions — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/lessons/day-06-regulation-toolbox-and-transitions-student-handout.docx",
+    description: "One-page student-facing handout: my six moves today, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["lesson-doc-7"] = {
+    title: "Day 7: Repair Language and Recovery — Lesson Document",
+    type: "Culture Camp lesson · DOCX",
+    path: "resources/lessons/day-07-repair-language-and-recovery-lesson.docx",
+    description: "Full procedure-card lesson: six-move block, non-negotiables, teacher language, and a Day-7 teaching script.",
+    action: "Open lesson document"
+  };
+  resourceCatalog["lesson-handout-7"] = {
+    title: "Day 7: Repair Language and Recovery — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/lessons/day-07-repair-language-and-recovery-student-handout.docx",
+    description: "One-page student-facing handout: my six moves today, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["lesson-doc-8"] = {
+    title: "Day 8: Student Leadership with Fidelity — Lesson Document",
+    type: "Culture Camp lesson · DOCX",
+    path: "resources/lessons/day-08-student-leadership-without-loss-of-fidelity-lesson.docx",
+    description: "Full procedure-card lesson: six-move block, non-negotiables, teacher language, and a Day-8 teaching script.",
+    action: "Open lesson document"
+  };
+  resourceCatalog["lesson-handout-8"] = {
+    title: "Day 8: Student Leadership with Fidelity — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/lessons/day-08-student-leadership-without-loss-of-fidelity-student-handout.docx",
+    description: "One-page student-facing handout: my six moves today, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["lesson-doc-9"] = {
+    title: "Day 9: Recognition Through Evidence — Lesson Document",
+    type: "Culture Camp lesson · DOCX",
+    path: "resources/lessons/day-09-recognition-through-evidence-lesson.docx",
+    description: "Full procedure-card lesson: six-move block, non-negotiables, teacher language, and a Day-9 teaching script.",
+    action: "Open lesson document"
+  };
+  resourceCatalog["lesson-handout-9"] = {
+    title: "Day 9: Recognition Through Evidence — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/lessons/day-09-recognition-through-evidence-student-handout.docx",
+    description: "One-page student-facing handout: my six moves today, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["lesson-doc-10"] = {
+    title: "Day 10: Readiness Review and Launch — Lesson Document",
+    type: "Culture Camp lesson · DOCX",
+    path: "resources/lessons/day-10-readiness-review-and-launch-lesson.docx",
+    description: "Full procedure-card lesson: six-move block, non-negotiables, teacher language, and a Day-10 teaching script.",
+    action: "Open lesson document"
+  };
+  resourceCatalog["lesson-handout-10"] = {
+    title: "Day 10: Readiness Review and Launch — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/lessons/day-10-readiness-review-and-launch-student-handout.docx",
+    description: "One-page student-facing handout: my six moves today, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["sw-handout-morning-entry"] = {
+    title: "Morning Entry — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/procedures/schoolwide/handouts/morning-entry-student-handout.docx",
+    description: "One-page student-facing handout: what I do, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["sw-handout-dismissal"] = {
+    title: "Dismissal — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/procedures/schoolwide/handouts/dismissal-student-handout.docx",
+    description: "One-page student-facing handout: what I do, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["sw-handout-hallway"] = {
+    title: "Hallway Travel — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/procedures/schoolwide/handouts/hallway-student-handout.docx",
+    description: "One-page student-facing handout: what I do, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["sw-handout-restroom"] = {
+    title: "Restroom Routine — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/procedures/schoolwide/handouts/restroom-student-handout.docx",
+    description: "One-page student-facing handout: what I do, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["sw-handout-lunch"] = {
+    title: "Lunch — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/procedures/schoolwide/handouts/lunch-student-handout.docx",
+    description: "One-page student-facing handout: what I do, my cues, and a self-check.",
+    action: "Open handout"
+  };
+  resourceCatalog["sw-handout-recess"] = {
+    title: "Recess — Student Handout",
+    type: "Student handout · DOCX",
+    path: "resources/procedures/schoolwide/handouts/recess-student-handout.docx",
+    description: "One-page student-facing handout: what I do, my cues, and a self-check.",
+    action: "Open handout"
+  };
+
   const lessons = [
     {
       day: 1,
@@ -681,6 +865,28 @@
       note: "Use the procedure for weather or building conditions that move recess indoors; the schoolwide outdoor Recess bundle remains separate."
     }
   ];
+
+  // Attach the procedure-card lesson document + student handout to each Culture Camp day.
+  lessons.forEach(lesson => {
+    const doc = `lesson-doc-${lesson.day}`;
+    const handout = `lesson-handout-${lesson.day}`;
+    if (resourceCatalog[doc]) lesson.teacherFiles = [doc, ...lesson.teacherFiles];
+    if (resourceCatalog[handout]) lesson.handouts = [handout, ...lesson.handouts];
+  });
+
+  // Attach the one-page student handout to each of the six school-wide procedures.
+  const schoolwideHandouts = {
+    "morning-entry": "sw-handout-morning-entry",
+    "dismissal": "sw-handout-dismissal",
+    "hallway": "sw-handout-hallway",
+    "restroom": "sw-handout-restroom",
+    "lunch": "sw-handout-lunch",
+    "recess": "sw-handout-recess"
+  };
+  systems.forEach(system => {
+    const handout = schoolwideHandouts[system.id];
+    if (handout && resourceCatalog[handout]) system.files = [...system.files, handout];
+  });
 
   const byId = id => document.getElementById(id);
   const all = selector => Array.from(document.querySelectorAll(selector));
