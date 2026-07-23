@@ -944,12 +944,16 @@
   }
 
   function deckTiles(ids) {
-    return ids.map(id => resourceCatalog[id]).filter(Boolean).map(f => `
-      <a class="deck-tile" href="${f.path}" target="_blank" rel="noreferrer">
+    return ids.map(id => resourceCatalog[id]).filter(Boolean).map(f => {
+      const base = f.path.replace(/^resources\//, "");
+      const present = `resources/present.html?deck=${encodeURIComponent(base)}&title=${encodeURIComponent(f.title)}`;
+      return `
+      <div class="deck-tile">
         <span class="deck-band">${f.gradeBand || ""}</span>
-        <span class="deck-meta">${f.action || "Open presentation"}</span>
-        <span class="deck-go">Open &rarr;</span>
-      </a>`).join("");
+        <a class="deck-present" href="${present}" target="_blank" rel="noreferrer">&#9654; Present with notes</a>
+        <a class="deck-slides" href="${f.path}" target="_blank" rel="noreferrer">Slides only &rarr;</a>
+      </div>`;
+    }).join("");
   }
 
   function fillSlot(slotId, containerId, html, emptyMsg) {
