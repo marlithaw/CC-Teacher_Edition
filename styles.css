@@ -116,7 +116,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
    ============================================================ */
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
   gap: clamp(28px, 5vw, 72px);
   align-items: center;
   padding: clamp(36px, 6vw, 84px) clamp(20px, 5vw, 72px);
@@ -150,13 +150,16 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 
 .hero-video {
   position: relative;
-  aspect-ratio: 16 / 10;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 9 / 16;      /* matches the portrait 720×1280 source — no cropping */
+  margin: 0 auto;
   background: #000;
-  border: 1px solid #000;
-  box-shadow: 0 26px 60px rgba(0, 0, 0, .45);
+  border: 1px solid rgba(255, 255, 255, .08);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, .5);
   overflow: hidden;
 }
-.hero-video video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
+.hero-video video { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
 .culture-video-cover {
   position: absolute; inset: 0;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -385,7 +388,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
    ============================================================ */
 @media (max-width: 1000px) {
   .hero { grid-template-columns: 1fr; }
-  .hero-video { max-width: 620px; }
+  .hero-video { max-width: 280px; }
   .workspace { grid-template-columns: 250px minmax(0, 1fr); }
 }
 
