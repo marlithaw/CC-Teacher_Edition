@@ -3,252 +3,156 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Matchbook Learning Culture Camp teacher dashboard: ten daily lessons plus schoolwide systems and classroom procedures.">
-  <title>When I Grow Up | Culture Camp</title>
+  <meta name="description" content="Matchbook Learning Culture Camp teacher hub: the ten-day Morning Meeting launch, schoolwide systems, and classroom procedures — presentations, teacher resources, and student handouts in one place.">
+  <title>Culture Camp · When I Grow Up | Matchbook Learning</title>
   <meta name="theme-color" content="#E21C24">
   <link rel="icon" type="image/svg+xml" href="./resources/_shared/flame-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20260722-assigned-seating-8am">
+  <link rel="stylesheet" href="./styles.css?v=20260723-redesign">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <div class="app-shell">
-    <header class="site-header">
-      <button class="brand-lockup" type="button" data-view="lessons" aria-label="Open the Culture Camp ten-day lessons">
-        <img class="brand-flame" src="./resources/_shared/flame-logo.svg" alt="" aria-hidden="true" width="40" height="50">
-        <span class="matchbook-name"><strong>Matchbook</strong><small>Learning</small></span>
-        <span class="brand-rule" aria-hidden="true"></span>
-        <span class="program-name">
-          <strong>Culture Camp</strong>
-          <small>When I Grow Up · Safe · Respectful · Responsible</small>
-        </span>
-      </button>
 
-      <nav class="primary-nav" aria-label="Culture Camp sections">
-        <button class="nav-button active" type="button" data-view="lessons" aria-pressed="true">
-          <span>10-Day Lessons</span><small>Days 1–10</small>
-        </button>
-        <button class="nav-button" type="button" data-view="systems" aria-pressed="false">
-          <span>Systems &amp; Procedures</span><small>15 systems</small>
-        </button>
-      </nav>
-    </header>
+  <header class="site-header">
+    <button class="brand-lockup" type="button" data-view="home" aria-label="Culture Camp home">
+      <img class="brand-flame" src="./resources/_shared/flame-logo.svg" alt="" aria-hidden="true" width="30" height="38">
+      <span class="matchbook-name"><strong>Matchbook</strong><small>Learning</small></span>
+    </button>
+    <nav class="primary-nav" aria-label="Culture Camp sections">
+      <button class="nav-tab active" type="button" data-view="home">Home</button>
+      <button class="nav-tab" type="button" data-view="lessons">10-Day Lessons</button>
+      <button class="nav-tab" type="button" data-view="systems">Systems &amp; Procedures</button>
+    </nav>
+  </header>
 
-    <main id="main-content">
-      <section class="quick-links" aria-labelledby="quick-links-title">
-        <div class="quick-links-intro">
-          <p class="section-label">Start here every morning</p>
-          <h2 id="quick-links-title">Daily schedules &amp; shared references</h2>
-          <p>The Culture Camp block always begins at <strong>8:00</strong>. Morning Meeting runs <strong>45 min</strong> Days&nbsp;1–3, <strong>40 min</strong> Days&nbsp;4–5, <strong>30 min</strong> Days&nbsp;6–8, <strong>20 min</strong> Day&nbsp;9, and <strong>15 min</strong> Day&nbsp;10.</p>
+  <main id="main-content">
+    <!-- ===================== HOME ===================== -->
+    <section id="view-home" class="view active" aria-labelledby="hero-title">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Matchbook Learning · Culture Camp</p>
+          <h1 class="hero-title" id="hero-title">When I <span>Grow Up</span></h1>
+          <hr class="hero-rule" aria-hidden="true">
+          <p class="hero-sub">A ten-day launch that makes Safe, Respectful, and Responsible the way we do everything — taught, practiced, and protected every morning at 8:00.</p>
+          <div class="hero-pillars"><span>Safe</span><span>Respectful</span><span>Responsible</span></div>
         </div>
-        <div class="quick-links-actions">
-          <a class="quick-link primary" href="./resources/culture-camp-day-by-day-teacher-guide.html#daily-schedules" target="_blank" rel="noreferrer">All 10 daily schedules</a>
-          <a class="quick-link" href="./resources/culture-camp-10-day-launch-kit.html" target="_blank" rel="noreferrer">10-day overview</a>
-          <a class="quick-link" href="./resources/schoolwide-behavior-matrix-2026.docx" target="_blank" rel="noreferrer">Behavior matrix</a>
-          <a class="quick-link" href="./resources/student-decks-index.html" target="_blank" rel="noreferrer">Student presentations</a>
-          <a class="quick-link" href="./resources/culture-camp-student-presentations-offline.zip" download="culture-camp-student-presentations-offline.zip">Offline library</a>
+        <div class="hero-video">
+          <video id="culture-intro-video" controls playsinline preload="metadata" poster="./resources/culture-camp-anthem-poster.jpg">
+            <source src="./resources/culture-camp-anthem.mp4" type="video/mp4">
+            Your browser does not support HTML video. Use the download link below to open the introduction directly.
+          </video>
+          <div class="culture-video-cover" id="culture-video-cover">
+            <p>Meet the Culture Camp story</p>
+            <button id="culture-video-play" type="button" aria-controls="culture-intro-video">▶ Watch introduction</button>
+            <small>Three-minute adult overview · On-screen lyrics</small>
+          </div>
         </div>
       </section>
 
-      <section id="view-lessons" class="view active" aria-labelledby="lesson-title">
-        <details class="culture-video-intro" open>
-          <summary class="culture-video-summary">
-            <span>
-              <span class="eyebrow red">Optional staff orientation</span>
-              <strong id="culture-video-title">Culture Camp Video Introduction</strong>
-              <small id="culture-video-purpose">Watch the three-minute adult overview without leaving the daily teaching workflow.</small>
-            </span>
-            <span class="culture-video-audience">Open video · 3:18</span>
-          </summary>
-
-          <div class="culture-video-intro-body">
-            <div class="culture-video-stage" aria-label="Embedded Culture Camp video introduction">
-              <aside class="culture-video-side culture-video-brand" aria-hidden="true">
-                <img src="./resources/student-decks/_shared/matchbook-flame.png" alt="">
-                <strong>Culture Camp</strong>
-                <span>Video Introduction</span>
-                <small>Culture is practiced before pressure.</small>
-              </aside>
-
-              <div class="culture-video-player">
-                <video id="culture-intro-video" controls playsinline preload="metadata" poster="./resources/culture-camp-anthem-poster.jpg" aria-describedby="culture-video-purpose culture-video-positioning">
-                  <source src="./resources/culture-camp-anthem.mp4" type="video/mp4">
-                  Your browser does not support HTML video. Use the download link below to open the introduction directly.
-                </video>
-                <div class="culture-video-cover" id="culture-video-cover">
-                  <p>Meet the Culture Camp story</p>
-                  <button id="culture-video-play" type="button" aria-controls="culture-intro-video">▶ Watch introduction</button>
-                  <small>Teacher and staff orientation · On-screen lyrics</small>
-                </div>
-              </div>
-
-              <aside class="culture-video-side culture-video-pillars" aria-label="Matchbook culture pillars">
-                <span>The Matchbook Way</span>
-                <strong>Safe</strong>
-                <strong>Respectful</strong>
-                <strong>Responsible</strong>
-              </aside>
-            </div>
-
-            <div class="culture-video-intro-footer" id="culture-video-positioning">
-              <p><strong>Purpose:</strong> Use this introduction to orient adults to Culture Camp as a whole. It is not a student lesson and does not replace the daily teaching plan or grade-band presentations.</p>
-              <a href="./resources/culture-camp-anthem.mp4" download="matchbook-culture-camp-video-introduction.mp4">Download video for offline use</a>
-            </div>
-          </div>
-        </details>
-
-        <div class="workspace-grid">
-          <aside class="bundle-sidebar" aria-label="Culture Camp days">
-            <div class="sidebar-heading">
-              <p class="eyebrow">Culture Camp</p>
-              <h2>Your 10-day journey</h2>
-              <p>Pick a day to see its plan, student presentations, and materials.</p>
-            </div>
-            <div id="day-list" class="bundle-list"></div>
-          </aside>
-
-          <article class="bundle-detail">
-            <div class="bundle-heading">
-              <div>
-                <p id="lesson-kicker" class="eyebrow red">Day 1 of 10</p>
-                <h1 id="lesson-title">Full-System Launch</h1>
-              </div>
-              <span class="bundle-status">Culture Camp</span>
-            </div>
-
-            <section class="overview-panel" aria-labelledby="emphasis-title">
-              <div>
-                <p class="section-label" id="emphasis-title">Today's focus</p>
-                <p id="lesson-focus" class="feature-copy"></p>
-              </div>
-              <div>
-                <p class="section-label">Teacher objective</p>
-                <p id="lesson-objective"></p>
-              </div>
-            </section>
-
-            <section class="daily-plan-panel" aria-labelledby="daily-plan-title">
-              <div>
-                <p class="section-label">Teach today</p>
-                <h2 id="daily-plan-title">Minute-by-minute plan</h2>
-                <p>This plan covers only the protected Culture Camp block beginning at 8:00. It does not schedule the rest of the school day.</p>
-              </div>
-              <div class="daily-plan-actions">
-                <a class="primary-link" id="open-primary-lesson" href="#" target="_blank" rel="noreferrer">Open daily plan</a>
-                <a class="secondary-link" id="open-script-companion" href="#" target="_blank" rel="noreferrer">Open grade-band scripts</a>
-              </div>
-            </section>
-
-            <section class="alignment-panel" aria-labelledby="alignment-title">
-              <div class="section-heading-row">
-                <div>
-                  <p class="section-label" id="alignment-title">What students practice</p>
-                  <h2>Focus for the day</h2>
-                </div>
-                <span class="working-label">Core lesson</span>
-              </div>
-              <div id="lesson-alignments" class="alignment-chips"></div>
-            </section>
-
-            <section class="presentation-panel" aria-labelledby="lesson-presentations-title">
-              <div class="section-heading-row">
-                <div>
-                  <p class="section-label">Present to students</p>
-                  <h2 id="lesson-presentations-title">Choose your grade-band presentation</h2>
-                </div>
-              </div>
-              <div id="lesson-presentations" class="presentation-grid"></div>
-            </section>
-
-            <section class="student-materials-panel" aria-labelledby="lesson-handouts-title">
-              <div class="section-heading-row">
-                <div>
-                  <p class="section-label">Give to students</p>
-                  <h2 id="lesson-handouts-title">Student handouts &amp; lesson materials</h2>
-                </div>
-              </div>
-              <div id="lesson-handouts" class="file-list"></div>
-            </section>
-
-            <section class="files-panel" aria-labelledby="lesson-files-title">
-              <details class="resource-disclosure">
-                <summary>
-                  <span>
-                    <span class="section-label">Prepare to teach</span>
-                    <strong id="lesson-files-title">Teacher &amp; facilitator resources</strong>
-                    <small id="lesson-resource-count"></small>
-                  </span>
-                  <span class="disclosure-label" aria-hidden="true">View teacher prep</span>
-                </summary>
-                <div id="lesson-files" class="file-list"></div>
-              </details>
-            </section>
-          </article>
-        </div>
+      <section class="paths" aria-label="Choose a section">
+        <a class="path" href="#" data-view="lessons">
+          <p class="eyebrow red">The 10-Day Launch</p>
+          <h2 class="path-title">Morning Meeting Lessons</h2>
+          <p>Days 1–10, taught in the protected 8:00 block. Each day opens with its student presentation, teacher lesson document, and student handout.</p>
+          <span class="path-go">Open the 10 days →</span>
+        </a>
+        <a class="path" href="#" data-view="systems">
+          <p class="eyebrow red">The Operating System</p>
+          <h2 class="path-title">Systems &amp; Procedures</h2>
+          <p>Schoolwide systems and classroom procedures. Each one opens with its presentation (where it has one), teacher procedure document, and student handout.</p>
+          <span class="path-go">Open all 15 systems →</span>
+        </a>
       </section>
 
-      <section id="view-systems" class="view" aria-labelledby="systems-title">
-        <section class="staff-learning-kit" aria-labelledby="staff-learning-title">
-          <div>
-            <p class="section-label">Prepare adults once</p>
-            <h2 id="staff-learning-title">Culture Systems Staff Learning Kit</h2>
-            <p>Use the slides and the matching 89-minute facilitator script to learn and rehearse the systems before teaching them.</p>
-          </div>
-          <div class="staff-learning-actions">
-            <a class="primary-link" href="./resources/procedures/staff-learning/culture-systems-staff-learning-slides.pptx" target="_blank" rel="noreferrer">Open staff learning slides</a>
-            <a href="./resources/procedures/staff-learning/culture-systems-facilitator-script.docx" target="_blank" rel="noreferrer">Open facilitator script</a>
-          </div>
-        </section>
-
-        <div class="workspace-grid systems-workspace">
-          <aside class="bundle-sidebar" aria-label="Schoolwide systems and classroom procedures">
-            <div class="sidebar-heading">
-              <p class="eyebrow">Systems &amp; procedures</p>
-              <h2>15 systems</h2>
-              <p>Schoolwide systems first, then classroom procedures.</p>
-            </div>
-            <div id="system-list" class="bundle-list"></div>
-          </aside>
-
-          <article class="bundle-detail">
-            <div class="bundle-heading">
-              <div>
-                <p id="system-kicker" class="eyebrow red">Schoolwide systems · 1 of 14</p>
-                <h1 id="systems-title">Morning Meeting</h1>
-              </div>
-              <span id="system-status" class="bundle-status current">Current source</span>
-            </div>
-
-            <section class="overview-panel system-overview" aria-labelledby="system-purpose-title">
-              <div>
-                <p class="section-label" id="system-purpose-title">Purpose</p>
-                <p id="system-purpose" class="feature-copy"></p>
-              </div>
-              <div>
-                <p class="section-label">Student-facing result</p>
-                <p id="system-result"></p>
-              </div>
-            </section>
-
-            <section class="files-panel" aria-labelledby="system-files-title">
-              <div class="section-heading-row">
-                <div>
-                  <p class="section-label">Open &amp; teach</p>
-                  <h2 id="system-files-title">Files for this system</h2>
-                </div>
-                <a class="primary-link" id="open-primary-system" href="#">Open operating guide</a>
-              </div>
-              <div id="system-files" class="file-list"></div>
-            </section>
-
-            <aside id="system-note" class="source-note"></aside>
-          </article>
-        </div>
+      <section class="shared-refs" aria-label="Shared references">
+        <span class="shared-label">Shared references</span>
+        <a href="./resources/culture-camp-day-by-day-teacher-guide.html#daily-schedules" target="_blank" rel="noreferrer">All 10 daily schedules</a>
+        <a href="./resources/schoolwide-behavior-matrix-2026.docx" target="_blank" rel="noreferrer">Behavior matrix</a>
+        <a href="./resources/student-decks-index.html" target="_blank" rel="noreferrer">Student presentation library</a>
+        <a href="./resources/culture-camp-student-presentations-offline.zip" download="culture-camp-student-presentations-offline.zip">Offline library</a>
       </section>
-    </main>
-  </div>
-  <script src="./app.js?v=20260722-assigned-seating-8am"></script>
+    </section>
+
+    <!-- ===================== LESSONS ===================== -->
+    <section id="view-lessons" class="view" aria-labelledby="lesson-title">
+      <div class="workspace">
+        <aside class="rail" aria-label="Culture Camp days">
+          <div class="rail-head">
+            <p class="eyebrow">Culture Camp</p>
+            <h2>10-Day Launch</h2>
+          </div>
+          <div id="day-list" class="rail-list"></div>
+        </aside>
+
+        <article class="detail">
+          <p class="eyebrow red" id="lesson-kicker">Day 1 of 10</p>
+          <h1 class="detail-title" id="lesson-title">Full-System Launch</h1>
+          <p class="detail-lead" id="lesson-focus"></p>
+
+          <section class="slot" id="lesson-present-slot">
+            <div class="slot-head"><h3>Present to students</h3><span class="slot-sub">Project the grade-band deck</span></div>
+            <div id="lesson-present" class="deck-grid"></div>
+          </section>
+
+          <section class="slot" id="lesson-teach-slot">
+            <div class="slot-head"><h3>Teach the lesson</h3><span class="slot-sub">Why it matters · how to teach it</span></div>
+            <div id="lesson-teach" class="res-list"></div>
+          </section>
+
+          <section class="slot" id="lesson-give-slot">
+            <div class="slot-head"><h3>Give to students</h3><span class="slot-sub">Handouts &amp; materials</span></div>
+            <div id="lesson-give" class="res-list"></div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== SYSTEMS ===================== -->
+    <section id="view-systems" class="view" aria-labelledby="system-title">
+      <div class="workspace">
+        <aside class="rail" aria-label="Systems and procedures">
+          <div class="rail-head">
+            <p class="eyebrow">Operating System</p>
+            <h2>15 Systems</h2>
+          </div>
+          <div class="staff-strip">
+            <p class="eyebrow">Prepare adults once</p>
+            <a href="./resources/procedures/staff-learning/culture-systems-staff-learning-slides.pptx" target="_blank" rel="noreferrer">Staff learning slides</a>
+            <a href="./resources/procedures/staff-learning/culture-systems-facilitator-script.docx" target="_blank" rel="noreferrer">89-minute facilitator script</a>
+          </div>
+          <div id="system-list" class="rail-list"></div>
+        </aside>
+
+        <article class="detail">
+          <p class="eyebrow red" id="system-kicker">Schoolwide systems · 1 of 15</p>
+          <h1 class="detail-title" id="system-title">Morning Meeting</h1>
+          <p class="detail-lead" id="system-purpose"></p>
+
+          <section class="slot" id="system-present-slot">
+            <div class="slot-head"><h3>Present to students</h3><span class="slot-sub">Project the grade-band deck</span></div>
+            <div id="system-present" class="deck-grid"></div>
+          </section>
+
+          <section class="slot" id="system-teach-slot">
+            <div class="slot-head"><h3>Teach the procedure</h3><span class="slot-sub">Current source · how to teach it</span></div>
+            <div id="system-teach" class="res-list"></div>
+          </section>
+
+          <section class="slot" id="system-give-slot">
+            <div class="slot-head"><h3>Give to students</h3><span class="slot-sub">Handouts &amp; materials</span></div>
+            <div id="system-give" class="res-list"></div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <strong>Matchbook Learning · Culture Camp</strong> &nbsp;·&nbsp; Safe · Respectful · Responsible &nbsp;·&nbsp; Culture is practiced before pressure.
+  </footer>
+
+  <script src="./app.js?v=20260723-redesign"></script>
 </body>
 </html>

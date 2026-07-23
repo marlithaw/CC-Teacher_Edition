@@ -916,10 +916,10 @@
       return {
         day: lessons.some(item => item.day === parsed.day) ? parsed.day : 1,
         system: systems.some(item => item.id === parsed.system) ? parsed.system : "morning-meeting",
-        view: "lessons"
+        view: ["home", "lessons", "systems"].includes(parsed.view) ? parsed.view : "home"
       };
     } catch {
-      return { day: 1, system: "morning-meeting", view: "lessons" };
+      return { day: 1, system: "morning-meeting", view: "home" };
     }
   }
 
@@ -929,29 +929,40 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(selection));
   }
 
-  function fileRows(ids) {
-    return ids.map(id => resourceCatalog[id]).filter(Boolean).map(file => `
-      <a class="file-row" href="${file.path}" ${file.download ? `download="${file.download}"` : 'target="_blank" rel="noreferrer"'}>
-        <span class="file-copy"><strong>${file.title}</strong><small>${file.description}</small></span>
-        <span class="file-meta"><small>${file.type}</small><strong>${file.action || "Open"}</strong></span>
-      </a>
-    `).join("");
+  function resRow(spec) {
+    const attrs = spec.download ? `download="${spec.download}"` : 'target="_blank" rel="noreferrer"';
+    return `<a class="res-row${spec.primary ? " primary" : ""}" href="${spec.href}" ${attrs}>
+        <span class="res-copy"><strong>${spec.title}</strong>${spec.desc ? `<small>${spec.desc}</small>` : ""}</span>
+        <span class="res-side">${spec.type ? `<span class="res-type">${spec.type}</span>` : ""}<span class="res-go">${spec.action || "Open"} &rarr;</span></span>
+      </a>`;
   }
 
-  function presentationRows(ids) {
-    return ids.map(id => resourceCatalog[id]).filter(Boolean).map(file => `
-      <a class="presentation-link" href="${file.path}" target="_blank" rel="noreferrer">
-        <span>${file.gradeBand}</span>
-        <strong>${file.action}</strong>
-      </a>
-    `).join("");
+  function catRow(id, opts = {}) {
+    const f = resourceCatalog[id];
+    if (!f) return "";
+    return resRow({ href: f.path, title: f.title, desc: f.description, type: f.type, action: f.action || "Open", download: f.download, primary: opts.primary });
+  }
+
+  function deckTiles(ids) {
+    return ids.map(id => resourceCatalog[id]).filter(Boolean).map(f => `
+      <a class="deck-tile" href="${f.path}" target="_blank" rel="noreferrer">
+        <span class="deck-band">${f.gradeBand || ""}</span>
+        <span class="deck-meta">${f.action || "Open presentation"}</span>
+        <span class="deck-go">Open &rarr;</span>
+      </a>`).join("");
+  }
+
+  function fillSlot(slotId, containerId, html, emptyMsg) {
+    const container = byId(containerId);
+    container.innerHTML = html || (emptyMsg ? `<p class="slot-empty">${emptyMsg}</p>` : "");
+    byId(slotId).hidden = !html && !emptyMsg;
   }
 
   function renderDayList() {
     byId("day-list").innerHTML = lessons.map(lesson => `
-      <button class="bundle-list-item ${lesson.day === selection.day ? "selected" : ""}" type="button" data-day="${lesson.day}" ${lesson.day === selection.day ? 'aria-current="true"' : ""}>
-        <span class="bundle-number">${lesson.day}</span>
-        <span><strong>Day ${lesson.day}</strong><small>${lesson.title}</small></span>
+      <button class="rail-item ${lesson.day === selection.day ? "selected" : ""}" type="button" data-day="${lesson.day}" ${lesson.day === selection.day ? 'aria-current="true"' : ""}>
+        <span class="rail-num">${lesson.day}</span>
+        <span><strong>${lesson.title}</strong><small>Day ${lesson.day}</small></span>
       </button>
     `).join("");
   }
@@ -962,39 +973,41 @@
     byId("lesson-kicker").textContent = `Day ${lesson.day} of ${lessons.length}`;
     byId("lesson-title").textContent = lesson.title;
     byId("lesson-focus").textContent = lesson.focus;
-    byId("lesson-objective").textContent = lesson.objective;
-    byId("lesson-alignments").innerHTML = lesson.alignment.map(item => `<span>${item}</span>`).join("");
-    byId("lesson-files").innerHTML = lesson.teacherFiles.length
-      ? fileRows(lesson.teacherFiles)
-      : '<p class="empty-resource-state">No additional teacher preparation file is required for this lesson. Use the timed plan and grade-band script companion.</p>';
-    byId("lesson-handouts").innerHTML = lesson.handouts.length
-      ? fileRows(lesson.handouts)
-      : '<p class="empty-resource-state">No separate student handout is needed today.</p>';
-    byId("lesson-presentations").innerHTML = presentationRows(lesson.presentations);
-    byId("lesson-resource-count").textContent = lesson.teacherFiles.length
-      ? `${lesson.teacherFiles.length} teacher ${lesson.teacherFiles.length === 1 ? "resource" : "resources"}`
-      : "Timed plan + script companion only";
 
-    const primaryLessonLink = byId("open-primary-lesson");
-    primaryLessonLink.href = `${resourceCatalog["day-by-day-guide"].path}#${lesson.planAnchor}`;
-    primaryLessonLink.textContent = `Open Day ${lesson.day} minute-by-minute plan`;
+    fillSlot("lesson-present-slot", "lesson-present", deckTiles(lesson.presentations), null);
 
-    const scriptCompanionLink = byId("open-script-companion");
-    scriptCompanionLink.href = `${resourceCatalog["grade-band-script-companion"].path}#${lesson.scriptAnchor}`;
-    scriptCompanionLink.textContent = `Open Day ${lesson.day} grade-band scripts`;
+    const docId = `lesson-doc-${lesson.day}`;
+    const teach = [];
+    if (resourceCatalog[docId]) teach.push(catRow(docId, { primary: true }));
+    teach.push(resRow({
+      href: `${resourceCatalog["day-by-day-guide"].path}#${lesson.planAnchor}`,
+      title: `Day ${lesson.day} minute-by-minute plan`,
+      desc: "Timed teacher language, actions, look-fors, and reset moves for the protected 8:00 block.",
+      type: "Minute-by-minute plan · HTML", action: "Open plan"
+    }));
+    teach.push(resRow({
+      href: `${resourceCatalog["grade-band-script-companion"].path}#${lesson.scriptAnchor}`,
+      title: `Day ${lesson.day} grade-band scripts`,
+      desc: "K–2, 3–5, and 6–8 teacher scripts for this day.",
+      type: "Teacher scripts · HTML", action: "Open scripts"
+    }));
+    lesson.teacherFiles.filter(id => id !== docId).forEach(id => teach.push(catRow(id)));
+    fillSlot("lesson-teach-slot", "lesson-teach", teach.join(""), null);
+
+    const give = lesson.handouts.map(id => catRow(id)).join("");
+    fillSlot("lesson-give-slot", "lesson-give", give, "No separate student handout is needed for this day.");
   }
 
   function renderSystemList() {
     let lastCategory = "";
     byId("system-list").innerHTML = systems.map((system, index) => {
-      const categoryLabel = system.category === lastCategory
-        ? ""
-        : `<p class="bundle-group-label">${system.category}</p>`;
+      const groupLabel = system.category === lastCategory ? "" : `<p class="rail-group">${system.category}</p>`;
       lastCategory = system.category;
-      return `${categoryLabel}
-        <button class="bundle-list-item ${system.id === selection.system ? "selected" : ""}" type="button" data-system="${system.id}" ${system.id === selection.system ? 'aria-current="true"' : ""}>
-          <span class="bundle-number">${index + 1}</span>
-          <span><strong>${system.shortTitle}</strong><small>${system.status}</small></span>
+      const scope = system.category.indexOf("Classroom") === 0 ? "Classroom" : "Schoolwide";
+      return `${groupLabel}
+        <button class="rail-item ${system.id === selection.system ? "selected" : ""}" type="button" data-system="${system.id}" ${system.id === selection.system ? 'aria-current="true"' : ""}>
+          <span class="rail-num">${index + 1}</span>
+          <span><strong>${system.shortTitle}</strong><small>${scope}</small></span>
         </button>`;
     }).join("");
   }
@@ -1004,29 +1017,31 @@
     const system = systems[index];
     renderSystemList();
     byId("system-kicker").textContent = `${system.category} · ${index + 1} of ${systems.length}`;
-    byId("systems-title").textContent = system.title;
+    byId("system-title").textContent = system.title;
     byId("system-purpose").textContent = system.purpose;
-    byId("system-result").textContent = system.result;
-    byId("system-files").innerHTML = fileRows(system.files.slice(1).filter(id => id !== "student-decks-offline"));
-    const primarySystemResource = resourceCatalog[system.files[0]];
-    const primarySystemLink = byId("open-primary-system");
-    primarySystemLink.href = primarySystemResource.path;
-    primarySystemLink.textContent = primarySystemResource.action || "Open operating guide";
-    primarySystemLink.target = "_blank";
-    primarySystemLink.rel = "noreferrer";
-    byId("system-status").textContent = system.status;
-    byId("system-status").className = `bundle-status ${system.statusClass}`;
-    byId("system-note").innerHTML = `<strong>${system.statusClass === "pending" ? "Before finalizing" : "Good to know"}</strong><p>${system.note}</p>`;
-    byId("system-note").classList.toggle("warning", system.statusClass === "pending");
+
+    const present = [], teach = [], give = [];
+    system.files.forEach(id => {
+      if (id === "student-decks-offline") return;
+      const f = resourceCatalog[id];
+      if (!f) return;
+      if (f.gradeBand) present.push(id);
+      else if (id.indexOf("sw-handout") === 0) give.push(id);
+      else teach.push(id);
+    });
+
+    fillSlot("system-present-slot", "system-present", deckTiles(present), null);
+    fillSlot("system-teach-slot", "system-teach", teach.map((id, i) => catRow(id, { primary: i === 0 })).join(""), null);
+    fillSlot("system-give-slot", "system-give", give.map(id => catRow(id)).join(""), "No separate student handout for this procedure.");
   }
 
   function showView(view) {
-    selection.view = view === "systems" ? "systems" : "lessons";
+    selection.view = ["home", "lessons", "systems"].includes(view) ? view : "home";
     all(".view").forEach(node => node.classList.toggle("active", node.id === `view-${selection.view}`));
-    all("[data-view]").forEach(button => {
-      const active = button.dataset.view === selection.view;
-      button.classList.toggle("active", active && button.classList.contains("nav-button"));
-      if (button.classList.contains("nav-button")) button.setAttribute("aria-pressed", String(active));
+    all(".nav-tab").forEach(tab => {
+      const active = tab.dataset.view === selection.view;
+      tab.classList.toggle("active", active);
+      tab.setAttribute("aria-current", active ? "page" : "false");
     });
     saveSelection();
     window.scrollTo({ top: 0, behavior: "auto" });
@@ -1035,6 +1050,7 @@
   document.addEventListener("click", event => {
     const viewButton = event.target.closest("[data-view]");
     if (viewButton) {
+      event.preventDefault();
       showView(viewButton.dataset.view);
       return;
     }
@@ -1044,7 +1060,7 @@
       selection.day = Number(dayButton.dataset.day);
       saveSelection();
       renderLesson();
-      if (window.innerWidth < 860) byId("lesson-title").scrollIntoView({ block: "start" });
+      if (window.innerWidth < 780) byId("lesson-title").scrollIntoView({ block: "start" });
       return;
     }
 
@@ -1053,7 +1069,7 @@
       selection.system = systemButton.dataset.system;
       saveSelection();
       renderSystem();
-      if (window.innerWidth < 860) byId("systems-title").scrollIntoView({ block: "start" });
+      if (window.innerWidth < 780) byId("system-title").scrollIntoView({ block: "start" });
     }
   });
 
