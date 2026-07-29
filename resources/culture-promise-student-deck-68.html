@@ -30,6 +30,14 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 
 .mb-icon{width:1em;height:1em;flex:none;}
 .hero-icon{font-size:clamp(58px,9vw,120px);color:currentColor;opacity:.95;}
+.video-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;
+  margin-top:clamp(12px,1.8vw,22px);}
+.video-stage video{display:block;max-width:100%;max-height:calc(100vh - 225px);
+  border-radius:16px;background:#000;box-shadow:0 18px 45px rgba(0,0,0,.28);}
+.video-stage.portrait video{width:min(38vw,430px);}
+.video-stage.landscape video{width:min(82vw,1080px);}
+.video-tip{margin:.8rem 0 0;text-align:center;font-size:clamp(11px,1.05vw,14px);
+  opacity:.72;}
 
 .items{display:flex;gap:clamp(12px,2.2vw,32px);margin-top:clamp(16px,2.6vw,36px);flex-wrap:wrap;}
 .item{flex:1 1 0;min-width:150px;display:flex;flex-direction:column;gap:.55rem;
@@ -124,6 +132,34 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 01</span></div>
 </section>
+<section class="slide dark">
+<p class="eyebrow">Morning Meeting Video · Relax</p>
+<div class="body-wrap">
+<h2>Relax</h2>
+<div class="video-stage portrait">
+<video controls preload="metadata" playsinline poster="videos/relax-poster.jpg" aria-label="Relax morning meeting video">
+<source src="videos/relax.mp4" type="video/mp4">
+Your browser cannot play this video. <a href="videos/relax.mp4">Open Relax</a>.
+</video>
+</div>
+<p class="video-tip">Teacher-started · No autoplay</p>
+</div>
+<div class="foot"><span>Matchbook Morning Meeting · Video</span><span class="band">Grades 6–8 · 02</span></div>
+</section>
+<section class="slide yellow">
+<p class="eyebrow">Morning Meeting Video · Excite</p>
+<div class="body-wrap">
+<h2>Excite</h2>
+<div class="video-stage landscape">
+<video controls preload="metadata" playsinline poster="videos/excite-poster.jpg" aria-label="Excite morning meeting video">
+<source src="videos/excite.mp4" type="video/mp4">
+Your browser cannot play this video. <a href="videos/excite.mp4">Open Excite</a>.
+</video>
+</div>
+<p class="video-tip">Teacher-started · No autoplay</p>
+</div>
+<div class="foot"><span>Matchbook Morning Meeting · Video</span><span class="band">Grades 6–8 · 03</span></div>
+</section>
 <section class="slide ">
 <p class="eyebrow">Nervous System First</p>
 <div class="body-wrap">
@@ -147,7 +183,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="why"><b>Why this works</b>A long, controlled exhale activates your vagus nerve, which lowers heart rate. This is not a mood exercise — it is a physical override, and it works whether or not you are in the mood for it.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 02</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 04</span></div>
 </section>
 <section class="slide dark">
 <p class="eyebrow">The Standard, Not The Slogan</p>
@@ -171,7 +207,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 </div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 03</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 05</span></div>
 </section>
 <section class="slide ">
 <p class="eyebrow">Structured Talk</p>
@@ -184,7 +220,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="callout">Speaker goes first. Listener does not respond until they finish.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 04</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 06</span></div>
 </section>
 <section class="slide yellow">
 <p class="eyebrow">The Observable Standard</p>
@@ -209,7 +245,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="callout">The proof is the restatement, not the posture.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 05</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 07</span></div>
 </section>
 <section class="slide ">
 <p class="eyebrow">One Visible Next Step</p>
@@ -222,7 +258,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="callout">A commitment is not a feeling. It is something anyone in this room could see you do.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 06</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 08</span></div>
 </section>
 <section class="slide dark">
 <p class="eyebrow">How We Leave Is How We Enter</p>
@@ -237,7 +273,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <div class="why"><b>Why this works</b>A clean exit removes the ninety seconds of noise that normally eats the start of your next class. You are buying back your own time.</div>
 <div class="callout">Timed as a class, against our own last time. Never against each other.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 07</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 09</span></div>
 </section>
 </div><div class="notes" id="notes">
 <div class="note-block" style="display:none">
@@ -252,7 +288,27 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Shield icon. Strong candidate for replacement with a photo of actual students from this school.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 2 · Regulate <span class="rub">R1</span></h3>
+<h3>Slide 2 · Relax Video <span class="rub">R1</span></h3>
+<p class="script">Press play when students are ready. Invite them to settle their bodies and follow along. The video is teacher-started and may be paused or replayed as needed.</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students have enough personal space</li><li>Movement stays calm and safe</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Pause, reset spacing, and restart from the current point.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Model the movement without turning participation into a compliance test.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Students may participate by watching or copying the movement.</li></ul></div>
+</div>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 3 · Excite Video <span class="rub">R1, R4</span></h3>
+<p class="script">Press play to lift the room’s energy. Set a clear movement boundary, then let students participate without requiring performance.</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Joyful participation within the agreed space</li><li>Students can stop when the video stops</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Pause, rehearse the stop signal, and continue when the group is ready.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Participate visibly so students are not being asked to perform for adults.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>The music and movement carry the invitation; no spoken response is required.</li></ul></div>
+</div>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 4 · Regulate <span class="rub">R1</span></h3>
 <p class="script">“Four in, four hold, four out. Here is why it works: the long exhale triggers your vagus nerve, which physically slows your heart rate. You do not have to want it to work. It works anyway. Three rounds.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Genuine participation rather than performative compliance</li><li>Students who resist on day one but participate by day three — that is the win</li></ul></div>
@@ -263,7 +319,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Lungs, clock, calm icons. Consider a heart-rate line dropping across the four counts.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 3 · Orient <span class="rub">R2, R3</span></h3>
+<h3>Slide 5 · Orient <span class="rub">R2, R3</span></h3>
 <p class="script">“Read the middle one again. Respect before it is earned. That is not weakness — it is the only way anyone in a new room ever gets a chance. If everyone waits to be respected first, nobody moves.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Students engage with the 'before it is earned' tension — expect argument</li><li>Students connect the standard to their own experience of a room that did not work</li></ul></div>
@@ -274,7 +330,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Same three icons used K–8. The visual continuity is deliberate and worth naming to students.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 4 · Connect <span class="rub">R3, R4</span></h3>
+<h3>Slide 6 · Connect <span class="rub">R3, R4</span></h3>
 <p class="script">“Think of a group that actually worked — a team, a class, a job, a friend group. What did people DO? Not how it felt. What did they do. Ninety seconds, speaker first. Listener does not respond until they are done.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Students name behaviors, not vibes</li><li>Listeners hold silence — this is the harder skill at this age</li></ul></div>
@@ -285,7 +341,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Two-people icon. Consider projecting a 90-second countdown.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 5 · Practice <span class="rub">R3, R4, R5</span></h3>
+<h3>Slide 7 · Practice <span class="rub">R3, R4, R5</span></h3>
 <p class="script">“We are not going to police your eyes. For some of you, forced eye contact makes it harder to listen, and in some families it is straight-up rude. So the standard is body orientation, and the proof is whether you can restate what the person said. That is measurable. Eyes are not.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Accurate restatement</li><li>Body orientation maintained without reminder</li></ul></div>
@@ -296,7 +352,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Body-orientation figure with a resting-gaze icon. Naming the no-eye-policing rule explicitly is part of the lesson.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 6 · Commit <span class="rub">R2, R5</span></h3>
+<h3>Slide 8 · Commit <span class="rub">R2, R5</span></h3>
 <p class="script">“Not a feeling. Not 'be better.' Something I could point at from across the room and say — there, that is them doing it. And the second blank names who it is for. If your commitment only helps you, it is not a culture commitment.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Observable verbs</li><li>The 'so that' names another person or the group</li></ul></div>
@@ -307,7 +363,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Check icon. Post commitments where you can reference them in the afternoon block.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 7 · Transition <span class="rub">R1, R4, R5</span></h3>
+<h3>Slide 9 · Transition <span class="rub">R1, R4, R5</span></h3>
 <p class="script">“How we leave is how we enter. And be clear about what you get out of this: a clean exit means the next class starts on time instead of burning ninety seconds settling down. That is time you get back.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Chairs in without prompting</li><li>No racing — collective timing only</li></ul></div>
@@ -325,7 +381,10 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
   var cnt=document.getElementById('cnt');
   var i=0, open=false;
   function draw(){
-    slides.forEach(function(s,n){s.classList.toggle('active',n===i);});
+    slides.forEach(function(s,n){
+      s.classList.toggle('active',n===i);
+      if(n!==i){[].slice.call(s.querySelectorAll('video,audio')).forEach(function(m){m.pause();});}
+    });
     notes.forEach(function(s,n){s.style.display=(n===i?'block':'none');});
     cnt.textContent=(i+1)+' / '+slides.length;
   }
@@ -333,6 +392,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
   function toggle(){ open=!open; panel.classList.toggle('show',open);
     document.getElementById('nbtn').textContent = open?'Hide notes (N)':'Notes (N)'; }
   document.addEventListener('keydown',function(e){
+    if(e.target&&e.target.tagName==='VIDEO'){return;}
     if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(1);}
     else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1);}
     else if(e.key==='n'||e.key==='N'){e.preventDefault();toggle();}
