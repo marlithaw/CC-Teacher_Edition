@@ -579,6 +579,23 @@
     action: "Open handout"
   };
 
+  // Morning-meeting opener videos (hosted on Canva). Two moods teachers can choose from
+  // to open any day — offered on the Day-1 student decks and on every lesson page.
+  const openerVideos = [
+    {
+      href: "https://www.canva.com/design/DAHM3LrQ2jk/KUi3rWQCOa4GESG2MnHrhw/watch",
+      title: "Relax — “You & Me”",
+      desc: "A calm, grounding opener. Play this to settle the room before the Culture Promise block.",
+      type: "Morning meeting video · Canva", action: "Watch"
+    },
+    {
+      href: "https://www.canva.com/design/DAHQbCXNXWo/_Ume8A1emGgSmRkSkNtOYQ/watch",
+      title: "Excite — “Elementary Morning Meeting”",
+      desc: "An upbeat, energizing opener. Play this to lift the room and start the day with momentum.",
+      type: "Morning meeting video · Canva", action: "Watch"
+    }
+  ];
+
   const lessons = [
     {
       day: 1,
@@ -979,6 +996,8 @@
     byId("lesson-focus").textContent = lesson.focus;
 
     fillSlot("lesson-present-slot", "lesson-present", deckTiles(lesson.presentations), null);
+
+    fillSlot("lesson-watch-slot", "lesson-watch", openerVideos.map(v => resRow(v)).join(""), null);
 
     const docId = `lesson-doc-${lesson.day}`;
     const teach = [];
