@@ -112,6 +112,29 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
   .note-block{display:block!important;page-break-inside:avoid;
     border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:12px;margin-bottom:12px;}
 }
+
+/* ---- Day-1 morning-meeting opener (Relax / Excite video chooser) ---- */
+.vpick{display:flex;gap:clamp(10px,1.8vw,24px);margin-top:clamp(12px,2vw,22px);flex-wrap:wrap;}
+.vbtn{flex:1 1 200px;display:flex;flex-direction:column;align-items:center;gap:.3rem;
+  font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.05em;font-weight:700;
+  font-size:clamp(17px,2.4vw,30px);line-height:1;cursor:pointer;border:0;border-radius:14px;
+  padding:clamp(12px,1.8vw,20px);color:#fff;background:rgba(255,255,255,.14);transition:background .15s;}
+.vbtn small{font-family:var(--font-body);text-transform:none;letter-spacing:0;font-weight:500;
+  font-size:clamp(11px,1.15vw,15px);opacity:.82;}
+.vbtn:hover{background:rgba(255,255,255,.26);}
+.vbtn.relax.active{background:#2E6F8E;}
+.vbtn.excite.active{background:var(--spark-red);}
+.vstage{flex:1;min-height:0;margin-top:clamp(12px,2vw,22px);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:.6rem;}
+.vwrap{display:none;max-width:100%;max-height:100%;border-radius:12px;overflow:hidden;
+  background:#000;box-shadow:0 6px 26px rgba(0,0,0,.4);}
+.vwrap.show{display:block;}
+.vwrap.relax{aspect-ratio:9/16;height:min(56vh,100%);}
+.vwrap.excite{aspect-ratio:16/9;width:min(100%,calc(52vh * 16 / 9));}
+.vwrap iframe{display:block;width:100%;height:100%;border:0;}
+.vhint{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.08em;
+  font-size:clamp(12px,1.3vw,16px);opacity:.7;margin:0;text-align:center;}
+@media print{.vpick,.vstage{display:none!important;}}
 </style></head><body>
 <div class="hud"><button id="prev">&larr;</button><button id="next">&rarr;</button><button id="nbtn">Notes (N)</button><span class="cnt" id="cnt"></span></div>
 <div class="deck">
@@ -124,6 +147,23 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 01</span></div>
 </section>
+<section class="slide dark">
+<p class="eyebrow">Culture Camp · Day 1 · Morning Meeting</p>
+<div class="body-wrap">
+<h2>Choose Today's Opener</h2>
+<div class="vpick">
+<button type="button" class="vbtn relax" data-v="relax" onclick="chooseOpener('relax')">Relax<small>&ldquo;You &amp; Me&rdquo; &middot; a calm start</small></button>
+<button type="button" class="vbtn excite" data-v="excite" onclick="chooseOpener('excite')">Excite<small>&ldquo;Morning Meeting&rdquo; &middot; an upbeat start</small></button>
+</div>
+<div class="vstage">
+<div class="vwrap relax"><iframe title="Relax — You &amp; Me" data-src="https://www.canva.com/design/DAHM3LrQ2jk/KUi3rWQCOa4GESG2MnHrhw/watch?embed" allowfullscreen allow="fullscreen" loading="lazy"></iframe></div>
+<div class="vwrap excite"><iframe title="Excite — Elementary Morning Meeting" data-src="https://www.canva.com/design/DAHQbCXNXWo/_Ume8A1emGgSmRkSkNtOYQ/watch?embed" allowfullscreen allow="fullscreen" loading="lazy"></iframe></div>
+<p class="vhint" id="vhint">Tap <b>Relax</b> or <b>Excite</b>, then press play.</p>
+</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 02</span></div>
+</section>
+
 <section class="slide ">
 <p class="eyebrow">Nervous System First</p>
 <div class="body-wrap">
@@ -147,7 +187,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="why"><b>Why this works</b>A long, controlled exhale activates your vagus nerve, which lowers heart rate. This is not a mood exercise — it is a physical override, and it works whether or not you are in the mood for it.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 02</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 03</span></div>
 </section>
 <section class="slide dark">
 <p class="eyebrow">The Standard, Not The Slogan</p>
@@ -171,7 +211,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 </div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 03</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 04</span></div>
 </section>
 <section class="slide ">
 <p class="eyebrow">Structured Talk</p>
@@ -184,7 +224,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="callout">Speaker goes first. Listener does not respond until they finish.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 04</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 05</span></div>
 </section>
 <section class="slide yellow">
 <p class="eyebrow">The Observable Standard</p>
@@ -209,7 +249,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="callout">The proof is the restatement, not the posture.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 05</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 06</span></div>
 </section>
 <section class="slide ">
 <p class="eyebrow">One Visible Next Step</p>
@@ -222,7 +262,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="callout">A commitment is not a feeling. It is something anyone in this room could see you do.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 06</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 07</span></div>
 </section>
 <section class="slide dark">
 <p class="eyebrow">How We Leave Is How We Enter</p>
@@ -237,7 +277,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <div class="why"><b>Why this works</b>A clean exit removes the ninety seconds of noise that normally eats the start of your next class. You are buying back your own time.</div>
 <div class="callout">Timed as a class, against our own last time. Never against each other.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 07</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades 6–8 · 08</span></div>
 </section>
 </div><div class="notes" id="notes">
 <div class="note-block" style="display:none">
@@ -252,7 +292,18 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Shield icon. Strong candidate for replacement with a photo of actual students from this school.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 2 · Regulate <span class="rub">R1</span></h3>
+<h3>Slide 2 · Morning Meeting Opener <span class="rub">R1</span></h3>
+<p class="script">&ldquo;Before we make our promise, we start our morning meeting together.&rdquo; Pick one opener for today. Tap <b>Relax</b> (&ldquo;You &amp; Me&rdquo;) for a calm, settling start, or <b>Excite</b> (&ldquo;Elementary Morning Meeting&rdquo;) for an upbeat, high-energy start. Press play and join in.</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Eyes on the screen, bodies settled</li><li>Students join the motions or the song</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>If energy runs high after Excite, do the flower/candle breath before Slide 3</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Model the moves from the side so students have someone to copy</li></ul></div>
+<div><p class="k">Which to choose</p><ul><li>Relax: after recess, on tense mornings, or to lower the room</li><li>Excite: first thing in the morning or when the room needs a lift</li></ul></div>
+</div>
+<p class="imgspec">Video: Two Canva morning-meeting videos are embedded. Only the chosen one loads and plays; switching stops the other.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 3 · Regulate <span class="rub">R1</span></h3>
 <p class="script">“Four in, four hold, four out. Here is why it works: the long exhale triggers your vagus nerve, which physically slows your heart rate. You do not have to want it to work. It works anyway. Three rounds.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Genuine participation rather than performative compliance</li><li>Students who resist on day one but participate by day three — that is the win</li></ul></div>
@@ -263,7 +314,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Lungs, clock, calm icons. Consider a heart-rate line dropping across the four counts.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 3 · Orient <span class="rub">R2, R3</span></h3>
+<h3>Slide 4 · Orient <span class="rub">R2, R3</span></h3>
 <p class="script">“Read the middle one again. Respect before it is earned. That is not weakness — it is the only way anyone in a new room ever gets a chance. If everyone waits to be respected first, nobody moves.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Students engage with the 'before it is earned' tension — expect argument</li><li>Students connect the standard to their own experience of a room that did not work</li></ul></div>
@@ -274,7 +325,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Same three icons used K–8. The visual continuity is deliberate and worth naming to students.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 4 · Connect <span class="rub">R3, R4</span></h3>
+<h3>Slide 5 · Connect <span class="rub">R3, R4</span></h3>
 <p class="script">“Think of a group that actually worked — a team, a class, a job, a friend group. What did people DO? Not how it felt. What did they do. Ninety seconds, speaker first. Listener does not respond until they are done.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Students name behaviors, not vibes</li><li>Listeners hold silence — this is the harder skill at this age</li></ul></div>
@@ -285,7 +336,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Two-people icon. Consider projecting a 90-second countdown.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 5 · Practice <span class="rub">R3, R4, R5</span></h3>
+<h3>Slide 6 · Practice <span class="rub">R3, R4, R5</span></h3>
 <p class="script">“We are not going to police your eyes. For some of you, forced eye contact makes it harder to listen, and in some families it is straight-up rude. So the standard is body orientation, and the proof is whether you can restate what the person said. That is measurable. Eyes are not.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Accurate restatement</li><li>Body orientation maintained without reminder</li></ul></div>
@@ -296,7 +347,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Body-orientation figure with a resting-gaze icon. Naming the no-eye-policing rule explicitly is part of the lesson.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 6 · Commit <span class="rub">R2, R5</span></h3>
+<h3>Slide 7 · Commit <span class="rub">R2, R5</span></h3>
 <p class="script">“Not a feeling. Not 'be better.' Something I could point at from across the room and say — there, that is them doing it. And the second blank names who it is for. If your commitment only helps you, it is not a culture commitment.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Observable verbs</li><li>The 'so that' names another person or the group</li></ul></div>
@@ -307,7 +358,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Check icon. Post commitments where you can reference them in the afternoon block.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 7 · Transition <span class="rub">R1, R4, R5</span></h3>
+<h3>Slide 8 · Transition <span class="rub">R1, R4, R5</span></h3>
 <p class="script">“How we leave is how we enter. And be clear about what you get out of this: a clean exit means the next class starts on time instead of burning ninety seconds settling down. That is time you get back.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Chairs in without prompting</li><li>No racing — collective timing only</li></ul></div>
@@ -318,6 +369,20 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Four step icons plus a clock showing the class's previous time.</p>
 </div>
 </div><script>
+window.chooseOpener=function(which){
+  var wraps=document.querySelectorAll('.vwrap');
+  for(var i=0;i<wraps.length;i++){
+    var w=wraps[i], on=w.classList.contains(which), f=w.querySelector('iframe');
+    w.classList.toggle('show',on);
+    if(f){ if(on){ if(!f.getAttribute('src')) f.setAttribute('src',f.getAttribute('data-src')); }
+           else { f.setAttribute('src',''); } }
+  }
+  var btns=document.querySelectorAll('.vbtn');
+  for(var j=0;j<btns.length;j++){ btns[j].classList.toggle('active',btns[j].getAttribute('data-v')===which); }
+  var h=document.getElementById('vhint'); if(h){ h.style.display='none'; }
+};
+</script>
+<script>
 (function(){
   var slides=[].slice.call(document.querySelectorAll('.slide'));
   var notes=[].slice.call(document.querySelectorAll('.note-block'));
