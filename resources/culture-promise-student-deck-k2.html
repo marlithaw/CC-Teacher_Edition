@@ -30,6 +30,14 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 
 .mb-icon{width:1em;height:1em;flex:none;}
 .hero-icon{font-size:clamp(58px,9vw,120px);color:currentColor;opacity:.95;}
+.video-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;
+  margin-top:clamp(12px,1.8vw,22px);}
+.video-stage video{display:block;max-width:100%;max-height:calc(100vh - 225px);
+  border-radius:16px;background:#000;box-shadow:0 18px 45px rgba(0,0,0,.28);}
+.video-stage.portrait video{width:min(38vw,430px);}
+.video-stage.landscape video{width:min(82vw,1080px);}
+.video-tip{margin:.8rem 0 0;text-align:center;font-size:clamp(11px,1.05vw,14px);
+  opacity:.72;}
 
 .items{display:flex;gap:clamp(12px,2.2vw,32px);margin-top:clamp(16px,2.6vw,36px);flex-wrap:wrap;}
 .item{flex:1 1 0;min-width:150px;display:flex;flex-direction:column;gap:.55rem;
@@ -124,6 +132,34 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 01</span></div>
 </section>
+<section class="slide dark">
+<p class="eyebrow">Morning Meeting Video · Relax</p>
+<div class="body-wrap">
+<h2>Relax</h2>
+<div class="video-stage portrait">
+<video controls preload="metadata" playsinline poster="videos/relax-poster.jpg" aria-label="Relax morning meeting video">
+<source src="videos/relax.mp4" type="video/mp4">
+Your browser cannot play this video. <a href="videos/relax.mp4">Open Relax</a>.
+</video>
+</div>
+<p class="video-tip">Teacher-started · No autoplay</p>
+</div>
+<div class="foot"><span>Matchbook Morning Meeting · Video</span><span class="band">Grades K–2 · 02</span></div>
+</section>
+<section class="slide yellow">
+<p class="eyebrow">Morning Meeting Video · Excite</p>
+<div class="body-wrap">
+<h2>Excite</h2>
+<div class="video-stage landscape">
+<video controls preload="metadata" playsinline poster="videos/excite-poster.jpg" aria-label="Excite morning meeting video">
+<source src="videos/excite.mp4" type="video/mp4">
+Your browser cannot play this video. <a href="videos/excite.mp4">Open Excite</a>.
+</video>
+</div>
+<p class="video-tip">Teacher-started · No autoplay</p>
+</div>
+<div class="foot"><span>Matchbook Morning Meeting · Video</span><span class="band">Grades K–2 · 03</span></div>
+</section>
 <section class="slide ">
 <p class="eyebrow">First We Get Calm</p>
 <div class="body-wrap">
@@ -143,7 +179,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <div class="callout">Let's do it three times.</div>
 <div class="cognate">calm · calma</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 02</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 04</span></div>
 </section>
 <section class="slide dark">
 <p class="eyebrow">What Our Words Mean</p>
@@ -168,7 +204,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="cognate">respectful · respetuoso    |    responsible · responsable</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 03</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 05</span></div>
 </section>
 <section class="slide ">
 <p class="eyebrow">We Talk To Each Other</p>
@@ -184,7 +220,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 </div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 04</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 06</span></div>
 </section>
 <section class="slide yellow">
 <p class="eyebrow">Watch Me, Then Show Me</p>
@@ -208,7 +244,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 </div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 05</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 07</span></div>
 </section>
 <section class="slide ">
 <p class="eyebrow">One Thing I Will Do</p>
@@ -224,7 +260,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 </div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 06</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 08</span></div>
 </section>
 <section class="slide dark">
 <p class="eyebrow">How We Leave</p>
@@ -238,7 +274,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 </div>
 <div class="callout">Quiet feet. Calm bodies.</div>
 </div>
-<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 07</span></div>
+<div class="foot"><span>Matchbook Culture Camp · Culture Promise</span><span class="band">Grades K–2 · 09</span></div>
 </section>
 </div><div class="notes" id="notes">
 <div class="note-block" style="display:none">
@@ -253,7 +289,27 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Shield icon. Point to each word as the class says it. Add a photo of THIS class here once taken.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 2 · Regulate <span class="rub">R1</span></h3>
+<h3>Slide 2 · Relax Video <span class="rub">R1</span></h3>
+<p class="script">Press play when students are ready. Invite them to settle their bodies and follow along. The video is teacher-started and may be paused or replayed as needed.</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students have enough personal space</li><li>Movement stays calm and safe</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Pause, reset spacing, and restart from the current point.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Model the movement beside students who need a visual cue.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Students may participate by watching or copying the movement.</li></ul></div>
+</div>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 3 · Excite Video <span class="rub">R1, R4</span></h3>
+<p class="script">Press play to lift the room’s energy. Give students a clear movement boundary before starting, then join the movement with them.</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Joyful participation within the agreed space</li><li>Students can stop when the video stops</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Pause, rehearse the stop signal, and continue when the group is ready.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Stand where every student can see a safe movement model.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>The music and movement carry the invitation; no spoken response is required.</li></ul></div>
+</div>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 4 · Regulate <span class="rub">R1</span></h3>
 <p class="script">“Before we learn, we get calm. Smell the flower — breathe in. Blow out the candle — long and slow. Again.” Do it three times with them, out loud.</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Shoulders drop</li><li>Exhale is longer than the inhale</li><li>Students copy the hand gesture</li></ul></div>
@@ -264,7 +320,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Flower and candle icons. Teacher models with real hand gestures — cupped hand to nose, then blowing.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 3 · Orient <span class="rub">R2, R3</span></h3>
+<h3>Slide 5 · Orient <span class="rub">R2, R3</span></h3>
 <p class="script">“Safe means my hands are gentle — show me gentle hands. Respectful means I let others have a turn. Responsible means I start my job without waiting.” Have them act out each one.</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Students physically demonstrate gentle hands</li><li>Students can point to the matching icon when you name a value</li></ul></div>
@@ -275,7 +331,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: One icon per value. These three icons must stay identical across all ten days and every shared-space deck.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 4 · Connect <span class="rub">R3, R4</span></h3>
+<h3>Slide 6 · Connect <span class="rub">R3, R4</span></h3>
 <p class="script">“We are going to practice talking AND listening. First, everyone say it with me: I feel happy when recess. Now turn to your partner. Knees to knees.” Rehearse chorally before partner talk.</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Knees turned toward partner</li><li>One person talking at a time</li><li>Students point to a picture if words are hard</li></ul></div>
@@ -286,7 +342,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Three pictured options. Students may point instead of speaking — pointing counts as a full answer at this band.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 5 · Practice <span class="rub">R3, R4, R5</span></h3>
+<h3>Slide 7 · Practice <span class="rub">R3, R4, R5</span></h3>
 <p class="script">“Listening has a body. Shoulders turned to the speaker. Ears ready. Your eyes can look at the speaker, OR your eyes can rest on a calm spot — both are good listening. Show me.”</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Shoulders and knees oriented toward the speaker</li><li>Stillness in the body — this is the actual measure, not eye contact</li></ul></div>
@@ -297,7 +353,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Body-orientation figure, ear, resting eyes. The eyes icon shows CLOSED/resting eyes on purpose — both options are equally correct.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 6 · Commit <span class="rub">R2, R5</span></h3>
+<h3>Slide 8 · Commit <span class="rub">R2, R5</span></h3>
 <p class="script">“A promise is one thing we can SEE you do. Pick one. Point to it. Say it: Today I will use kind words.” Have three students say theirs aloud.</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Every student points to one option</li><li>Students can name their choice back when asked later in the day</li></ul></div>
@@ -308,7 +364,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
 <p class="imgspec">Visual: Three pictured promises. Students choose one and point. Keep the same three all week so the choice becomes automatic.</p>
 </div>
 <div class="note-block" style="display:none">
-<h3>Slide 7 · Transition <span class="rub">R1, R4, R5</span></h3>
+<h3>Slide 9 · Transition <span class="rub">R1, R4, R5</span></h3>
 <p class="script">“How we leave the meeting is how we start our learning. Four steps. Stand. Push in. Turn. Walk. Let's practice.” Do not time this at K–2.</p>
 <div class="grid">
 <div><p class="k">Look for</p><ul><li>Chairs pushed in without reminder</li><li>Bodies calm, not rushing</li></ul></div>
@@ -326,7 +382,10 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
   var cnt=document.getElementById('cnt');
   var i=0, open=false;
   function draw(){
-    slides.forEach(function(s,n){s.classList.toggle('active',n===i);});
+    slides.forEach(function(s,n){
+      s.classList.toggle('active',n===i);
+      if(n!==i){[].slice.call(s.querySelectorAll('video,audio')).forEach(function(m){m.pause();});}
+    });
     notes.forEach(function(s,n){s.style.display=(n===i?'block':'none');});
     cnt.textContent=(i+1)+' / '+slides.length;
   }
@@ -334,6 +393,7 @@ html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-
   function toggle(){ open=!open; panel.classList.toggle('show',open);
     document.getElementById('nbtn').textContent = open?'Hide notes (N)':'Notes (N)'; }
   document.addEventListener('keydown',function(e){
+    if(e.target&&e.target.tagName==='VIDEO'){return;}
     if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(1);}
     else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1);}
     else if(e.key==='n'||e.key==='N'){e.preventDefault();toggle();}
