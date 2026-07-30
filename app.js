@@ -273,6 +273,13 @@
       description: "Schoolwide refresher for four high-frequency student expectations.",
       action: "Open current procedure"
     },
+    "student-technology-58": {
+      title: "Student Technology SRR · Grades 5–8 Only",
+      type: "Schoolwide procedure · PDF · Grades 5–8",
+      path: "resources/procedures/schoolwide/08-student-technology-grades-5-8.pdf",
+      description: "Adult procedure guide and scripts for device carrying, storage, entry checks, exit checks, and line-up routines in Grades 5–8.",
+      action: "Open Grades 5–8 procedure"
+    },
     "entering-exiting-current": {
       title: "Entering (First Five) & Exiting the Classroom Procedure",
       type: "Updated current source · DOCX",
@@ -607,6 +614,18 @@
       result: "Students can name and follow the four expectations without inconsistent adult messages.",
       files: ["refresher-current"],
       note: "Use this as a targeted refresher when these expectations drift; it is not a replacement for the full behavior matrix."
+    },
+    {
+      id: "student-technology-58",
+      category: "Schoolwide systems",
+      title: "Student Technology Procedures · Grades 5–8 Only",
+      shortTitle: "Student Technology · 5–8",
+      status: "Grades 5–8 only",
+      statusClass: "current",
+      purpose: "Give Grades 5–8 teachers one schoolwide procedure for carrying, storing, checking, and lining up with student devices.",
+      result: "Students in Grades 5–8 handle devices safely and consistently while using the shared voice-level cues.",
+      files: ["student-technology-58"],
+      note: "This procedure is for Grades 5–8 only. Do not assign or teach it as a K–4 procedure."
     },
     {
       id: "entering-first-five-exiting",
