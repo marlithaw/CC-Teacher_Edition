@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expectations Refresher · Grades 6–8 | Culture Camp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#232323; --ember:#C8161D; --spark-red:#E21C24; --mb-yellow:#F9DC7C;
+  --ink:#1A1A1A; --slate:#4A4A4A; --hairline:#e2e8f0; --muted:#94a3b8;
+  --font-body:'Inter',system-ui,sans-serif; --font-cond:'Oswald',system-ui,sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;height:100%;background:#111;font-family:var(--font-body);}
+.deck{position:relative;width:100vw;height:100vh;overflow:hidden;}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;
+  padding:clamp(24px,4vw,64px);background:#fff;color:var(--ink);}
+.slide.active{display:flex;}
+.slide.dark{background:var(--charcoal);color:#fff;}
+.slide.red{background:var(--spark-red);color:#fff;}
+.slide.yellow{background:var(--mb-yellow);color:var(--ink);}
+
+.eyebrow{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.14em;
+  font-size:clamp(11px,1.1vw,14px);font-weight:600;opacity:.72;margin:0 0 .6rem;}
+.slide h1{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;
+  letter-spacing:.01em;line-height:1.02;margin:0;font-size:clamp(30px,5.4vw,76px);}
+.slide h2{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;
+  line-height:1.05;margin:0;font-size:clamp(24px,4.2vw,58px);}
+.lede{font-size:clamp(15px,1.7vw,25px);line-height:1.45;margin:1rem 0 0;max-width:36ch;opacity:.9;}
+.body-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;}
+
+.mb-icon{width:1em;height:1em;flex:none;}
+.hero-icon{font-size:clamp(58px,9vw,120px);color:currentColor;opacity:.95;}
+
+.items{display:flex;gap:clamp(12px,2.2vw,32px);margin-top:clamp(16px,2.6vw,36px);flex-wrap:wrap;}
+.item{flex:1 1 0;min-width:150px;display:flex;flex-direction:column;gap:.55rem;
+  padding:clamp(12px,1.6vw,22px);border-radius:14px;background:rgba(0,0,0,.045);}
+.slide.dark .item,.slide.red .item{background:rgba(255,255,255,.11);}
+.item .mb-icon{font-size:clamp(34px,4.4vw,62px);}
+.item .lab{font-family:var(--font-cond);text-transform:uppercase;font-weight:700;
+  letter-spacing:.05em;font-size:clamp(15px,1.7vw,25px);line-height:1.1;}
+.item .txt{font-size:clamp(13px,1.35vw,19px);line-height:1.4;opacity:.93;}
+
+.frame{margin-top:clamp(16px,2.4vw,32px);padding:clamp(14px,2vw,26px);
+  border-radius:14px;border:2px dashed currentColor;opacity:.98;}
+.frame .flab{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;
+  font-size:clamp(11px,1.1vw,14px);font-weight:600;opacity:.7;margin-bottom:.45rem;}
+.frame .stem{font-size:clamp(17px,2.3vw,34px);font-family:var(--font-cond);font-weight:600;line-height:1.25;}
+.choices{display:flex;gap:clamp(10px,1.6vw,22px);margin-top:clamp(12px,1.8vw,22px);flex-wrap:wrap;}
+.choice{flex:1 1 0;min-width:120px;display:flex;flex-direction:column;align-items:center;
+  gap:.4rem;padding:clamp(10px,1.4vw,18px);border-radius:12px;background:rgba(0,0,0,.06);text-align:center;}
+.slide.dark .choice,.slide.red .choice{background:rgba(255,255,255,.13);}
+.choice .mb-icon{font-size:clamp(30px,3.8vw,54px);}
+.choice .cl{font-family:var(--font-cond);text-transform:uppercase;font-weight:600;
+  font-size:clamp(12px,1.3vw,18px);letter-spacing:.03em;}
+.bank{margin-top:.7rem;font-size:clamp(12px,1.25vw,17px);opacity:.85;}
+.bank b{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.08em;font-size:.85em;}
+
+.steps{display:flex;gap:clamp(10px,1.6vw,24px);margin-top:clamp(16px,2.4vw,32px);flex-wrap:wrap;}
+.step{flex:1 1 0;min-width:110px;display:flex;flex-direction:column;align-items:center;gap:.45rem;
+  padding:clamp(10px,1.5vw,20px);border-radius:12px;background:rgba(0,0,0,.06);text-align:center;}
+.slide.dark .step,.slide.red .step{background:rgba(255,255,255,.13);}
+.step .n{font-family:var(--font-cond);font-weight:700;font-size:clamp(20px,2.6vw,38px);opacity:.5;line-height:1;}
+.step .mb-icon{font-size:clamp(28px,3.4vw,48px);}
+.step .sl{font-family:var(--font-cond);text-transform:uppercase;font-weight:600;
+  font-size:clamp(13px,1.4vw,20px);letter-spacing:.03em;}
+
+.callout{margin-top:clamp(14px,2vw,28px);font-family:var(--font-cond);font-weight:600;
+  text-transform:uppercase;letter-spacing:.04em;font-size:clamp(14px,1.8vw,26px);line-height:1.2;}
+.cognate{margin-top:.8rem;font-size:clamp(11px,1.15vw,15px);opacity:.7;font-style:italic;}
+.why{margin-top:clamp(14px,2vw,26px);padding:clamp(12px,1.6vw,20px);border-left:5px solid currentColor;
+  font-size:clamp(13px,1.5vw,21px);line-height:1.45;opacity:.94;}
+.why b{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.07em;font-size:.82em;
+  display:block;margin-bottom:.25rem;opacity:.75;}
+
+.foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;
+  font-size:clamp(9px,.95vw,12px);opacity:.55;padding-top:1rem;}
+.foot .band{font-weight:700;letter-spacing:.16em;}
+
+.notes{position:fixed;left:0;right:0;bottom:0;max-height:58vh;overflow:auto;
+  background:#0d0d0d;color:#f2f2f2;border-top:4px solid var(--spark-red);
+  padding:20px clamp(20px,4vw,56px) 28px;display:none;z-index:60;font-size:14.5px;line-height:1.55;}
+.notes.show{display:block;}
+.notes h3{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.12em;
+  font-size:12px;margin:0 0 10px;color:var(--mb-yellow);}
+.notes .script{font-size:16.5px;line-height:1.55;margin:0 0 14px;padding:12px 14px;
+  background:rgba(255,255,255,.07);border-left:4px solid var(--mb-yellow);border-radius:0 8px 8px 0;}
+.notes .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;}
+.notes .k{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;
+  font-size:11px;color:var(--muted);margin:0 0 5px;}
+.notes ul{margin:0;padding-left:18px;}
+.notes li{margin-bottom:4px;}
+.notes .rub{display:inline-block;font-family:var(--font-cond);background:var(--spark-red);
+  color:#fff;padding:2px 9px;border-radius:20px;font-size:11px;letter-spacing:.1em;}
+.notes .imgspec{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:12px;
+  border-top:1px solid rgba(255,255,255,.13);padding-top:10px;}
+
+.hud{position:fixed;top:14px;right:16px;z-index:70;display:flex;gap:8px;align-items:center;
+  font-family:var(--font-cond);font-size:11px;letter-spacing:.1em;text-transform:uppercase;}
+.hud button{font:inherit;background:rgba(0,0,0,.62);color:#fff;border:0;border-radius:20px;
+  padding:7px 13px;cursor:pointer;letter-spacing:.1em;}
+.hud button:hover{background:var(--spark-red);}
+.hud .cnt{background:rgba(0,0,0,.62);color:#fff;border-radius:20px;padding:7px 13px;}
+
+@media print{
+  html,body{background:#fff;height:auto;}
+  .deck{height:auto;width:auto;}
+  .hud{display:none;}
+  .slide{display:flex!important;position:relative;inset:auto;height:100vh;
+    page-break-after:always;border-bottom:1px solid #ddd;}
+  .notes{display:block!important;position:relative;max-height:none;}
+  .note-block{display:block!important;page-break-inside:avoid;
+    border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:12px;margin-bottom:12px;}
+}
+</style></head><body>
+<div class="hud"><button id="prev">&larr;</button><button id="next">&rarr;</button><button id="nbtn">Notes (N)</button><span class="cnt" id="cnt"></span></div>
+<div class="deck">
+<section class="slide red">
+<p class="eyebrow">System Reset · Refresher</p>
+<div class="body-wrap">
+<h1>Why We<br>Reset</h1>
+<p class="lede">Standards drift when no one tends them. Resetting is not a crackdown — it is how a community keeps agreements it actually chose.</p>
+<div style="margin-top:1.1rem"><svg class="mb-icon hero-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M52 20a24 24 0 1 0 4 18"/><path d="M52 8v14H38"/></svg></div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Expectations Refresher</span><span class="band">Grades 6–8 · 01</span></div>
+</section>
+<section class="slide ">
+<p class="eyebrow">Nervous System First</p>
+<div class="body-wrap">
+<h2>Reset Before You Engage</h2>
+<div class="items">
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 8v26"/><path d="M32 20c-4 0-8 3-9 8l-4 16a6 6 0 0 0 11 4V20z"/><path d="M32 20c4 0 8 3 9 8l4 16a6 6 0 0 1-11 4V20z"/></svg>
+<div class="lab">4 in</div>
+<div class="txt">Through the nose.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="24"/><path d="M32 17v15l10 6"/></svg>
+<div class="lab">4 hold</div>
+<div class="txt">Steady, not strained.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="22"/><path d="M22 28h6"/><path d="M36 28h6"/><path d="M22 40c4 4 16 4 20 0"/></svg>
+<div class="lab">4 out</div>
+<div class="txt">Slow, through the mouth.</div>
+</div>
+</div>
+<div class="why"><b>Why this works</b>A reset can feel like criticism, and criticism spikes defensiveness. The long exhale lowers that response so you can hear the standard as information, not attack.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Expectations Refresher</span><span class="band">Grades 6–8 · 02</span></div>
+</section>
+<section class="slide dark">
+<p class="eyebrow">The Four Checkpoints</p>
+<div class="body-wrap">
+<h2>What We’re Resetting</h2>
+<div class="items">
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="12" width="32" height="44" rx="2"/><path d="M26 12v-2a6 6 0 0 1 12 0v2"/><path d="M23 30l4 4 8-8"/><path d="M23 44l4 4 8-8"/></svg>
+<div class="lab">Dress code</div>
+<div class="txt">In standard before the bell.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="20" y="8" width="24" height="48" rx="4"/><path d="M28 48h8"/><path d="M14 12l36 40"/></svg>
+<div class="lab">Phones</div>
+<div class="txt">Away and silent, out of sight.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 26a12 12 0 0 1 24 0v26a4 4 0 0 1-4 4H24a4 4 0 0 1-4-4z"/><path d="M27 26v-6a5 5 0 0 1 10 0v6"/><path d="M27 40h10"/></svg>
+<div class="lab">Backpacks</div>
+<div class="txt">Stowed, not on desks or aisles.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8v48"/><path d="M16 10h30l-6 9 6 9H16"/></svg>
+<div class="lab">Hall passes</div>
+<div class="txt">Out and visible, one at a time.</div>
+</div>
+</div>
+<div class="why"><b>Why this works</b>None of these are about control for its own sake. Phones fragment attention, blocked aisles are a safety issue, and visible passes keep the building accountable and safe. The rule follows the reason.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Expectations Refresher</span><span class="band">Grades 6–8 · 03</span></div>
+</section>
+<section class="slide ">
+<p class="eyebrow">Structured Talk</p>
+<div class="body-wrap">
+<h2>Which One Slipped, And Why?</h2>
+<div style="margin-top:1.1rem"><svg class="mb-icon hero-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="18" r="7"/><path d="M8 50v-4a12 12 0 0 1 24 0v4"/><circle cx="45" cy="18" r="7"/><path d="M34 50v-4a12 12 0 0 1 24 0v4"/></svg></div>
+<div class="frame">
+<div class="flab">Prompt</div>
+<div class="stem">Which checkpoint drifted the most — and what is the honest reason it is easy to let slide?</div>
+</div>
+<div class="callout">Restate your partner’s point before you respond.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Expectations Refresher</span><span class="band">Grades 6–8 · 04</span></div>
+</section>
+<section class="slide yellow">
+<p class="eyebrow">The Observable Standard</p>
+<div class="body-wrap">
+<h2>Back To Standard</h2>
+<div class="items">
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="20" y="8" width="24" height="48" rx="4"/><path d="M28 48h8"/><path d="M14 12l36 40"/></svg>
+<div class="lab">Phones</div>
+<div class="txt">Out of sight from the bell to the bell.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 26a12 12 0 0 1 24 0v26a4 4 0 0 1-4 4H24a4 4 0 0 1-4-4z"/><path d="M27 26v-6a5 5 0 0 1 10 0v6"/><path d="M27 40h10"/></svg>
+<div class="lab">Aisles</div>
+<div class="txt">Clear — nothing anyone could trip on.</div>
+</div>
+<div class="item">
+<svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8v48"/><path d="M16 10h30l-6 9 6 9H16"/></svg>
+<div class="lab">Passes</div>
+<div class="txt">One out, visible, signed.</div>
+</div>
+</div>
+<div class="callout">These are safety and focus systems, not arbitrary rules. That is why they hold.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Expectations Refresher</span><span class="band">Grades 6–8 · 05</span></div>
+</section>
+<section class="slide ">
+<p class="eyebrow">One Visible Next Step</p>
+<div class="body-wrap">
+<h2>My Reset Commitment</h2>
+<div style="margin-top:1.1rem"><svg class="mb-icon hero-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="24"/><path d="M20 33l8 9 16-19"/></svg></div>
+<div class="frame">
+<div class="flab">Frame</div>
+<div class="stem">I will reset ___ so that ___ for ___.</div>
+</div>
+<div class="callout">Name the checkpoint, the reason, and who it protects — including you.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Expectations Refresher</span><span class="band">Grades 6–8 · 06</span></div>
+</section>
+<section class="slide dark">
+<p class="eyebrow">Carry It All Day</p>
+<div class="body-wrap">
+<h2>The Standard Travels</h2>
+<div class="steps">
+<div class="step"><div class="n">1</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M52 20a24 24 0 1 0 4 18"/><path d="M52 8v14H38"/></svg><div class="sl">Reset</div></div>
+<div class="step"><div class="n">2</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30l10-8 8 4 8-4 10 8"/><path d="M16 22v18"/><path d="M48 22v18"/><path d="M24 40l6 6 6-6 6 4"/></svg><div class="sl">Respect</div></div>
+<div class="step"><div class="n">3</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="12" width="32" height="44" rx="2"/><path d="M26 12v-2a6 6 0 0 1 12 0v2"/><path d="M23 30l4 4 8-8"/><path d="M23 44l4 4 8-8"/></svg><div class="sl">Own it</div></div>
+<div class="step"><div class="n">4</div><svg class="mb-icon " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 8l7 15 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2z"/></svg><div class="sl">Hold it</div></div>
+</div>
+<div class="why"><b>Why this works</b>A reset that lives only in this room is theater. The point is that it holds in every class, every hallway, and when no adult is watching — because you decided it, not because you were caught.</div>
+<div class="callout">Same standard everywhere — especially when no one is checking.</div>
+</div>
+<div class="foot"><span>Matchbook Culture Camp · Expectations Refresher</span><span class="band">Grades 6–8 · 07</span></div>
+</section>
+</div><div class="notes" id="notes">
+<div class="note-block" style="display:none">
+<h3>Slide 1 · Title &amp; Promise <span class="rub">R1, R5</span></h3>
+<p class="script">“Every system drifts — phones creep out, passes get skipped, backpacks pile up. We reset the agreements we made, on purpose, together.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students engage without defensiveness</li><li>Reset read as shared, not punitive</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>If cynical: “Agreements you never revisit stop being yours. This keeps them yours.”</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Be transparent about which expectations slipped and why they exist.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Non-verbal signals reduce language load in transitions.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Reset icon. Honest, not punitive, framing.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 2 · Regulate <span class="rub">R1</span></h3>
+<p class="script">“Box breath before we reset — four, four, four. This lets you take the standard as information instead of a callout.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Controlled exhale</li><li>Lower defensiveness</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Do it with them.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Breathe alongside anyone tense.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Gesture carries the count.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Three breath icons, 4-4-4.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 3 · Orient <span class="rub">R1, R5</span></h3>
+<p class="script">“Four checkpoints — dress code, phones, backpacks, hall passes. For each one, name the reason, not just the rule.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students can state the reason behind each</li><li>All four checkpoints recalled</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Re-teach the checkpoint with the weakest rationale.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Post the four; tie each to its actual reason.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Four labeled icons anchor the checklist.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Four checkpoint icons. Reason before rule.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 4 · Connect <span class="rub">R2</span></h3>
+<p class="script">“With your partner: which checkpoint slipped most, and what is the honest reason it is easy to let go?”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Candid, non-defensive analysis</li><li>Restating before responding</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Frame: “___ slips because ___; the fix is ___.”</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Reward honesty; do not turn shares into confessions.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Sentence frame supports the response.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Two-person talk icon. Ninety seconds, then share.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 5 · Practice <span class="rub">R4, R5</span></h3>
+<p class="script">“Rehearse the standard: phones away, aisles clear, one visible pass. We run it until it is automatic again.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Phones out of sight</li><li>Clear aisles; pass system followed</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Reset and re-run the checkpoint.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Rehearse the checkpoint the class named as loosest.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Physical/visible standard is accessible to all.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Three icons for the reset checkpoints.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 6 · Commit <span class="rub">R2, R5</span></h3>
+<p class="script">“One commitment: name the checkpoint, the reason behind it, and who it protects. Make it observable.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Commitment tied to a real reason</li><li>Observable action</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Push vague ones to a visible behavior.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Log commitments for Friday recognition.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Frame supplies structure.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Check icon.</p>
+</div>
+<div class="note-block" style="display:none">
+<h3>Slide 7 · Transition <span class="rub">R1, R4, R5</span></h3>
+<p class="script">“This reset only means something if it holds in every room and when no one is watching. That is what makes it yours.”</p>
+<div class="grid">
+<div><p class="k">Look for</p><ul><li>Students extend the reset beyond this room</li><li>Ownership language, not compliance language</li></ul></div>
+<div><p class="k">If it breaks</p><ul><li>Re-anchor on the four checkpoints and their reasons.</li></ul></div>
+<div><p class="k">Support adult</p><ul><li>Reinforce the reset across the day, not just here.</li></ul></div>
+<div><p class="k">Language support</p><ul><li>Four icons, four words.</li></ul></div>
+</div>
+<p class="imgspec">Visual: Four icons. Carry the standard building-wide.</p>
+</div>
+</div><script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var notes=[].slice.call(document.querySelectorAll('.note-block'));
+  var panel=document.getElementById('notes');
+  var cnt=document.getElementById('cnt');
+  var i=0, open=false;
+  function draw(){
+    slides.forEach(function(s,n){s.classList.toggle('active',n===i);});
+    notes.forEach(function(s,n){s.style.display=(n===i?'block':'none');});
+    cnt.textContent=(i+1)+' / '+slides.length;
+  }
+  function go(d){ i=Math.max(0,Math.min(slides.length-1,i+d)); draw(); }
+  function toggle(){ open=!open; panel.classList.toggle('show',open);
+    document.getElementById('nbtn').textContent = open?'Hide notes (N)':'Notes (N)'; }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(1);}
+    else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1);}
+    else if(e.key==='n'||e.key==='N'){e.preventDefault();toggle();}
+    else if(e.key==='Home'){i=0;draw();}
+    else if(e.key==='End'){i=slides.length-1;draw();}
+  });
+  document.getElementById('prev').addEventListener('click',function(){go(-1);});
+  document.getElementById('next').addEventListener('click',function(){go(1);});
+  document.getElementById('nbtn').addEventListener('click',toggle);
+  draw();
+})();
+</script></body></html>
